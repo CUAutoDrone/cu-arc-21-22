@@ -92,3 +92,16 @@ class FlightControllerCommands(threading.Thread):
             sleep(self.senddelay)
             #sleep(0.007)
         print('Ending communication')
+
+def main():
+    """This is an example of how to use this class"""
+    from fccontrolclass import FlightControllerCommands as fc
+    control  = fc()
+    control.start()
+    #take off
+    control.throttle = 1500
+    sleep(2)
+    #land
+    control.throttle = 1000;
+if __name__ == '__main__':
+    main()
