@@ -1,10 +1,11 @@
 import serial
 from time import sleep
 import struct
-from time import sleep
+
 
 """variable which tells if we have already connected to the serial port"""
 connected = None
+
 
 def connecttoport(dport):
     global connected
@@ -44,6 +45,8 @@ def pack(channels):
     #ensures each of the two parts of each channel is 1 byte by converting it to
     #a char
     return message #list(map(lambda i :struct.pack(b'B',i),message))
+
+
 def commands(channels):
     global connected
     """This function will take any amount of channels given and both pack and send
@@ -67,6 +70,7 @@ def commands(channels):
     else:
         print('other option')
         send(message, connecttoport('/dev/ttyS0'))
+
 
 def test():
     for i in range(4000):
@@ -106,6 +110,7 @@ def test():
     # for i in range(100):
     #     commands([1500, 1500, 1500, 885, 1500, 1500])
     #     sleep(1)
+
 
 if __name__ == "__main__":
     test()
