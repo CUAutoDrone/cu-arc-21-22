@@ -9,7 +9,7 @@ class FlightControllerCommands(threading.Thread):
     is started it will send serial messages to the flight controller 142 times per second
     """
     def __init__(self, port = '/dev/ttyS0', throttle=885, pitch=1500, yaw=1500, roll=1500):
-        super().__init__(self)
+        super(self).__init__()
         self.port = port
         self.connection = None
         self.throttle = throttle
