@@ -2,14 +2,14 @@ import serial
 from time import sleep
 import threading
 
-class FlightControllerCommands(threading.Thread):
+# class FlightControllerCommands(threading.Thread):
+class FlightControllerCommands():
     """
     This is a class which allows for the communication between the pi and any flight
     controller which supports serial communication in the ibus format. When the thread
     is started it will send serial messages to the flight controller 142 times per second
     """
     def __init__(self, port = '/dev/ttyS0', throttle=885, pitch=1500, yaw=1500, roll=1500):
-        threading.Thread.__init__(self)
         self.port = port
         self.connection = None
         self.throttle = throttle
@@ -105,9 +105,9 @@ def main():
     """This is an example of how to use this class"""
     from fccontrolclass import FlightControllerCommands as fc
     control = fc()
-    control.start()
-    
+    t1 = threading.Thread(target=control.run)
     control.arm()
+    t1.start()
 
     #take off
     control.throttle = 1500
