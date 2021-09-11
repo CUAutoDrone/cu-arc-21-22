@@ -107,7 +107,7 @@ def main():
     control = fc()
     t1 = threading.Thread(target=control.run)
     t1.start()
-    
+
     control.arm()
 
     # take off
