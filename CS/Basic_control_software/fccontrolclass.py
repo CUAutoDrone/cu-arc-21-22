@@ -105,8 +105,12 @@ def main():
     control = fc()
     t1 = threading.Thread(target=control.run)
 
-    control.arm()
     t1.start()
+    sleep(1)
+
+    control.arm()
+    sleep(1)
+
     # take off
     control.throttle = 1500
     sleep(2)
