@@ -30,7 +30,7 @@ class FlightControllerCommands():
             dport = self.port
         self.connection = serial.Serial(
             dport, 115200, timeout=10, write_timeout=10)
-        print("Connected to " + self.connection.name + "\n")
+        print("Connected to " + self.connection.name)
         return self.connection
 
     def send(self, msg):
@@ -88,7 +88,7 @@ class FlightControllerCommands():
 
     def run(self):
         self.constantmessage = True
-        print('Begining communications with flight controller')
+        print('Begining communications with flight controller\n')
         while self.constantmessage:
             self.commands(
                 [self.roll, self.pitch, self.throttle, self.yaw, 2000]
