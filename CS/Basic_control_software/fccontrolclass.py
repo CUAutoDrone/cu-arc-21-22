@@ -106,6 +106,7 @@ def main():
     t1 = threading.Thread(target=control.run)
     t1.start()
 
+    sleep(1)
     control.arm()
 
     # take off
