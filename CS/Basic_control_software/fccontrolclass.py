@@ -91,7 +91,7 @@ class FlightControllerCommands():
         print('Begining communications with flight controller\n')
         while self.constantmessage:
             self.commands(
-                [self.roll, self.pitch, self.throttle, self.yaw, 2000]
+                [self.roll, self.pitch, 885, self.yaw, 2000]
                 if self.armed else
                 [1500, 1500, 885, 1500, 1000]
             )
