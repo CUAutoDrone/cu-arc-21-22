@@ -91,7 +91,7 @@ class FlightControllerCommands():
         print('Begining communications with flight controller\n')
         while self.constantmessage:
             self.commands(
-                [self.roll, self.pitch, 885, self.yaw, 2000]
+                [self.roll, self.pitch, self.throttle, self.yaw, 2000]
                 if self.armed else
                 [1500, 1500, 885, 1500, 1000]
             )
@@ -104,11 +104,9 @@ def main():
     from fccontrolclass import FlightControllerCommands as fc
     control = fc()
     t1 = threading.Thread(target=control.run)
-    t1.start()
 
     control.arm()
-    sleep(5)
-
+    t1.start()
     # take off
     control.throttle = 1500
     sleep(2)
