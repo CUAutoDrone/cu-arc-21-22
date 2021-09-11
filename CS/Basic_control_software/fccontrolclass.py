@@ -94,7 +94,6 @@ class FlightControllerCommands():
                 #[self.roll, self.pitch, self.throttle, self.yaw, 2000]
                 # if self.armed else
                 #[1500, 1500, 885, 1500, 1000]
-                [self.roll, self.pitch, self.throttle, self.yaw, 2000]
                 [1100, 1200, 1300, 1400, 1500]
 
             )
