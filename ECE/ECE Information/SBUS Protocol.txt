@@ -1,0 +1,6 @@
+IBUS is the name of the serial protocol which we emulate in order to
+control it. Bellow are resources to try to understand it.
+
+This is the primary one we used to write the code:
+http://blog.dsp.id.au/posts/2017/10/22/flysky-ibus-protocol/
+
