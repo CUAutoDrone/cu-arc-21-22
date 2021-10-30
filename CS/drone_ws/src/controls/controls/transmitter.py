@@ -2,7 +2,7 @@ from .fccontrolclass import FlightControllerCommands as fc
 from threading import Thread
 from time import sleep
 import rclpy
-from rclpy.executors import Executor
+from rclpy.executors import MultiThreadedExecutor
 from rclpy.node import Node
 from std_msgs.msg import Bool, Int64
 
@@ -60,7 +60,7 @@ def main(args=None):
     t1 = Thread(target=control.run)
     t1.start()
 
-    executor = Executor()
+    executor = MultiThreadedExecutor()
     executor.add_node(ArmTransmitter(control))
     executor.spin()
 
