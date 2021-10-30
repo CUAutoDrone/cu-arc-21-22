@@ -18,7 +18,7 @@ from std_msgs.msg import Bool, Int64
 
 class ArmTransmitter(Node):
     def __init__(self, fc):
-        super.__init__('arm_transmitter')
+        super().__init__('arm_transmitter')
         self.subscription = self.create_subscription(
             Bool, 'arm', self.callback, 1
         )
