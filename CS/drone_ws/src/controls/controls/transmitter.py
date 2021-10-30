@@ -102,14 +102,15 @@ def main(args=None):
 
     executor.spin()
 
+    executor.shutdown()
     arm.destroy_node()
     throttle.destroy_node()
     pitch.destroy_node()
     roll.destroy_node()
     yaw.destroy_node()
-
     rclpy.shutdown()
     control.shutdown()
+    t1.join()
 
 if __name__ == '__main__':
     main()
