@@ -15,6 +15,7 @@ class FlightControllerCommands():
     def __init__(self, port='/dev/ttyS0', throttle=885, pitch=1500, yaw=1500, roll=1500):
         self.port = port
         self.connection = None
+        self.arming = False
         self.armed = False
         self.throttle = throttle
         self.pitch = pitch
@@ -79,12 +80,25 @@ class FlightControllerCommands():
     def disarm(self):
         print("Disarming Drone")
         self.armed = False
-        sleep(1)
 
     def arm(self):
         print("Arming Drone")
-        self.armed = True
+        self.arming = True
         sleep(1)
+        self.armed = True
+        self.arming = False
+
+    def setThrottle(self, throttle):
+        self.throttle = throttle
+
+    def setPitch(self, pitch):
+        self.throttle = pitch
+
+    def setRoll(self, roll):
+        self.throttle = roll
+
+    def setYaw(self, yaw):
+        self.throttle = yaw
 
     def run(self):
         self.constantmessage = True
@@ -93,7 +107,7 @@ class FlightControllerCommands():
             self.commands(
                 [self.roll, self.pitch, self.throttle, self.yaw, 2000]
                 if self.armed else
-                [1500, 1500, 885, 1500, 1000]
+                [1500, 1500, 885, 1500, 1000 if not self.arming else 2000]
             )
             sleep(self.senddelay)
         print('Ending communication')
