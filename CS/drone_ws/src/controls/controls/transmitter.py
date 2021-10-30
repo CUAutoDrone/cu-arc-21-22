@@ -86,13 +86,30 @@ def main(args=None):
 
     rclpy.init(args=args)
 
+    arm = ArmTransmitter(control)
+    throttle = ThrottleTransmitter(control)
+    pitch = PitchTransmitter(control)
+    roll = RollTransmitter(control)
+    yaw = YawTransmitter(control)
+
     executor = MultiThreadedExecutor()
-    executor.add_node(ArmTransmitter(control))
-    executor.add_node(ThrottleTransmitter(control))
-    executor.add_node(PitchTransmitter(control))
-    executor.add_node(RollTransmitter(control))
-    executor.add_node(YawTransmitter(control))
+
+    executor.add_node(arm)
+    executor.add_node(throttle)
+    executor.add_node(pitch)
+    executor.add_node(roll)
+    executor.add_node(yaw)
+
     executor.spin()
+
+    arm.destroy_node()
+    throttle.destroy_node()
+    pitch.destroy_node()
+    roll.destroy_node()
+    yaw.destroy_node()
+
+    rclpy.shutdown()
+    control.shutdown()
 
 if __name__ == '__main__':
     main()

@@ -117,3 +117,6 @@ class FlightControllerCommands():
             )
             sleep(self.senddelay)
         print('Ending communication')
+
+    def shutdown(self):
+        self.constantmessage = False
