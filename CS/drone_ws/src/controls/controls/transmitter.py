@@ -31,28 +31,52 @@ class ArmTransmitter(Node):
             self.fc.disarm()
 
 
-# def throttle_transmitter(fc):
-#     rospy.init_node('arm_transmitter', anonymous=True)
-#     rospy.Subscriber('throttle', int, lambda i : fc.setThrottle(i))
-#     rospy.spin()
+class ThrottleTransmitter(Node):
+    def __init__(self, fc):
+        super().__init__('throttle_transmitter')
+        self.subscription = self.create_subscription(
+            Int64, 'throttle', self.callback, 1
+        )
+        self.fc = fc
+
+    def callback(self, msg):
+        fc.setThrottle(msg.data)
 
 
-# def pitch_transmitter(fc):
-#     rospy.init_node('arm_transmitter', anonymous=True)
-#     rospy.Subscriber('pitch', int, lambda i : fc.setPitch(i))
-#     rospy.spin()
+class PitchTransmitter(Node):
+    def __init__(self, fc):
+        super().__init__('pitch_transmitter')
+        self.subscription = self.create_subscription(
+            Int64, 'pitch', self.callback, 1
+        )
+        self.fc = fc
+
+    def callback(self, msg):
+        fc.setPitch(msg.data)
 
 
-# def roll_transmitter(fc):
-#     rospy.init_node('arm_transmitter', anonymous=True)
-#     rospy.Subscriber('roll', int , lambda i : fc.setRoll(i))
-#     rospy.spin()
+class RollTransmitter(Node):
+    def __init__(self, fc):
+        super().__init__('roll_transmitter')
+        self.subscription = self.create_subscription(
+            Int64, 'roll', self.callback, 1
+        )
+        self.fc = fc
+
+    def callback(self, msg):
+        fc.setRoll(msg.data)
 
 
-# def yaw_transmitter(fc):
-#     rospy.init_node('arm_transmitter', anonymous=True)
-#     rospy.Subscriber('yaw', int, lambda i : fc.setYaw(i))
-#     rospy.spin()
+class YawTransmitter(Node):
+    def __init__(self, fc):
+        super().__init__('yaw_transmitter')
+        self.subscription = self.create_subscription(
+            Int64, 'yaw', self.callback, 1
+        )
+        self.fc = fc
+
+    def callback(self, msg):
+        fc.setYaw(msg.data)
      
 
 def main(args=None):
@@ -64,6 +88,10 @@ def main(args=None):
 
     executor = MultiThreadedExecutor()
     executor.add_node(ArmTransmitter(control))
+    executor.add_node(ThrottleTransmitter(control))
+    executor.add_node(PitchTransmitter(control))
+    executor.add_node(RollTransmitter(control))
+    executor.add_node(YawTransmitter(control))
     executor.spin()
 
 if __name__ == '__main__':
