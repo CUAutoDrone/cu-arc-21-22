@@ -87,8 +87,8 @@ def main(args=None):
     rclpy.init(args=args)
 
     executor = MultiThreadedExecutor()
-    executor.add_node(ArmTransmitter(control))
     executor.add_node(ThrottleTransmitter(control))
+    executor.add_node(ArmTransmitter(control))
     executor.add_node(PitchTransmitter(control))
     executor.add_node(RollTransmitter(control))
     executor.add_node(YawTransmitter(control))
