@@ -25,7 +25,7 @@ class ArmTransmitter(Node):
         self.fc = fc
 
     def callback(self, msg):
-        if msg:
+        if msg.data:
             self.fc.arm()
         else:
             self.fc.disarm()
