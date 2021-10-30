@@ -92,13 +92,13 @@ class FlightControllerCommands():
         self.throttle = throttle
 
     def setPitch(self, pitch):
-        self.throttle = pitch
+        self.pitch = pitch
 
     def setRoll(self, roll):
-        self.throttle = roll
+        self.roll = roll
 
     def setYaw(self, yaw):
-        self.throttle = yaw
+        self.yaw = yaw
 
     def run(self):
         self.constantmessage = True
