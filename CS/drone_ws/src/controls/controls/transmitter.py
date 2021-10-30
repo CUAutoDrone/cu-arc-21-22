@@ -4,7 +4,7 @@ from time import sleep
 import rclpy
 from rclpy.executors import Executor
 from rclpy.node import Node
-from std_msgs.msg import Boolean, Int
+from std_msgs.msg import Bool, Int64
 
 
 # def main(args=None):
@@ -20,7 +20,7 @@ class ArmTransmitter(Node):
     def __init__(self, fc):
         super.__init__('arm_transmitter')
         self.subscription = self.create_subscription(
-            Boolean, 'arm', self.callback, 1
+            Bool, 'arm', self.callback, 1
         )
         self.fc = fc
 
