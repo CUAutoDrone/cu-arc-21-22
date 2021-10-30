@@ -41,5 +41,7 @@ def readDistance():
 	value = high*256 + low
 	return value
 
-#print(readDistance())
+if __name__ == '__main__':
+	while True:
+		print(readDistance())
 
