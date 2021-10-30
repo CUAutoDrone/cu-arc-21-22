@@ -25,11 +25,10 @@ class ArmTransmitter(Node):
         self.fc = fc
 
     def callback(self, msg):
-        print(msg)
-        # if msg:
-        #     self.fc.arm()
-        # else:
-        #     self.fc.disarm()
+        if msg:
+            self.fc.arm()
+        else:
+            self.fc.disarm()
 
 
 # def throttle_transmitter(fc):
@@ -57,9 +56,9 @@ class ArmTransmitter(Node):
      
 
 def main(args=None):
-    control = None #fc()
-    # t1 = Thread(target=control.run)
-    # t1.start()
+    control = fc()
+    t1 = Thread(target=control.run)
+    t1.start()
 
     rclpy.init(args=args)
 
