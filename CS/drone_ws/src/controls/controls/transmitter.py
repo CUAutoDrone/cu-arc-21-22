@@ -40,7 +40,7 @@ class ThrottleTransmitter(Node):
         self.fc = fc
 
     def callback(self, msg):
-        fc.setThrottle(msg.data)
+        self.fc.setThrottle(msg.data)
 
 
 class PitchTransmitter(Node):
@@ -52,7 +52,7 @@ class PitchTransmitter(Node):
         self.fc = fc
 
     def callback(self, msg):
-        fc.setPitch(msg.data)
+        self.fc.setPitch(msg.data)
 
 
 class RollTransmitter(Node):
@@ -64,7 +64,7 @@ class RollTransmitter(Node):
         self.fc = fc
 
     def callback(self, msg):
-        fc.setRoll(msg.data)
+        self.fc.setRoll(msg.data)
 
 
 class YawTransmitter(Node):
@@ -76,7 +76,7 @@ class YawTransmitter(Node):
         self.fc = fc
 
     def callback(self, msg):
-        fc.setYaw(msg.data)
+        self.fc.setYaw(msg.data)
      
 
 def main(args=None):
@@ -87,8 +87,8 @@ def main(args=None):
     rclpy.init(args=args)
 
     executor = MultiThreadedExecutor()
-    executor.add_node(ThrottleTransmitter(control))
     executor.add_node(ArmTransmitter(control))
+    executor.add_node(ThrottleTransmitter(control))
     executor.add_node(PitchTransmitter(control))
     executor.add_node(RollTransmitter(control))
     executor.add_node(YawTransmitter(control))
