@@ -60,6 +60,8 @@ def main(args=None):
     t1 = Thread(target=control.run)
     t1.start()
 
+    rclpy.init(args=args)
+
     executor = MultiThreadedExecutor()
     executor.add_node(ArmTransmitter(control))
     executor.spin()
