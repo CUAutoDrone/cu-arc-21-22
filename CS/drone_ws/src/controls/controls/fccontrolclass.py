@@ -112,7 +112,8 @@ class FlightControllerCommands():
             print(
                 [self.roll, self.pitch, self.throttle, self.yaw, 2000]
                 if self.armed else
-                [1500, 1500, 885, 1500, 1000 if not self.arming else 2000]
+                [1500, 1500, 885, 1500, 1000 if not self.arming else 2000],
+                end='\r'
             )
             sleep(self.senddelay)
         print('Ending communication')
