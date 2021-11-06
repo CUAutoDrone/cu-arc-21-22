@@ -105,11 +105,13 @@ def main(args=None):
 
     except KeyboardInterrupt:
         executor.shutdown()
+
         arm.destroy_node()
         throttle.destroy_node()
         pitch.destroy_node()
         roll.destroy_node()
         yaw.destroy_node()
+        
         rclpy.shutdown()
         control.shutdown()
 
