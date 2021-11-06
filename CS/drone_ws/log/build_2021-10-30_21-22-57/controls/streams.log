@@ -1,0 +1,40 @@
+[1.142s] Invoking command in '/home/ubuntu/cu-arc-21-22/CS/drone_ws/src/controls': PYTHONPATH=/home/ubuntu/cu-arc-21-22/CS/drone_ws/install/controls/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/controls build --build-base /home/ubuntu/cu-arc-21-22/CS/drone_ws/build/controls/build install --prefix /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/controls --record /home/ubuntu/cu-arc-21-22/CS/drone_ws/build/controls/install.log --single-version-externally-managed
+[2.090s] running egg_info
+[2.092s] creating ../../build/controls/controls.egg-info
+[2.092s] writing ../../build/controls/controls.egg-info/PKG-INFO
+[2.093s] writing dependency_links to ../../build/controls/controls.egg-info/dependency_links.txt
+[2.094s] writing entry points to ../../build/controls/controls.egg-info/entry_points.txt
+[2.094s] writing requirements to ../../build/controls/controls.egg-info/requires.txt
+[2.095s] writing top-level names to ../../build/controls/controls.egg-info/top_level.txt
+[2.101s] writing manifest file '../../build/controls/controls.egg-info/SOURCES.txt'
+[2.283s] reading manifest file '../../build/controls/controls.egg-info/SOURCES.txt'
+[2.287s] writing manifest file '../../build/controls/controls.egg-info/SOURCES.txt'
+[2.287s] running build
+[2.288s] running build_py
+[2.288s] creating /home/ubuntu/cu-arc-21-22/CS/drone_ws/build/controls/build
+[2.289s] creating /home/ubuntu/cu-arc-21-22/CS/drone_ws/build/controls/build/lib
+[2.289s] creating /home/ubuntu/cu-arc-21-22/CS/drone_ws/build/controls/build/lib/controls
+[2.290s] copying controls/fccontrolclass.py -> /home/ubuntu/cu-arc-21-22/CS/drone_ws/build/controls/build/lib/controls
+[2.290s] copying controls/__init__.py -> /home/ubuntu/cu-arc-21-22/CS/drone_ws/build/controls/build/lib/controls
+[2.291s] copying controls/transmitter.py -> /home/ubuntu/cu-arc-21-22/CS/drone_ws/build/controls/build/lib/controls
+[2.292s] running install
+[2.295s] running install_lib
+[2.299s] creating /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/controls/lib/python3.8/site-packages/controls
+[2.300s] copying /home/ubuntu/cu-arc-21-22/CS/drone_ws/build/controls/build/lib/controls/fccontrolclass.py -> /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/controls/lib/python3.8/site-packages/controls
+[2.301s] copying /home/ubuntu/cu-arc-21-22/CS/drone_ws/build/controls/build/lib/controls/__init__.py -> /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/controls/lib/python3.8/site-packages/controls
+[2.301s] copying /home/ubuntu/cu-arc-21-22/CS/drone_ws/build/controls/build/lib/controls/transmitter.py -> /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/controls/lib/python3.8/site-packages/controls
+[2.304s] byte-compiling /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/controls/lib/python3.8/site-packages/controls/fccontrolclass.py to fccontrolclass.cpython-38.pyc
+[2.310s] byte-compiling /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/controls/lib/python3.8/site-packages/controls/__init__.py to __init__.cpython-38.pyc
+[2.312s] byte-compiling /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/controls/lib/python3.8/site-packages/controls/transmitter.py to transmitter.cpython-38.pyc
+[2.314s] running install_data
+[2.320s] creating /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/controls/share/ament_index
+[2.320s] creating /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/controls/share/ament_index/resource_index
+[2.321s] creating /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/controls/share/ament_index/resource_index/packages
+[2.321s] copying resource/controls -> /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/controls/share/ament_index/resource_index/packages
+[2.322s] copying package.xml -> /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/controls/share/controls
+[2.322s] running install_egg_info
+[2.329s] Copying ../../build/controls/controls.egg-info to /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/controls/lib/python3.8/site-packages/controls-0.0.0-py3.8.egg-info
+[2.334s] running install_scripts
+[2.405s] Installing transmitter script to /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/controls/lib/controls
+[2.406s] writing list of installed files to '/home/ubuntu/cu-arc-21-22/CS/drone_ws/build/controls/install.log'
+[2.499s] Invoked command in '/home/ubuntu/cu-arc-21-22/CS/drone_ws/src/controls' returned '0': PYTHONPATH=/home/ubuntu/cu-arc-21-22/CS/drone_ws/install/controls/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/controls build --build-base /home/ubuntu/cu-arc-21-22/CS/drone_ws/build/controls/build install --prefix /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/controls --record /home/ubuntu/cu-arc-21-22/CS/drone_ws/build/controls/install.log --single-version-externally-managed

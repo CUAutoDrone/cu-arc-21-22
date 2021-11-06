@@ -1,0 +1,4 @@
+[console_scripts]
+publishHeight = controls.publishHeight:main
+transmitter = controls.transmitter:main
+

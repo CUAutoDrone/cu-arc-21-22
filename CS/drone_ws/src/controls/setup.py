@@ -20,7 +20,8 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'transmitter = controls.transmitter:main'
+            'transmitter = controls.transmitter:main',
+            'publishHeight = controls.publishHeight:main'
         ],
     },
 )
