@@ -18,7 +18,6 @@ class HeightPublisher(Node):
         self.publisher.publish(msg)
 
 
-
 def main(args=None):
     sensor = DistanceSensor()
 

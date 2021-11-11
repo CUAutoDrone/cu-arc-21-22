@@ -1,4 +1,5 @@
 [console_scripts]
+pid = controls.pid:main
 publishHeight = controls.publishHeight:main
 transmitter = controls.transmitter:main
 

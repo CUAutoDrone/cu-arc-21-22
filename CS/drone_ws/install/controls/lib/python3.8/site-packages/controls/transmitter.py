@@ -7,15 +7,6 @@ from rclpy.node import Node
 from std_msgs.msg import Bool, Int64
 
 
-# def main(args=None):
-#     rclpy.init(args=args)
-#     node = Node('my_node_name')
-#     rclpy.spin(node)
-#     rclpy.shutdown()
-# if __name__ == '__main__':
-#     main()
-
-
 class ArmTransmitter(Node):
     def __init__(self, fc):
         super().__init__('arm_transmitter')

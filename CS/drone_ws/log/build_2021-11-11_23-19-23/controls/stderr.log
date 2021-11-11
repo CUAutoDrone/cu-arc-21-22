@@ -1,0 +1,5 @@
+  File "/home/ubuntu/cu-arc-21-22/CS/drone_ws/install/controls/lib/python3.8/site-packages/controls/pid.py", line 34
+    throttle = self.kp * current_error +
+                                        ^
+SyntaxError: invalid syntax
+
