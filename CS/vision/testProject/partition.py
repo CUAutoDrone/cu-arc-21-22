@@ -1,17 +1,3 @@
-""" usage: partition_dataset.py [-h] [-i IMAGEDIR] [-o OUTPUTDIR] [-r RATIO] [-x]
-
-Partition dataset of images into training and testing sets
-
-optional arguments:
-  -h, --help            show this help message and exit
-  -i IMAGEDIR, --imageDir IMAGEDIR
-                        Path to the folder where the image dataset is stored. If not specified, the CWD will be used.
-  -o OUTPUTDIR, --outputDir OUTPUTDIR
-                        Path to the output folder where the train and test dirs should be created. Defaults to the same directory as IMAGEDIR.
-  -r RATIO, --ratio RATIO
-                        The ratio of the number of test images over the total number of images. The default is 0.1.
-  -x, --xml             Set this flag if you want the xml annotation files to be processed and copied over.
-"""
 import os
 import re
 from shutil import copyfile
@@ -19,84 +5,89 @@ import argparse
 import math
 import random
 
+""" 
+Usage: partition.py [-h] [-tr TRAIN] [-te TEST] [-x XML]
 
-def iterate_dir(source, dest, ratio, copy_xml):
-    source = source.replace('\\', '/') + '/training_demo/images'
-    dest = dest.replace('\\', '/') + '/training_demo'
-    train_dir = os.path.join(dest, 'train')
-    test_dir = os.path.join(dest, 'test')
+Partition dataset of pos_img into training and testing sets
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -tr --train           TRAIN
+                        percentage of data for train. If not specified, defaults to 75.
+  -te, --test           TEST
+                        Percentage of data for test. If not specified, defaults to 25.
+  -x, --xml             Set this flag if you want the xml annotation files to be processed and copied over.
+"""
+
+
+def iterate_dir(train, test, copy_xml):
+    base = os.path.join(os.getcwd(), "training_demo")
+    pos_img = os.path.join(base, "pos_img")
+    train_dir = os.path.join(base, "train")
+    test_dir = os.path.join(base, "test")
 
     if not os.path.exists(train_dir):
         os.makedirs(train_dir)
+
     if not os.path.exists(test_dir):
         os.makedirs(test_dir)
 
-    for f in os.listdir(source):
-        print(f)
-
-    images = [f for f in os.listdir(source)
-              if re.search(r'.+\.png', f)]
-
-    print(images)
+    images = [f for f in os.listdir(pos_img) if re.search(r'.+\.png', f)]
 
     num_images = len(images)
-    num_test_images = math.ceil(ratio*num_images)
+
+    num_test_images = math.floor(num_images * test / 100)
+    num_train_images = num_images - num_test_images
+
+    train = random.sample(range(0, num_images), num_train_images)
+    test = list(set(range(0, num_images)) - set(train))
 
     for i in range(num_test_images):
-        idx = random.randint(0, len(images)-1)
+        idx = test[i]
         filename = images[idx]
-        copyfile(os.path.join(source, filename),
+        copyfile(os.path.join(pos_img, filename),
                  os.path.join(test_dir, filename))
         if copy_xml:
             xml_filename = os.path.splitext(filename)[0]+'.xml'
-            copyfile(os.path.join(source, xml_filename),
-                     os.path.join(test_dir,xml_filename))
-        images.remove(images[idx])
+            copyfile(os.path.join(pos_img, xml_filename),
+                     os.path.join(test_dir, xml_filename))
 
-    for filename in images:
-        copyfile(os.path.join(source, filename),
+    for i in range(num_train_images):
+        idx = train[i]
+        filename = images[idx]
+        copyfile(os.path.join(pos_img, filename),
                  os.path.join(train_dir, filename))
         if copy_xml:
             xml_filename = os.path.splitext(filename)[0]+'.xml'
-            copyfile(os.path.join(source, xml_filename),
+            copyfile(os.path.join(pos_img, xml_filename),
                      os.path.join(train_dir, xml_filename))
 
 
 def main():
 
-    # Initiate argument parser
-    parser = argparse.ArgumentParser(description="Partition dataset of images into training and testing sets",
+    parser = argparse.ArgumentParser(description="Partition dataset of pos_img into training and testing sets",
                                      formatter_class=argparse.RawTextHelpFormatter)
     parser.add_argument(
-        '-i', '--imageDir',
-        help='Path to the folder where the image dataset is stored. If not specified, the CWD will be used.',
-        type=str,
-        default=os.getcwd()
+        '-tr', '--train',
+        help='Percentage of data for training.',
+        type=int,
+        default=25
     )
     parser.add_argument(
-        '-o', '--outputDir',
-        help='Path to the output folder where the train and test dirs should be created. '
-             'Defaults to the same directory as IMAGEDIR.',
-        type=str,
-        default=None
+        '-te', '--test',
+        help='Percentage of data for testing.',
+        type=int,
+        default=75
     )
-    parser.add_argument(
-        '-r', '--ratio',
-        help='The ratio of the number of test images over the total number of images. The default is 0.1.',
-        default=0.1,
-        type=float)
     parser.add_argument(
         '-x', '--xml',
         help='Set this flag if you want the xml annotation files to be processed and copied over.',
-        action='store_true'
+        action='store_true',
+        default=True
     )
     args = parser.parse_args()
 
-    if args.outputDir is None:
-        args.outputDir = args.imageDir
-
-    # Now we are ready to start the iteration
-    iterate_dir(args.imageDir, args.outputDir, args.ratio, args.xml)
+    iterate_dir(args.train, args.test, args.xml)
 
 
 if __name__ == '__main__':
