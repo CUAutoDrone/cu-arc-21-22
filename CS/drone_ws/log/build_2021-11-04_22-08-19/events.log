@@ -1,0 +1,54 @@
+[0.000000] (-) TimerEvent: {}
+[0.002798] (controls) JobQueued: {'identifier': 'controls', 'dependencies': OrderedDict()}
+[0.003266] (controls) JobStarted: {'identifier': 'controls'}
+[0.090563] (-) TimerEvent: {}
+[0.192013] (-) TimerEvent: {}
+[0.293493] (-) TimerEvent: {}
+[0.394375] (-) TimerEvent: {}
+[0.496574] (-) TimerEvent: {}
+[0.597477] (-) TimerEvent: {}
+[0.698862] (-) TimerEvent: {}
+[0.799773] (-) TimerEvent: {}
+[0.902124] (-) TimerEvent: {}
+[1.003017] (-) TimerEvent: {}
+[1.104136] (-) TimerEvent: {}
+[1.207490] (-) TimerEvent: {}
+[1.232707] (controls) Command: {'cmd': ['/usr/bin/python3', 'setup.py', 'egg_info', '--egg-base', '../../build/controls', 'build', '--build-base', '/home/ubuntu/cu-arc-21-22/CS/drone_ws/build/controls/build', 'install', '--prefix', '/home/ubuntu/cu-arc-21-22/CS/drone_ws/install/controls', '--record', '/home/ubuntu/cu-arc-21-22/CS/drone_ws/build/controls/install.log', '--single-version-externally-managed'], 'cwd': '/home/ubuntu/cu-arc-21-22/CS/drone_ws/src/controls', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'ubuntu', 'SSH_CLIENT': '10.48.85.185 55434 22', 'XDG_SESSION_TYPE': 'tty', 'GIT_ASKPASS': '/home/ubuntu/.vscode-server/bin/e7d7e9a9348e6a8cc8c03f877d39cb72e5dfb1ff/extensions/git/dist/askpass.sh', 'SHLVL': '2', 'LD_LIBRARY_PATH': '/home/ubuntu/ros2_foxy/ros2-linux/opt/yaml_cpp_vendor/lib:/home/ubuntu/ros2_foxy/ros2-linux/opt/rviz_ogre_vendor/lib:/home/ubuntu/ros2_foxy/ros2-linux/lib', 'BROWSER': '/home/ubuntu/.vscode-server/bin/e7d7e9a9348e6a8cc8c03f877d39cb72e5dfb1ff/bin/helpers/browser.sh', 'MOTD_SHOWN': 'pam', 'HOME': '/home/ubuntu', 'OLDPWD': '/home/ubuntu/cu-arc-21-22/CS', 'TERM_PROGRAM_VERSION': '1.60.0', 'VSCODE_IPC_HOOK_CLI': '/run/user/1000/vscode-ipc-4f2fb2f7-5e3c-42c5-83bf-7446e6f98b59.sock', 'ROS_PYTHON_VERSION': '3', 'VSCODE_GIT_ASKPASS_MAIN': '/home/ubuntu/.vscode-server/bin/e7d7e9a9348e6a8cc8c03f877d39cb72e5dfb1ff/extensions/git/dist/askpass-main.js', 'VSCODE_GIT_ASKPASS_NODE': '/home/ubuntu/.vscode-server/bin/e7d7e9a9348e6a8cc8c03f877d39cb72e5dfb1ff/node', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'COLCON_PREFIX_PATH': '/home/ubuntu/cu-arc-21-22/CS/drone_ws/install:/home/ubuntu/ros2_foxy/ros2-linux', 'ROS_DISTRO': 'foxy', 'LOGNAME': 'ubuntu', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'PKG_CONFIG_PATH': '/home/ubuntu/ros2_foxy/ros2-linux/lib/aarch64-linux-gnu/pkgconfig:/home/ubuntu/ros2_foxy/ros2-linux/lib/pkgconfig', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm-256color', 'XDG_SESSION_ID': '1', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/home/ubuntu/.vscode-server/bin/e7d7e9a9348e6a8cc8c03f877d39cb72e5dfb1ff/bin:/home/ubuntu/.local/bin:/home/ubuntu/ros2_foxy/ros2-linux/bin:/home/ubuntu/.vscode-server/bin/e7d7e9a9348e6a8cc8c03f877d39cb72e5dfb1ff/bin:/home/ubuntu/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'XDG_RUNTIME_DIR': '/run/user/1000', 'LANG': 'C.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'VSCODE_GIT_IPC_HANDLE': '/run/user/1000/vscode-git-a7e71f0a34.sock', 'TERM_PROGRAM': 'vscode', 'AMENT_PREFIX_PATH': '/home/ubuntu/cu-arc-21-22/CS/drone_ws/install/controls:/home/ubuntu/ros2_foxy/ros2-linux', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'PWD': '/home/ubuntu/cu-arc-21-22/CS/drone_ws/build/controls', 'SSH_CONNECTION': '10.48.85.185 55434 10.49.95.111 22', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/ubuntu/cu-arc-21-22/CS/drone_ws/install/controls/lib/python3.8/site-packages:/home/ubuntu/cu-arc-21-22/CS/drone_ws/install/controls/lib/python3.8/site-packages:/home/ubuntu/ros2_foxy/ros2-linux/lib/python3.8/site-packages', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/home/ubuntu/ros2_foxy/ros2-linux'}, 'shell': False}
+[1.308008] (-) TimerEvent: {}
+[1.409317] (-) TimerEvent: {}
+[1.510200] (-) TimerEvent: {}
+[1.611141] (-) TimerEvent: {}
+[1.712014] (-) TimerEvent: {}
+[1.813162] (-) TimerEvent: {}
+[1.915674] (-) TimerEvent: {}
+[2.017518] (-) TimerEvent: {}
+[2.120127] (-) TimerEvent: {}
+[2.222126] (-) TimerEvent: {}
+[2.286870] (controls) StdoutLine: {'line': b'running egg_info\n'}
+[2.290985] (controls) StdoutLine: {'line': b'writing ../../build/controls/controls.egg-info/PKG-INFO\n'}
+[2.293251] (controls) StdoutLine: {'line': b'writing dependency_links to ../../build/controls/controls.egg-info/dependency_links.txt\n'}
+[2.295325] (controls) StdoutLine: {'line': b'writing entry points to ../../build/controls/controls.egg-info/entry_points.txt\n'}
+[2.298785] (controls) StdoutLine: {'line': b'writing requirements to ../../build/controls/controls.egg-info/requires.txt\n'}
+[2.302226] (controls) StdoutLine: {'line': b'writing top-level names to ../../build/controls/controls.egg-info/top_level.txt\n'}
+[2.322527] (-) TimerEvent: {}
+[2.428196] (-) TimerEvent: {}
+[2.455355] (controls) StdoutLine: {'line': b"reading manifest file '../../build/controls/controls.egg-info/SOURCES.txt'\n"}
+[2.460897] (controls) StdoutLine: {'line': b"writing manifest file '../../build/controls/controls.egg-info/SOURCES.txt'\n"}
+[2.464048] (controls) StdoutLine: {'line': b'running build\n'}
+[2.467585] (controls) StdoutLine: {'line': b'running build_py\n'}
+[2.469732] (controls) StdoutLine: {'line': b'running install\n'}
+[2.472290] (controls) StdoutLine: {'line': b'running install_lib\n'}
+[2.480836] (controls) StdoutLine: {'line': b'running install_data\n'}
+[2.482817] (controls) StdoutLine: {'line': b'running install_egg_info\n'}
+[2.492818] (controls) StdoutLine: {'line': b"removing '/home/ubuntu/cu-arc-21-22/CS/drone_ws/install/controls/lib/python3.8/site-packages/controls-0.0.0-py3.8.egg-info' (and everything under it)\n"}
+[2.509503] (controls) StdoutLine: {'line': b'Copying ../../build/controls/controls.egg-info to /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/controls/lib/python3.8/site-packages/controls-0.0.0-py3.8.egg-info\n'}
+[2.510562] (controls) StdoutLine: {'line': b'running install_scripts\n'}
+[2.528433] (-) TimerEvent: {}
+[2.587313] (controls) StdoutLine: {'line': b'Installing publishHeight script to /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/controls/lib/controls\n'}
+[2.588352] (controls) StdoutLine: {'line': b'Installing transmitter script to /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/controls/lib/controls\n'}
+[2.591249] (controls) StdoutLine: {'line': b"writing list of installed files to '/home/ubuntu/cu-arc-21-22/CS/drone_ws/build/controls/install.log'\n"}
+[2.628905] (-) TimerEvent: {}
+[2.703996] (controls) CommandEnded: {'returncode': 0}
+[2.729614] (-) TimerEvent: {}
+[2.787194] (controls) JobEnded: {'identifier': 'controls', 'rc': 0}
+[2.793297] (-) EventReactorShutdown: {}
