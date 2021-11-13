@@ -23,8 +23,9 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'transmitter = controls.transmitter:main',
-            'publishHeight = controls.publishHeight:main',
+            'flight_controller = controls.flight_controller:main',
+            'test_flight_controller = controls.flight_controller:test_main',
+            'distance_sensor = controls.distance_sensor:main',
             'pid = controls.pid:main'
         ],
     },

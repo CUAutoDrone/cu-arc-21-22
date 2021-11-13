@@ -17,9 +17,9 @@ class PID(Node):
 
         self.desired_height = 0
 
-        self.kp = 1
+        self.kp = 0
         self.ki = 0
-        self.kd = 0
+        self.kd = 1
 
         self.sum = 0
         self.last_error = 0
@@ -28,7 +28,7 @@ class PID(Node):
 
 
     def update_callback(self, msg):
-        self.desired_height = data.msg
+        self.desired_height = msg.data
         self.sum = 0
 
 

@@ -106,5 +106,41 @@ def main(args=None):
         rclpy.shutdown()
         control.shutdown()
 
+def test_main(args=None):
+    control = fc()
+    t1 = Thread(target=control.test_run)
+    t1.start()
+
+    rclpy.init(args=args)
+
+    arm = ArmTransmitter(control)
+    throttle = ThrottleTransmitter(control)
+    pitch = PitchTransmitter(control)
+    roll = RollTransmitter(control)
+    yaw = YawTransmitter(control)
+
+    executor = MultiThreadedExecutor()
+
+    executor.add_node(arm)
+    executor.add_node(throttle)
+    executor.add_node(pitch)
+    executor.add_node(roll)
+    executor.add_node(yaw)
+
+    try:
+        executor.spin()
+
+    except KeyboardInterrupt:
+        executor.shutdown()
+
+        arm.destroy_node()
+        throttle.destroy_node()
+        pitch.destroy_node()
+        roll.destroy_node()
+        yaw.destroy_node()
+        
+        rclpy.shutdown()
+        control.shutdown()
+
 if __name__ == '__main__':
     main()

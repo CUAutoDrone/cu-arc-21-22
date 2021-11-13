@@ -4,7 +4,7 @@ import rclpy
 from rclpy.node import Node
 from std_msgs.msg import Int64
 
-
+#Deprecated : distanceSensor became its own node
 class HeightPublisher(Node):
     def __init__(self, sensor):
         super().__init__('arm_transmitter')

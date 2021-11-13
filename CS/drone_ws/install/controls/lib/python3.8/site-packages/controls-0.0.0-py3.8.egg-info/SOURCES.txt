@@ -9,12 +9,13 @@ setup.py
 ../../build/controls/controls.egg-info/top_level.txt
 ../../build/controls/controls.egg-info/zip-safe
 controls/__init__.py
-controls/distanceSensor.py
-controls/fccontrolclass.py
+controls/distance_sensor.py
+controls/flight_controller.py
 controls/pid.py
 controls/publishHeight.py
 controls/transmitter.py
 launch/hover.launch.py
+launch/test_hover.launch.py
 resource/controls
 test/test_copyright.py
 test/test_flake8.py

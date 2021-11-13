@@ -5,7 +5,7 @@ def generate_launch_description():
     return LaunchDescription([
         Node(
             package='controls',
-            executable='transmitter'
+            executable='flight_controller'
         ),
         Node(
             package='controls',
@@ -13,6 +13,6 @@ def generate_launch_description():
         ),
         Node(
             package='controls',
-            executable='publishHeight'
+            executable='distance_sensor'
         )
     ])
