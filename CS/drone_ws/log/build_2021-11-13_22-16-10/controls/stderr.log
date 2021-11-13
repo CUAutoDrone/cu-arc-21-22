@@ -1,0 +1,6 @@
+  File "/home/ubuntu/cu-arc-21-22/CS/drone_ws/install/controls/lib/python3.8/site-packages/controls/fccontrolclass.py", line 34
+    Int64, 'throttle', lambda x: self.throttle = x, 1
+                       ^
+SyntaxError: expression cannot contain assignment, perhaps you meant "=="?
+
+Sorry: TabError: inconsistent use of tabs and spaces in indentation (distance_sensor.py, line 9)

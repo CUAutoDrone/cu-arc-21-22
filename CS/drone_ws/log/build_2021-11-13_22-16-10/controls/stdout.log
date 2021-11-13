@@ -1,0 +1,36 @@
+running egg_info
+writing ../../build/controls/controls.egg-info/PKG-INFO
+writing dependency_links to ../../build/controls/controls.egg-info/dependency_links.txt
+writing entry points to ../../build/controls/controls.egg-info/entry_points.txt
+writing requirements to ../../build/controls/controls.egg-info/requires.txt
+writing top-level names to ../../build/controls/controls.egg-info/top_level.txt
+reading manifest file '../../build/controls/controls.egg-info/SOURCES.txt'
+writing manifest file '../../build/controls/controls.egg-info/SOURCES.txt'
+running build
+running build_py
+copying controls/fccontrolclass.py -> /home/ubuntu/cu-arc-21-22/CS/drone_ws/build/controls/build/lib/controls
+copying controls/publishHeight.py -> /home/ubuntu/cu-arc-21-22/CS/drone_ws/build/controls/build/lib/controls
+copying controls/distance_sensor.py -> /home/ubuntu/cu-arc-21-22/CS/drone_ws/build/controls/build/lib/controls
+copying controls/pid.py -> /home/ubuntu/cu-arc-21-22/CS/drone_ws/build/controls/build/lib/controls
+running install
+running install_lib
+copying /home/ubuntu/cu-arc-21-22/CS/drone_ws/build/controls/build/lib/controls/fccontrolclass.py -> /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/controls/lib/python3.8/site-packages/controls
+copying /home/ubuntu/cu-arc-21-22/CS/drone_ws/build/controls/build/lib/controls/publishHeight.py -> /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/controls/lib/python3.8/site-packages/controls
+copying /home/ubuntu/cu-arc-21-22/CS/drone_ws/build/controls/build/lib/controls/distance_sensor.py -> /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/controls/lib/python3.8/site-packages/controls
+copying /home/ubuntu/cu-arc-21-22/CS/drone_ws/build/controls/build/lib/controls/pid.py -> /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/controls/lib/python3.8/site-packages/controls
+byte-compiling /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/controls/lib/python3.8/site-packages/controls/fccontrolclass.py to fccontrolclass.cpython-38.pyc
+byte-compiling /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/controls/lib/python3.8/site-packages/controls/publishHeight.py to publishHeight.cpython-38.pyc
+byte-compiling /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/controls/lib/python3.8/site-packages/controls/distance_sensor.py to distance_sensor.cpython-38.pyc
+byte-compiling /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/controls/lib/python3.8/site-packages/controls/pid.py to pid.cpython-38.pyc
+running install_data
+copying launch/hover.launch.py -> /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/controls/share/controls
+copying launch/test_hover.launch.py -> /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/controls/share/controls
+running install_egg_info
+removing '/home/ubuntu/cu-arc-21-22/CS/drone_ws/install/controls/lib/python3.8/site-packages/controls-0.0.0-py3.8.egg-info' (and everything under it)
+Copying ../../build/controls/controls.egg-info to /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/controls/lib/python3.8/site-packages/controls-0.0.0-py3.8.egg-info
+running install_scripts
+Installing distance_sensor script to /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/controls/lib/controls
+Installing flight_controller script to /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/controls/lib/controls
+Installing pid script to /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/controls/lib/controls
+Installing test_transmitter script to /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/controls/lib/controls
+writing list of installed files to '/home/ubuntu/cu-arc-21-22/CS/drone_ws/build/controls/install.log'
