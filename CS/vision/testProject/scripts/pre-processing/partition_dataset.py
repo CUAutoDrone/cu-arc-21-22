@@ -21,7 +21,7 @@ optional arguments:
 
 
 def iterate_dir(train, test, copy_xml):
-    base = os.path.join(os.getcwd(), "training_demo")
+    base = os.path.join(os.getcwd(), "workspace/training_demo")
     pos_img = os.path.join(base, "pos_img")
     train_dir = os.path.join(base, "train")
     test_dir = os.path.join(base, "test")
