@@ -21,10 +21,16 @@ optional arguments:
 
 
 def iterate_dir(train, test, copy_xml):
-    base = os.path.join(os.getcwd(), "workspace/training_demo")
+    base = os.path.join(os.getcwd(), "workspace/training_demo/images")
+    annote_base = os.path.join(os.getcwd(), "workspace/training_demo/annotations")
+    pos_annote = os.path.join(annote_base, "pos_annotations")
     pos_img = os.path.join(base, "pos_img")
     train_dir = os.path.join(base, "train")
     test_dir = os.path.join(base, "test")
+
+    # print(pos_img)
+    # print(train_dir)
+    # print(test_dir)
 
     if not os.path.exists(train_dir):
         os.makedirs(train_dir)
@@ -49,7 +55,7 @@ def iterate_dir(train, test, copy_xml):
                  os.path.join(test_dir, filename))
         if copy_xml:
             xml_filename = os.path.splitext(filename)[0]+'.xml'
-            copyfile(os.path.join(pos_img, xml_filename),
+            copyfile(os.path.join(pos_annote, xml_filename),
                      os.path.join(test_dir, xml_filename))
 
     for i in range(num_train_images):
@@ -59,7 +65,7 @@ def iterate_dir(train, test, copy_xml):
                  os.path.join(train_dir, filename))
         if copy_xml:
             xml_filename = os.path.splitext(filename)[0]+'.xml'
-            copyfile(os.path.join(pos_img, xml_filename),
+            copyfile(os.path.join(pos_annote, xml_filename),
                      os.path.join(train_dir, xml_filename))
 
 
