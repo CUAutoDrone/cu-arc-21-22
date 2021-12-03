@@ -1,0 +1,3 @@
+[submodule "CS/vision/testProject/CS/vision/testProject/models"]
+	path = CS/vision/testProject/CS/vision/testProject/models
+	url = https://github.com/CornellAerialRobotics/cu-arc-21-22.git
