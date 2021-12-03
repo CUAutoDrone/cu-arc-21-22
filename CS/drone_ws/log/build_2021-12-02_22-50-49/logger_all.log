@@ -1,0 +1,122 @@
+[1.769s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[1.769s] DEBUG:colcon:Parsed command line arguments: Namespace(ament_cmake_args=None, base_paths=['.'], build_base='build', catkin_cmake_args=None, catkin_skip_building_tests=False, cmake_args=None, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, cmake_target=None, cmake_target_skip_unavailable=False, continue_on_error=False, event_handlers=None, executor='parallel', ignore_user_meta=False, install_base='install', log_base=None, log_level=None, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0xffffa988b9a0>>, merge_install=False, metas=['./colcon.meta'], packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_end=None, packages_ignore=None, packages_ignore_regex=None, packages_select=None, packages_select_build_failed=False, packages_select_by_dep=None, packages_select_regex=None, packages_select_test_failures=False, packages_skip=None, packages_skip_build_finished=False, packages_skip_by_dep=None, packages_skip_regex=None, packages_skip_test_passed=False, packages_skip_up_to=None, packages_start=None, packages_up_to=None, packages_up_to_regex=None, parallel_workers=4, paths=None, symlink_install=False, test_result_base=None, verb_extension=<colcon_core.verb.build.BuildVerb object at 0xffffa988b9a0>, verb_name='build', verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0xffffa988bf10>)
+[1.820s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[1.821s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[1.821s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[1.821s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[1.821s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[1.822s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[1.822s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/ubuntu/cu-arc-21-22/CS/drone_ws'
+[1.823s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[1.823s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[1.824s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[1.824s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[1.824s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[1.825s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[1.825s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[1.825s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[1.825s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[1.914s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[1.914s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[1.915s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[1.915s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[1.915s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[1.916s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[1.916s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[1.917s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[1.918s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[1.918s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[1.919s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[1.920s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[1.921s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[1.921s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[1.922s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[1.922s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[1.923s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[1.923s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[1.923s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[1.924s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[1.924s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[1.924s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[1.924s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[1.925s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[1.925s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[1.925s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[1.925s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[1.925s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[1.926s] Level 1:colcon.colcon_core.package_identification:_identify(src/controls) by extensions ['ignore', 'ignore_ament_install']
+[1.927s] Level 1:colcon.colcon_core.package_identification:_identify(src/controls) by extension 'ignore'
+[1.927s] Level 1:colcon.colcon_core.package_identification:_identify(src/controls) by extension 'ignore_ament_install'
+[1.928s] Level 1:colcon.colcon_core.package_identification:_identify(src/controls) by extensions ['colcon_pkg']
+[1.928s] Level 1:colcon.colcon_core.package_identification:_identify(src/controls) by extension 'colcon_pkg'
+[1.928s] Level 1:colcon.colcon_core.package_identification:_identify(src/controls) by extensions ['colcon_meta']
+[1.928s] Level 1:colcon.colcon_core.package_identification:_identify(src/controls) by extension 'colcon_meta'
+[1.929s] Level 1:colcon.colcon_core.package_identification:_identify(src/controls) by extensions ['ros']
+[1.929s] Level 1:colcon.colcon_core.package_identification:_identify(src/controls) by extension 'ros'
+[1.947s] DEBUG:colcon.colcon_core.package_identification:Package 'src/controls' with type 'ros.ament_python' and name 'controls'
+[1.947s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[1.947s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[1.948s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[1.948s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[1.948s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[2.060s] Level 5:colcon.colcon_core.verb:set package 'controls' build argument 'cmake_args' from command line to 'None'
+[2.060s] Level 5:colcon.colcon_core.verb:set package 'controls' build argument 'cmake_target' from command line to 'None'
+[2.060s] Level 5:colcon.colcon_core.verb:set package 'controls' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[2.061s] Level 5:colcon.colcon_core.verb:set package 'controls' build argument 'cmake_clean_cache' from command line to 'False'
+[2.061s] Level 5:colcon.colcon_core.verb:set package 'controls' build argument 'cmake_clean_first' from command line to 'False'
+[2.061s] Level 5:colcon.colcon_core.verb:set package 'controls' build argument 'cmake_force_configure' from command line to 'False'
+[2.061s] Level 5:colcon.colcon_core.verb:set package 'controls' build argument 'ament_cmake_args' from command line to 'None'
+[2.061s] Level 5:colcon.colcon_core.verb:set package 'controls' build argument 'catkin_cmake_args' from command line to 'None'
+[2.062s] Level 5:colcon.colcon_core.verb:set package 'controls' build argument 'catkin_skip_building_tests' from command line to 'False'
+[2.062s] DEBUG:colcon.colcon_core.verb:Building package 'controls' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/ubuntu/cu-arc-21-22/CS/drone_ws/build/controls', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/ubuntu/cu-arc-21-22/CS/drone_ws/install/controls', 'merge_install': False, 'path': '/home/ubuntu/cu-arc-21-22/CS/drone_ws/src/controls', 'symlink_install': False, 'test_result_base': None}
+[2.064s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[2.073s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[2.074s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/ubuntu/cu-arc-21-22/CS/drone_ws/src/controls' with build type 'ament_python'
+[2.076s] Level 1:colcon.colcon_core.shell:create_environment_hook('controls', 'ament_prefix_path')
+[2.110s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[2.111s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuntu/cu-arc-21-22/CS/drone_ws/install/controls/share/controls/hook/ament_prefix_path.ps1'
+[2.117s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ubuntu/cu-arc-21-22/CS/drone_ws/install/controls/share/controls/hook/ament_prefix_path.dsv'
+[2.128s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuntu/cu-arc-21-22/CS/drone_ws/install/controls/share/controls/hook/ament_prefix_path.sh'
+[2.143s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.143s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[3.270s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/ubuntu/cu-arc-21-22/CS/drone_ws/src/controls'
+[3.273s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[3.274s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[3.330s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ubuntu/cu-arc-21-22/CS/drone_ws/src/controls': PYTHONPATH=/home/ubuntu/cu-arc-21-22/CS/drone_ws/install/controls/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/controls build --build-base /home/ubuntu/cu-arc-21-22/CS/drone_ws/build/controls/build install --prefix /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/controls --record /home/ubuntu/cu-arc-21-22/CS/drone_ws/build/controls/install.log --single-version-externally-managed
+[4.940s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ubuntu/cu-arc-21-22/CS/drone_ws/src/controls' returned '0': PYTHONPATH=/home/ubuntu/cu-arc-21-22/CS/drone_ws/install/controls/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/controls build --build-base /home/ubuntu/cu-arc-21-22/CS/drone_ws/build/controls/build install --prefix /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/controls --record /home/ubuntu/cu-arc-21-22/CS/drone_ws/build/controls/install.log --single-version-externally-managed
+[4.980s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/cu-arc-21-22/CS/drone_ws/install/controls' for CMake module files
+[4.984s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/cu-arc-21-22/CS/drone_ws/install/controls' for CMake config files
+[4.989s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/cu-arc-21-22/CS/drone_ws/install/controls/lib'
+[4.990s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/cu-arc-21-22/CS/drone_ws/install/controls/bin'
+[4.991s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/cu-arc-21-22/CS/drone_ws/install/controls/lib/pkgconfig/controls.pc'
+[4.991s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/cu-arc-21-22/CS/drone_ws/install/controls/lib/python3.8/site-packages'
+[4.992s] Level 1:colcon.colcon_core.shell:create_environment_hook('controls', 'pythonpath')
+[4.995s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuntu/cu-arc-21-22/CS/drone_ws/install/controls/share/controls/hook/pythonpath.ps1'
+[4.999s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ubuntu/cu-arc-21-22/CS/drone_ws/install/controls/share/controls/hook/pythonpath.dsv'
+[5.001s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuntu/cu-arc-21-22/CS/drone_ws/install/controls/share/controls/hook/pythonpath.sh'
+[5.004s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(controls)
+[5.007s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuntu/cu-arc-21-22/CS/drone_ws/install/controls/share/controls/package.ps1'
+[5.023s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ubuntu/cu-arc-21-22/CS/drone_ws/install/controls/share/controls/package.dsv'
+[5.033s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuntu/cu-arc-21-22/CS/drone_ws/install/controls/share/controls/package.sh'
+[5.040s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuntu/cu-arc-21-22/CS/drone_ws/install/controls/share/controls/package.bash'
+[5.054s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuntu/cu-arc-21-22/CS/drone_ws/install/controls/share/controls/package.zsh'
+[5.063s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ubuntu/cu-arc-21-22/CS/drone_ws/install/controls/share/colcon-core/packages/controls)
+[5.065s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[5.066s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[5.068s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[5.068s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[5.116s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[5.117s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[5.117s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[5.124s] DEBUG:colcon.colcon_notification.desktop_notification.notify2:Failed to initialize notify2: org.freedesktop.DBus.Error.ServiceUnknown: The name org.freedesktop.Notifications was not provided by any .service files
+[5.124s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[5.128s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ubuntu/cu-arc-21-22/CS/drone_ws/install/local_setup.ps1'
+[5.136s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/ubuntu/cu-arc-21-22/CS/drone_ws/install/_local_setup_util_ps1.py'
+[5.147s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ubuntu/cu-arc-21-22/CS/drone_ws/install/setup.ps1'
+[5.160s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ubuntu/cu-arc-21-22/CS/drone_ws/install/local_setup.sh'
+[5.167s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/ubuntu/cu-arc-21-22/CS/drone_ws/install/_local_setup_util_sh.py'
+[5.170s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ubuntu/cu-arc-21-22/CS/drone_ws/install/setup.sh'
+[5.182s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ubuntu/cu-arc-21-22/CS/drone_ws/install/local_setup.bash'
+[5.189s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ubuntu/cu-arc-21-22/CS/drone_ws/install/setup.bash'
+[5.200s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ubuntu/cu-arc-21-22/CS/drone_ws/install/local_setup.zsh'
+[5.207s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ubuntu/cu-arc-21-22/CS/drone_ws/install/setup.zsh'

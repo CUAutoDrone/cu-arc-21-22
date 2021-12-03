@@ -26,24 +26,25 @@ class FlightController(Node):
         self.yaw = yaw
         self.roll = roll
         self.constantmessage = False
+        self.callback_group = rclpy.callback_groups.ReentrantCallbackGroup()
 
         self.arm_subscription = self.create_subscription(
-            Bool, 'arm', lambda msg: self.arm() if msg.data else self.disarm, 1
+            Bool, 'arm', lambda msg: self.arm() if msg.data else self.disarm(), 1, callback_group=self.callback_group
         )
         self.throttle_subscription = self.create_subscription(
-            Int64, 'throttle', lambda msg: self.setThrottle(msg.data), 1
+            Int64, 'throttle', lambda msg: self.setThrottle(msg.data), 1, callback_group=self.callback_group
         )
         self.pitch_subscription = self.create_subscription(
-            Int64, 'pitch', lambda msg: self.setPitch(msg.data), 1
+            Int64, 'pitch', lambda msg: self.setPitch(msg.data), 1, callback_group=self.callback_group
         )
         self.roll_subscription = self.create_subscription(
-            Int64, 'roll', lambda msg: self.setRoll(msg.data), 1
+            Int64, 'roll', lambda msg: self.setRoll(msg.data), 1, callback_group=self.callback_group
         )
         self.yaw_subscription = self.create_subscription(
-            Int64, 'yaw', lambda msg: self.setYaw(msg.data), 1
+            Int64, 'yaw', lambda msg: self.setYaw(msg.data), 1, callback_group=self.callback_group
         )
         self.timer = self.create_timer(
-            0.01, self.test_transmit if test else self.transmit
+            0.01, self.test_transmit if test else self.transmit, callback_group=self.callback_group
         )
 
 
@@ -104,14 +105,14 @@ class FlightController(Node):
 
 
     def disarm(self):
-        print("Disarming Drone")
+        self.get_logger().info("Disarming Drone")
         self.armed = False
 
 
     def arm(self):
-        print("Arming Drone")
+        self.get_logger().info("Arming Drone")
         self.arming = True
-        sleep(1)
+        sleep(5)
         self.armed = True
         self.arming = False
 
@@ -151,20 +152,24 @@ class FlightController(Node):
 def main(args=None):
     rclpy.init(args=args)
 
+    executor = MultiThreadedExecutor()
     controller = FlightController()
-    rclpy.spin(controller)
+    executor.add_node(controller)
+    executor.spin()
 
-    controller.destroy_node()
+    executor.destroy_node()
     rclpy.shutdown()
 
 
 def test_main(args=None):
     rclpy.init(args=args)
 
+    executor = MultiThreadedExecutor()
     controller = FlightController(test=True)
-    rclpy.spin(controller)
+    executor.add_node(controller)
+    executor.spin()
 
-    controller.destroy_node()
+    executor.destroy_node()
     rclpy.shutdown()
 
 

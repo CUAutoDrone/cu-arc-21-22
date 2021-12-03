@@ -17,14 +17,14 @@ class PID(Node):
 
         self.desired_height = 0
 
-        self.kp = 0
+        self.kp = 10
         self.ki = 0
-        self.kd = 1
+        self.kd = 0
 
         self.sum = 0
         self.last_error = 0
 
-        self._neutral_throttle = 1200
+        self._neutral_throttle = 1550
 
 
     def update_callback(self, msg):
