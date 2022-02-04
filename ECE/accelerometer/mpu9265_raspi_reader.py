@@ -61,7 +61,7 @@ try:
         print("Roll: " + str(roll))
         print("Yaw: " + str(yaw))
 
-	time.sleep(0.5)
+	    time.sleep(0.5)
 
 except KeyboardInterrupt:
     sys.exit()
