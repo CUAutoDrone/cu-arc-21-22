@@ -1,0 +1,78 @@
+[0.000000] (-) TimerEvent: {}
+[0.001538] (controls) JobQueued: {'identifier': 'controls', 'dependencies': OrderedDict()}
+[0.003538] (controls) JobStarted: {'identifier': 'controls'}
+[0.098688] (-) TimerEvent: {}
+[0.199822] (-) TimerEvent: {}
+[0.301143] (-) TimerEvent: {}
+[0.405281] (-) TimerEvent: {}
+[0.506931] (-) TimerEvent: {}
+[0.607720] (-) TimerEvent: {}
+[0.708544] (-) TimerEvent: {}
+[0.809295] (-) TimerEvent: {}
+[0.910088] (-) TimerEvent: {}
+[1.010855] (-) TimerEvent: {}
+[1.111845] (-) TimerEvent: {}
+[1.213097] (-) TimerEvent: {}
+[1.314116] (-) TimerEvent: {}
+[1.416249] (-) TimerEvent: {}
+[1.518100] (-) TimerEvent: {}
+[1.619050] (-) TimerEvent: {}
+[1.720978] (-) TimerEvent: {}
+[1.821709] (-) TimerEvent: {}
+[1.922469] (-) TimerEvent: {}
+[2.023206] (-) TimerEvent: {}
+[2.123977] (-) TimerEvent: {}
+[2.224785] (-) TimerEvent: {}
+[2.325543] (-) TimerEvent: {}
+[2.426457] (-) TimerEvent: {}
+[2.527243] (-) TimerEvent: {}
+[2.628024] (-) TimerEvent: {}
+[2.728797] (-) TimerEvent: {}
+[2.829760] (-) TimerEvent: {}
+[2.930898] (-) TimerEvent: {}
+[2.939973] (controls) Command: {'cmd': ['/usr/bin/python3', 'setup.py', 'egg_info', '--egg-base', '../../build/controls', 'build', '--build-base', '/home/ubuntu/cu-arc-21-22/CS/drone_ws/build/controls/build', 'install', '--prefix', '/home/ubuntu/cu-arc-21-22/CS/drone_ws/install/controls', '--record', '/home/ubuntu/cu-arc-21-22/CS/drone_ws/build/controls/install.log', '--single-version-externally-managed'], 'cwd': '/home/ubuntu/cu-arc-21-22/CS/drone_ws/src/controls', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'ubuntu', 'SSH_CLIENT': '10.49.41.60 49774 22', 'XDG_SESSION_TYPE': 'tty', 'GIT_ASKPASS': '/home/ubuntu/.vscode-server/bin/ccbaa2d27e38e5afa3e5c21c1c7bef4657064247/extensions/git/dist/askpass.sh', 'SHLVL': '2', 'LD_LIBRARY_PATH': '/home/ubuntu/ros2_foxy/ros2-linux/opt/yaml_cpp_vendor/lib:/home/ubuntu/ros2_foxy/ros2-linux/opt/rviz_ogre_vendor/lib:/home/ubuntu/ros2_foxy/ros2-linux/lib', 'BROWSER': '/home/ubuntu/.vscode-server/bin/ccbaa2d27e38e5afa3e5c21c1c7bef4657064247/bin/helpers/browser.sh', 'MOTD_SHOWN': 'pam', 'HOME': '/home/ubuntu', 'OLDPWD': '/home/ubuntu/.vscode-server/bin/ccbaa2d27e38e5afa3e5c21c1c7bef4657064247', 'TERM_PROGRAM_VERSION': '1.62.3', 'VSCODE_IPC_HOOK_CLI': '/run/user/1000/vscode-ipc-45625f00-bc8b-46e8-92c3-cab2b24590f5.sock', 'ROS_PYTHON_VERSION': '3', 'VSCODE_GIT_ASKPASS_MAIN': '/home/ubuntu/.vscode-server/bin/ccbaa2d27e38e5afa3e5c21c1c7bef4657064247/extensions/git/dist/askpass-main.js', 'VSCODE_GIT_ASKPASS_NODE': '/home/ubuntu/.vscode-server/bin/ccbaa2d27e38e5afa3e5c21c1c7bef4657064247/node', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'COLCON_PREFIX_PATH': '/home/ubuntu/cu-arc-21-22/CS/drone_ws/install:/home/ubuntu/ros2_foxy/ros2-linux', 'ROS_DISTRO': 'foxy', 'LOGNAME': 'ubuntu', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'PKG_CONFIG_PATH': '/home/ubuntu/ros2_foxy/ros2-linux/lib/aarch64-linux-gnu/pkgconfig:/home/ubuntu/ros2_foxy/ros2-linux/lib/pkgconfig', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm-256color', 'XDG_SESSION_ID': '14', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/home/ubuntu/.vscode-server/bin/ccbaa2d27e38e5afa3e5c21c1c7bef4657064247/bin:/home/ubuntu/.local/bin:/home/ubuntu/ros2_foxy/ros2-linux/bin:/home/ubuntu/.vscode-server/bin/ccbaa2d27e38e5afa3e5c21c1c7bef4657064247/bin:/home/ubuntu/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'XDG_RUNTIME_DIR': '/run/user/1000', 'LANG': 'C.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'VSCODE_GIT_IPC_HANDLE': '/run/user/1000/vscode-git-3f9f6c4e04.sock', 'TERM_PROGRAM': 'vscode', 'AMENT_PREFIX_PATH': '/home/ubuntu/cu-arc-21-22/CS/drone_ws/install/controls:/home/ubuntu/ros2_foxy/ros2-linux', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'PWD': '/home/ubuntu/cu-arc-21-22/CS/drone_ws/build/controls', 'SSH_CONNECTION': '10.49.41.60 49774 10.49.19.20 22', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/ubuntu/cu-arc-21-22/CS/drone_ws/install/controls/lib/python3.8/site-packages:/home/ubuntu/cu-arc-21-22/CS/drone_ws/install/controls/lib/python3.8/site-packages:/home/ubuntu/ros2_foxy/ros2-linux/lib/python3.8/site-packages', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/home/ubuntu/ros2_foxy/ros2-linux'}, 'shell': False}
+[3.031196] (-) TimerEvent: {}
+[3.132076] (-) TimerEvent: {}
+[3.232991] (-) TimerEvent: {}
+[3.333819] (-) TimerEvent: {}
+[3.434601] (-) TimerEvent: {}
+[3.535373] (-) TimerEvent: {}
+[3.636125] (-) TimerEvent: {}
+[3.736909] (-) TimerEvent: {}
+[3.837714] (-) TimerEvent: {}
+[3.938914] (-) TimerEvent: {}
+[3.959675] (controls) StdoutLine: {'line': b'running egg_info\n'}
+[3.962584] (controls) StdoutLine: {'line': b'writing ../../build/controls/controls.egg-info/PKG-INFO\n'}
+[3.965223] (controls) StdoutLine: {'line': b'writing dependency_links to ../../build/controls/controls.egg-info/dependency_links.txt\n'}
+[3.966282] (controls) StdoutLine: {'line': b'writing entry points to ../../build/controls/controls.egg-info/entry_points.txt\n'}
+[3.967522] (controls) StdoutLine: {'line': b'writing requirements to ../../build/controls/controls.egg-info/requires.txt\n'}
+[3.968558] (controls) StdoutLine: {'line': b'writing top-level names to ../../build/controls/controls.egg-info/top_level.txt\n'}
+[4.039080] (-) TimerEvent: {}
+[4.118874] (controls) StdoutLine: {'line': b"reading manifest file '../../build/controls/controls.egg-info/SOURCES.txt'\n"}
+[4.123879] (controls) StdoutLine: {'line': b"writing manifest file '../../build/controls/controls.egg-info/SOURCES.txt'\n"}
+[4.124968] (controls) StdoutLine: {'line': b'running build\n'}
+[4.125789] (controls) StdoutLine: {'line': b'running build_py\n'}
+[4.128067] (controls) StdoutLine: {'line': b'copying controls/killswitch.py -> /home/ubuntu/cu-arc-21-22/CS/drone_ws/build/controls/build/lib/controls\n'}
+[4.129914] (controls) StdoutLine: {'line': b'running install\n'}
+[4.134386] (controls) StdoutLine: {'line': b'running install_lib\n'}
+[4.139284] (-) TimerEvent: {}
+[4.142624] (controls) StdoutLine: {'line': b'copying /home/ubuntu/cu-arc-21-22/CS/drone_ws/build/controls/build/lib/controls/killswitch.py -> /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/controls/lib/python3.8/site-packages/controls\n'}
+[4.148906] (controls) StdoutLine: {'line': b'byte-compiling /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/controls/lib/python3.8/site-packages/controls/killswitch.py to killswitch.cpython-38.pyc\n'}
+[4.156083] (controls) StdoutLine: {'line': b'running install_data\n'}
+[4.161820] (controls) StdoutLine: {'line': b'running install_egg_info\n'}
+[4.168114] (controls) StdoutLine: {'line': b"removing '/home/ubuntu/cu-arc-21-22/CS/drone_ws/install/controls/lib/python3.8/site-packages/controls-0.0.0-py3.8.egg-info' (and everything under it)\n"}
+[4.171161] (controls) StdoutLine: {'line': b'Copying ../../build/controls/controls.egg-info to /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/controls/lib/python3.8/site-packages/controls-0.0.0-py3.8.egg-info\n'}
+[4.180975] (controls) StdoutLine: {'line': b'running install_scripts\n'}
+[4.239447] (-) TimerEvent: {}
+[4.263265] (controls) StdoutLine: {'line': b'Installing distance_sensor script to /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/controls/lib/controls\n'}
+[4.264477] (controls) StdoutLine: {'line': b'Installing flight_controller script to /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/controls/lib/controls\n'}
+[4.265493] (controls) StdoutLine: {'line': b'Installing killswitch script to /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/controls/lib/controls\n'}
+[4.266432] (controls) StdoutLine: {'line': b'Installing pid script to /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/controls/lib/controls\n'}
+[4.267734] (controls) StdoutLine: {'line': b'Installing test_flight_controller script to /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/controls/lib/controls\n'}
+[4.268622] (controls) StdoutLine: {'line': b'Installing ultrasonic_sensor script to /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/controls/lib/controls\n'}
+[4.270610] (controls) StdoutLine: {'line': b"writing list of installed files to '/home/ubuntu/cu-arc-21-22/CS/drone_ws/build/controls/install.log'\n"}
+[4.339788] (-) TimerEvent: {}
+[4.380458] (controls) CommandEnded: {'returncode': 0}
+[4.440339] (-) TimerEvent: {}
+[4.446634] (controls) JobEnded: {'identifier': 'controls', 'rc': 0}
+[4.452201] (-) EventReactorShutdown: {}

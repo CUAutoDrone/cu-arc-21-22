@@ -26,7 +26,9 @@ setup(
             'flight_controller = controls.flight_controller:main',
             'test_flight_controller = controls.flight_controller:test_main',
             'distance_sensor = controls.distance_sensor:main',
-            'pid = controls.pid:main'
+            'ultrasonic_sensor = controls.ultrasonic_sensor:main',
+            'pid = controls.pid:main',
+            'killswitch = controls.killswitch:main'
         ],
     },
 )

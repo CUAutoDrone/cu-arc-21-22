@@ -13,6 +13,6 @@ def generate_launch_description():
         ),
         Node(
             package='controls',
-            executable='distance_sensor'
+            executable='ultrasonic_sensor'
         )
     ])

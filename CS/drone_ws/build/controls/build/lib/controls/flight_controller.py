@@ -26,25 +26,25 @@ class FlightController(Node):
         self.yaw = yaw
         self.roll = roll
         self.constantmessage = False
-        self.callback_group = rclpy.callback_groups.ReentrantCallbackGroup()
+        self.timer_callback_group = rclpy.callback_groups.MutuallyExclusiveCallbackGroup()
 
         self.arm_subscription = self.create_subscription(
-            Bool, 'arm', lambda msg: self.arm() if msg.data else self.disarm(), 1, callback_group=self.callback_group
+            Bool, 'arm', lambda msg: self.arm() if msg.data else self.disarm(), 1
         )
         self.throttle_subscription = self.create_subscription(
-            Int64, 'throttle', lambda msg: self.setThrottle(msg.data), 1, callback_group=self.callback_group
+            Int64, 'throttle', lambda msg: self.setThrottle(msg.data), 1
         )
         self.pitch_subscription = self.create_subscription(
-            Int64, 'pitch', lambda msg: self.setPitch(msg.data), 1, callback_group=self.callback_group
+            Int64, 'pitch', lambda msg: self.setPitch(msg.data), 1
         )
         self.roll_subscription = self.create_subscription(
-            Int64, 'roll', lambda msg: self.setRoll(msg.data), 1, callback_group=self.callback_group
+            Int64, 'roll', lambda msg: self.setRoll(msg.data), 1
         )
         self.yaw_subscription = self.create_subscription(
-            Int64, 'yaw', lambda msg: self.setYaw(msg.data), 1, callback_group=self.callback_group
+            Int64, 'yaw', lambda msg: self.setYaw(msg.data), 1
         )
-        self.timer = self.create_timer(
-            0.01, self.test_transmit if test else self.transmit, callback_group=self.callback_group
+        self.transmit_timer = self.create_timer(
+            0.01, self.test_transmit if test else self.transmit, callback_group=self.timer_callback_group
         )
 
 
@@ -112,7 +112,7 @@ class FlightController(Node):
     def arm(self):
         self.get_logger().info("Arming Drone")
         self.arming = True
-        sleep(5)
+        sleep(1)
         self.armed = True
         self.arming = False
 

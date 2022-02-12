@@ -1,6 +1,8 @@
 [console_scripts]
 distance_sensor = controls.distance_sensor:main
 flight_controller = controls.flight_controller:main
+killswitch = controls.killswitch:main
 pid = controls.pid:main
 test_flight_controller = controls.flight_controller:test_main
+ultrasonic_sensor = controls.ultrasonic_sensor:main
 

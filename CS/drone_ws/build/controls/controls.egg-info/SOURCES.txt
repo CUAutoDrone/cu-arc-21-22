@@ -11,9 +11,11 @@ setup.py
 controls/__init__.py
 controls/distance_sensor.py
 controls/flight_controller.py
+controls/killswitch.py
 controls/pid.py
 controls/publishHeight.py
 controls/transmitter.py
+controls/ultrasonic.py
 launch/hover.launch.py
 launch/test_hover.launch.py
 resource/controls

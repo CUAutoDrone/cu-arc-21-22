@@ -17,7 +17,7 @@ class PID(Node):
 
         self.desired_height = 0
 
-        self.kp = 10
+        self.kp = 3
         self.ki = 0
         self.kd = 0
 
@@ -49,7 +49,7 @@ class PID(Node):
 
     
     def u_to_throttle(self, u):
-        return u + self._neutral_throttle
+        return min(u + self._neutral_throttle, 2000)
 
 
 def main(args=None):
