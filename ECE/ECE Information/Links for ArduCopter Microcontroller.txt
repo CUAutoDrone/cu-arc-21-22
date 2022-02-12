@@ -1,0 +1,5 @@
+https://www.youtube.com/watch?v=HL8ZYeLOYLA&t=49s -- Binding Transmiter to Receiver 
+https://www.instructables.com/Building-Your-First-ArduCopter/ -- Setting up microcontroller
+https://ardupilot.org/planner/docs/common-mission-planning.html -- Main Page for ArduPilot info
+
+ 
