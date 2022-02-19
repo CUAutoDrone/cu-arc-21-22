@@ -5,4 +5,5 @@ https://ardupilot.org/copter/docs/common-connect-mission-planner-autopilot.html 
 https://ardupilot.org/planner/docs/common-radio-control-calibration.html -- info on radio control calibration (transmitter setup)
 https://docs.px4.io/master/en/config/flight_mode.html -- Flight mode config
 https://robu.in/calibrating-apm-2-8-using-mission-planner/ -- more on arducopter setup and mission planner
+https://ardupilot.org/copter/docs/common-rc-systems.html -- radio control systems for arducopter
 
