@@ -1,0 +1,141 @@
+[0.000000] (-) TimerEvent: {}
+[0.001622] (controls) JobQueued: {'identifier': 'controls', 'dependencies': OrderedDict()}
+[0.001986] (pi_gpio_interface) JobQueued: {'identifier': 'pi_gpio_interface', 'dependencies': OrderedDict()}
+[0.002245] (pi_gpio) JobQueued: {'identifier': 'pi_gpio', 'dependencies': OrderedDict([('pi_gpio_interface', '/home/ubuntu/cu-arc-21-22/CS/drone_ws/install/pi_gpio_interface')])}
+[0.004292] (pi_gpio_interface) JobStarted: {'identifier': 'pi_gpio_interface'}
+[0.085214] (controls) JobStarted: {'identifier': 'controls'}
+[0.098825] (-) TimerEvent: {}
+[0.174796] (pi_gpio_interface) JobProgress: {'identifier': 'pi_gpio_interface', 'progress': 'cmake'}
+[0.175985] (pi_gpio_interface) Command: {'cmd': ['/usr/bin/cmake', '/home/ubuntu/cu-arc-21-22/CS/drone_ws/src/ros2_pi_gpio/pi_gpio_interface', '-DCMAKE_INSTALL_PREFIX=/home/ubuntu/cu-arc-21-22/CS/drone_ws/install/pi_gpio_interface'], 'cwd': '/home/ubuntu/cu-arc-21-22/CS/drone_ws/build/pi_gpio_interface', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'ubuntu'), ('SSH_CLIENT', '10.48.147.249 46178 22'), ('XDG_SESSION_TYPE', 'tty'), ('GIT_ASKPASS', '/home/ubuntu/.vscode-server/bin/f80445acd5a3dadef24aa209168452a3d97cc326/extensions/git/dist/askpass.sh'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/home/ubuntu/ros2_foxy/ros2-linux/opt/yaml_cpp_vendor/lib:/home/ubuntu/ros2_foxy/ros2-linux/opt/rviz_ogre_vendor/lib:/home/ubuntu/ros2_foxy/ros2-linux/lib'), ('BROWSER', '/home/ubuntu/.vscode-server/bin/f80445acd5a3dadef24aa209168452a3d97cc326/bin/helpers/browser.sh'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/ubuntu'), ('TERM_PROGRAM_VERSION', '1.64.2'), ('VSCODE_IPC_HOOK_CLI', '/run/user/1000/vscode-ipc-1ea35a1e-9e04-40bc-b6d8-6760a2c6e2c8.sock'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_MAIN', '/home/ubuntu/.vscode-server/bin/f80445acd5a3dadef24aa209168452a3d97cc326/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/home/ubuntu/.vscode-server/bin/f80445acd5a3dadef24aa209168452a3d97cc326/node'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('COLCON_PREFIX_PATH', '/home/ubuntu/cu-arc-21-22/CS/drone_ws/install:/home/ubuntu/ros2_foxy/ros2-linux'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'ubuntu'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('PKG_CONFIG_PATH', '/home/ubuntu/ros2_foxy/ros2-linux/lib/aarch64-linux-gnu/pkgconfig:/home/ubuntu/ros2_foxy/ros2-linux/lib/pkgconfig'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '8'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/ubuntu/.vscode-server/bin/f80445acd5a3dadef24aa209168452a3d97cc326/bin/remote-cli:/home/ubuntu/.local/bin:/home/ubuntu/ros2_foxy/ros2-linux/bin:/home/ubuntu/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('LANG', 'C.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-9416513771.sock'), ('TERM_PROGRAM', 'vscode'), ('AMENT_PREFIX_PATH', '/home/ubuntu/cu-arc-21-22/CS/drone_ws/install/controls:/home/ubuntu/ros2_foxy/ros2-linux'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/home/ubuntu/cu-arc-21-22/CS/drone_ws/build/pi_gpio_interface'), ('SSH_CONNECTION', '10.48.147.249 46178 10.49.96.89 22'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/ubuntu/cu-arc-21-22/CS/drone_ws/install/controls/lib/python3.8/site-packages:/home/ubuntu/ros2_foxy/ros2-linux/lib/python3.8/site-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/ubuntu/ros2_foxy/ros2-linux:/home/ubuntu/cu-arc-21-22/CS/drone_ws/install/controls')]), 'shell': False}
+[0.199121] (-) TimerEvent: {}
+[0.300388] (-) TimerEvent: {}
+[0.401510] (-) TimerEvent: {}
+[0.502402] (-) TimerEvent: {}
+[0.603188] (-) TimerEvent: {}
+[0.703937] (-) TimerEvent: {}
+[0.804803] (-) TimerEvent: {}
+[0.905509] (-) TimerEvent: {}
+[1.006222] (-) TimerEvent: {}
+[1.106955] (-) TimerEvent: {}
+[1.207776] (-) TimerEvent: {}
+[1.308743] (-) TimerEvent: {}
+[1.343842] (pi_gpio_interface) StdoutLine: {'line': b'-- The C compiler identification is GNU 9.3.0\n'}
+[1.408867] (-) TimerEvent: {}
+[1.509941] (-) TimerEvent: {}
+[1.610840] (-) TimerEvent: {}
+[1.711556] (-) TimerEvent: {}
+[1.812395] (-) TimerEvent: {}
+[1.913191] (-) TimerEvent: {}
+[2.013894] (-) TimerEvent: {}
+[2.115613] (-) TimerEvent: {}
+[2.179088] (pi_gpio_interface) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 9.3.0\n'}
+[2.215766] (-) TimerEvent: {}
+[2.217338] (pi_gpio_interface) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc\n'}
+[2.316022] (-) TimerEvent: {}
+[2.417171] (-) TimerEvent: {}
+[2.517963] (-) TimerEvent: {}
+[2.579334] (pi_gpio_interface) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc -- works\n'}
+[2.618216] (-) TimerEvent: {}
+[2.639186] (pi_gpio_interface) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[2.718401] (-) TimerEvent: {}
+[2.819370] (-) TimerEvent: {}
+[2.922951] (-) TimerEvent: {}
+[2.981981] (pi_gpio_interface) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[3.023129] (-) TimerEvent: {}
+[3.030730] (pi_gpio_interface) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[3.033092] (pi_gpio_interface) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[3.048098] (pi_gpio_interface) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++\n'}
+[3.123286] (-) TimerEvent: {}
+[3.224830] (-) TimerEvent: {}
+[3.327762] (-) TimerEvent: {}
+[3.422330] (controls) Command: {'cmd': ['/usr/bin/python3', 'setup.py', 'egg_info', '--egg-base', '../../build/controls', 'build', '--build-base', '/home/ubuntu/cu-arc-21-22/CS/drone_ws/build/controls/build', 'install', '--prefix', '/home/ubuntu/cu-arc-21-22/CS/drone_ws/install/controls', '--record', '/home/ubuntu/cu-arc-21-22/CS/drone_ws/build/controls/install.log', '--single-version-externally-managed'], 'cwd': '/home/ubuntu/cu-arc-21-22/CS/drone_ws/src/controls', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'ubuntu', 'SSH_CLIENT': '10.48.147.249 46178 22', 'XDG_SESSION_TYPE': 'tty', 'GIT_ASKPASS': '/home/ubuntu/.vscode-server/bin/f80445acd5a3dadef24aa209168452a3d97cc326/extensions/git/dist/askpass.sh', 'SHLVL': '2', 'LD_LIBRARY_PATH': '/home/ubuntu/ros2_foxy/ros2-linux/opt/yaml_cpp_vendor/lib:/home/ubuntu/ros2_foxy/ros2-linux/opt/rviz_ogre_vendor/lib:/home/ubuntu/ros2_foxy/ros2-linux/lib', 'BROWSER': '/home/ubuntu/.vscode-server/bin/f80445acd5a3dadef24aa209168452a3d97cc326/bin/helpers/browser.sh', 'MOTD_SHOWN': 'pam', 'HOME': '/home/ubuntu', 'TERM_PROGRAM_VERSION': '1.64.2', 'VSCODE_IPC_HOOK_CLI': '/run/user/1000/vscode-ipc-1ea35a1e-9e04-40bc-b6d8-6760a2c6e2c8.sock', 'ROS_PYTHON_VERSION': '3', 'VSCODE_GIT_ASKPASS_MAIN': '/home/ubuntu/.vscode-server/bin/f80445acd5a3dadef24aa209168452a3d97cc326/extensions/git/dist/askpass-main.js', 'VSCODE_GIT_ASKPASS_NODE': '/home/ubuntu/.vscode-server/bin/f80445acd5a3dadef24aa209168452a3d97cc326/node', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'COLCON_PREFIX_PATH': '/home/ubuntu/cu-arc-21-22/CS/drone_ws/install:/home/ubuntu/ros2_foxy/ros2-linux', 'ROS_DISTRO': 'foxy', 'LOGNAME': 'ubuntu', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'PKG_CONFIG_PATH': '/home/ubuntu/ros2_foxy/ros2-linux/lib/aarch64-linux-gnu/pkgconfig:/home/ubuntu/ros2_foxy/ros2-linux/lib/pkgconfig', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm-256color', 'XDG_SESSION_ID': '8', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/home/ubuntu/.vscode-server/bin/f80445acd5a3dadef24aa209168452a3d97cc326/bin/remote-cli:/home/ubuntu/.local/bin:/home/ubuntu/ros2_foxy/ros2-linux/bin:/home/ubuntu/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'XDG_RUNTIME_DIR': '/run/user/1000', 'LANG': 'C.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'VSCODE_GIT_IPC_HANDLE': '/run/user/1000/vscode-git-9416513771.sock', 'TERM_PROGRAM': 'vscode', 'AMENT_PREFIX_PATH': '/home/ubuntu/cu-arc-21-22/CS/drone_ws/install/controls:/home/ubuntu/ros2_foxy/ros2-linux', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'PWD': '/home/ubuntu/cu-arc-21-22/CS/drone_ws/build/controls', 'SSH_CONNECTION': '10.48.147.249 46178 10.49.96.89 22', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/ubuntu/cu-arc-21-22/CS/drone_ws/install/controls/lib/python3.8/site-packages:/home/ubuntu/cu-arc-21-22/CS/drone_ws/install/controls/lib/python3.8/site-packages:/home/ubuntu/ros2_foxy/ros2-linux/lib/python3.8/site-packages', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/home/ubuntu/ros2_foxy/ros2-linux'}, 'shell': False}
+[3.435283] (-) TimerEvent: {}
+[3.459036] (pi_gpio_interface) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ -- works\n'}
+[3.463064] (pi_gpio_interface) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[3.535260] (-) TimerEvent: {}
+[3.636683] (-) TimerEvent: {}
+[3.737478] (-) TimerEvent: {}
+[3.838369] (-) TimerEvent: {}
+[3.844227] (pi_gpio_interface) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[3.888545] (pi_gpio_interface) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[3.890694] (pi_gpio_interface) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[3.938522] (-) TimerEvent: {}
+[3.943142] (pi_gpio_interface) StdoutLine: {'line': b'-- Found ament_cmake: 0.9.9 (/home/ubuntu/ros2_foxy/ros2-linux/share/ament_cmake/cmake)\n'}
+[4.038694] (-) TimerEvent: {}
+[4.120272] (pi_gpio_interface) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") \n'}
+[4.121215] (pi_gpio_interface) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[4.138840] (-) TimerEvent: {}
+[4.240734] (-) TimerEvent: {}
+[4.341516] (-) TimerEvent: {}
+[4.442341] (-) TimerEvent: {}
+[4.543344] (-) TimerEvent: {}
+[4.631662] (controls) StdoutLine: {'line': b'running egg_info\n'}
+[4.634377] (controls) StdoutLine: {'line': b'writing ../../build/controls/controls.egg-info/PKG-INFO\n'}
+[4.636656] (controls) StdoutLine: {'line': b'writing dependency_links to ../../build/controls/controls.egg-info/dependency_links.txt\n'}
+[4.637985] (controls) StdoutLine: {'line': b'writing entry points to ../../build/controls/controls.egg-info/entry_points.txt\n'}
+[4.639058] (controls) StdoutLine: {'line': b'writing requirements to ../../build/controls/controls.egg-info/requires.txt\n'}
+[4.639959] (controls) StdoutLine: {'line': b'writing top-level names to ../../build/controls/controls.egg-info/top_level.txt\n'}
+[4.643520] (-) TimerEvent: {}
+[4.744544] (-) TimerEvent: {}
+[4.796928] (controls) StdoutLine: {'line': b"reading manifest file '../../build/controls/controls.egg-info/SOURCES.txt'\n"}
+[4.867349] (-) TimerEvent: {}
+[4.871780] (controls) StdoutLine: {'line': b"writing manifest file '../../build/controls/controls.egg-info/SOURCES.txt'\n"}
+[4.875399] (controls) StdoutLine: {'line': b'running build\n'}
+[4.876189] (controls) StdoutLine: {'line': b'running build_py\n'}
+[4.878933] (controls) StdoutLine: {'line': b'running install\n'}
+[4.882208] (controls) StdoutLine: {'line': b'running install_lib\n'}
+[4.891911] (controls) StdoutLine: {'line': b'running install_data\n'}
+[4.894933] (controls) StdoutLine: {'line': b'copying launch/test_hover.launch.py -> /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/controls/share/controls\n'}
+[4.896612] (controls) StdoutLine: {'line': b'running install_egg_info\n'}
+[4.902867] (controls) StdoutLine: {'line': b"removing '/home/ubuntu/cu-arc-21-22/CS/drone_ws/install/controls/lib/python3.8/site-packages/controls-0.0.0-py3.8.egg-info' (and everything under it)\n"}
+[4.920779] (controls) StdoutLine: {'line': b'Copying ../../build/controls/controls.egg-info to /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/controls/lib/python3.8/site-packages/controls-0.0.0-py3.8.egg-info\n'}
+[4.921761] (controls) StdoutLine: {'line': b'running install_scripts\n'}
+[4.967513] (-) TimerEvent: {}
+[4.985355] (controls) StdoutLine: {'line': b'Installing distance_sensor script to /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/controls/lib/controls\n'}
+[4.988047] (controls) StdoutLine: {'line': b'Installing flight_controller script to /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/controls/lib/controls\n'}
+[4.990323] (controls) StdoutLine: {'line': b'Installing killswitch script to /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/controls/lib/controls\n'}
+[4.991849] (controls) StdoutLine: {'line': b'Installing pid script to /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/controls/lib/controls\n'}
+[4.993763] (controls) StdoutLine: {'line': b'Installing test_flight_controller script to /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/controls/lib/controls\n'}
+[4.995842] (controls) StdoutLine: {'line': b'Installing ultrasonic_sensor script to /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/controls/lib/controls\n'}
+[4.998348] (controls) StdoutLine: {'line': b"writing list of installed files to '/home/ubuntu/cu-arc-21-22/CS/drone_ws/build/controls/install.log'\n"}
+[5.067826] (-) TimerEvent: {}
+[5.101091] (controls) CommandEnded: {'returncode': 0}
+[5.161908] (controls) JobEnded: {'identifier': 'controls', 'rc': 0}
+[5.168470] (-) TimerEvent: {}
+[5.269745] (-) TimerEvent: {}
+[5.370506] (-) TimerEvent: {}
+[5.471230] (-) TimerEvent: {}
+[5.571928] (-) TimerEvent: {}
+[5.574154] (pi_gpio_interface) StdoutLine: {'line': b'-- Found rosidl_default_generators: 1.0.1 (/home/ubuntu/ros2_foxy/ros2-linux/share/rosidl_default_generators/cmake)\n'}
+[5.614761] (pi_gpio_interface) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[5.672110] (-) TimerEvent: {}
+[5.711140] (pi_gpio_interface) StdoutLine: {'line': b'-- Found rosidl_adapter: 1.2.1 (/home/ubuntu/ros2_foxy/ros2-linux/share/rosidl_adapter/cmake)\n'}
+[5.772287] (-) TimerEvent: {}
+[5.873058] (-) TimerEvent: {}
+[5.973787] (-) TimerEvent: {}
+[6.074580] (-) TimerEvent: {}
+[6.175395] (-) TimerEvent: {}
+[6.229470] (pi_gpio_interface) StderrLine: {'line': b'CMake Error at /usr/share/cmake-3.16/Modules/FindPackageHandleStandardArgs.cmake:146 (message):\n'}
+[6.230571] (pi_gpio_interface) StderrLine: {'line': b'  Could NOT find OpenSSL, try to set the path to OpenSSL root folder in the\n'}
+[6.231212] (pi_gpio_interface) StderrLine: {'line': b'  system variable OPENSSL_ROOT_DIR (missing: OPENSSL_CRYPTO_LIBRARY\n'}
+[6.231626] (pi_gpio_interface) StderrLine: {'line': b'  OPENSSL_INCLUDE_DIR)\n'}
+[6.231997] (pi_gpio_interface) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[6.232368] (pi_gpio_interface) StderrLine: {'line': b'  /usr/share/cmake-3.16/Modules/FindPackageHandleStandardArgs.cmake:393 (_FPHSA_FAILURE_MESSAGE)\n'}
+[6.232806] (pi_gpio_interface) StderrLine: {'line': b'  /usr/share/cmake-3.16/Modules/FindOpenSSL.cmake:447 (find_package_handle_standard_args)\n'}
+[6.233191] (pi_gpio_interface) StderrLine: {'line': b'  /home/ubuntu/ros2_foxy/ros2-linux/share/fastrtps/cmake/fastrtps-config.cmake:52 (find_package)\n'}
+[6.233558] (pi_gpio_interface) StderrLine: {'line': b'  /home/ubuntu/ros2_foxy/ros2-linux/share/rosidl_typesupport_fastrtps_c/cmake/rosidl_typesupport_fastrtps_c-extras.cmake:6 (find_package)\n'}
+[6.233972] (pi_gpio_interface) StderrLine: {'line': b'  /home/ubuntu/ros2_foxy/ros2-linux/share/rosidl_typesupport_fastrtps_c/cmake/rosidl_typesupport_fastrtps_cConfig.cmake:41 (include)\n'}
+[6.234343] (pi_gpio_interface) StderrLine: {'line': b'  /home/ubuntu/ros2_foxy/ros2-linux/share/rosidl_typesupport_c/cmake/rosidl_typesupport_c-extras.cmake:13 (find_package)\n'}
+[6.234738] (pi_gpio_interface) StderrLine: {'line': b'  /home/ubuntu/ros2_foxy/ros2-linux/share/rosidl_typesupport_c/cmake/rosidl_typesupport_cConfig.cmake:41 (include)\n'}
+[6.235102] (pi_gpio_interface) StderrLine: {'line': b'  /home/ubuntu/ros2_foxy/ros2-linux/share/rosidl_default_generators/cmake/rosidl_default_generators-extras.cmake:21 (find_package)\n'}
+[6.235468] (pi_gpio_interface) StderrLine: {'line': b'  /home/ubuntu/ros2_foxy/ros2-linux/share/rosidl_default_generators/cmake/rosidl_default_generatorsConfig.cmake:41 (include)\n'}
+[6.235839] (pi_gpio_interface) StderrLine: {'line': b'  CMakeLists.txt:14 (find_package)\n'}
+[6.236217] (pi_gpio_interface) StderrLine: {'line': b'\n'}
+[6.236619] (pi_gpio_interface) StderrLine: {'line': b'\n'}
+[6.239297] (pi_gpio_interface) StdoutLine: {'line': b'-- Configuring incomplete, errors occurred!\n'}
+[6.240137] (pi_gpio_interface) StdoutLine: {'line': b'See also "/home/ubuntu/cu-arc-21-22/CS/drone_ws/build/pi_gpio_interface/CMakeFiles/CMakeOutput.log".\n'}
+[6.257307] (pi_gpio_interface) CommandEnded: {'returncode': 1}
+[6.275690] (-) TimerEvent: {}
+[6.331748] (pi_gpio_interface) JobEnded: {'identifier': 'pi_gpio_interface', 'rc': 1}
+[6.336091] (pi_gpio) JobSkipped: {'identifier': 'pi_gpio'}
+[6.336257] (-) EventReactorShutdown: {}

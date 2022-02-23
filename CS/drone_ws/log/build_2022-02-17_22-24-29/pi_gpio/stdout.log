@@ -1,0 +1,19 @@
+running egg_info
+writing ../../../build/pi_gpio/pi_gpio.egg-info/PKG-INFO
+writing dependency_links to ../../../build/pi_gpio/pi_gpio.egg-info/dependency_links.txt
+writing entry points to ../../../build/pi_gpio/pi_gpio.egg-info/entry_points.txt
+writing requirements to ../../../build/pi_gpio/pi_gpio.egg-info/requires.txt
+writing top-level names to ../../../build/pi_gpio/pi_gpio.egg-info/top_level.txt
+reading manifest file '../../../build/pi_gpio/pi_gpio.egg-info/SOURCES.txt'
+writing manifest file '../../../build/pi_gpio/pi_gpio.egg-info/SOURCES.txt'
+running build
+running build_py
+running install
+running install_lib
+running install_data
+running install_egg_info
+removing '/home/ubuntu/cu-arc-21-22/CS/drone_ws/install/pi_gpio/lib/python3.8/site-packages/pi_gpio-0.8.2-py3.8.egg-info' (and everything under it)
+Copying ../../../build/pi_gpio/pi_gpio.egg-info to /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/pi_gpio/lib/python3.8/site-packages/pi_gpio-0.8.2-py3.8.egg-info
+running install_scripts
+Installing pi_gpio_server script to /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/pi_gpio/lib/pi_gpio
+writing list of installed files to '/home/ubuntu/cu-arc-21-22/CS/drone_ws/build/pi_gpio/install.log'

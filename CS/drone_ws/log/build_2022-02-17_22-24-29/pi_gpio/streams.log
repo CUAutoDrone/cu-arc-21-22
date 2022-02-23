@@ -1,0 +1,21 @@
+[3.284s] Invoking command in '/home/ubuntu/cu-arc-21-22/CS/drone_ws/src/ros2_pi_gpio/pi_gpio': AMENT_PREFIX_PATH=/home/ubuntu/cu-arc-21-22/CS/drone_ws/install/pi_gpio_interface:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/ubuntu/cu-arc-21-22/CS/drone_ws/install/pi_gpio_interface:${CMAKE_PREFIX_PATH} LD_LIBRARY_PATH=/home/ubuntu/cu-arc-21-22/CS/drone_ws/install/pi_gpio_interface/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/ubuntu/cu-arc-21-22/CS/drone_ws/install/pi_gpio/lib/python3.8/site-packages:/home/ubuntu/cu-arc-21-22/CS/drone_ws/install/pi_gpio_interface/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../../build/pi_gpio build --build-base /home/ubuntu/cu-arc-21-22/CS/drone_ws/build/pi_gpio/build install --prefix /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/pi_gpio --record /home/ubuntu/cu-arc-21-22/CS/drone_ws/build/pi_gpio/install.log --single-version-externally-managed
+[4.311s] running egg_info
+[4.314s] writing ../../../build/pi_gpio/pi_gpio.egg-info/PKG-INFO
+[4.315s] writing dependency_links to ../../../build/pi_gpio/pi_gpio.egg-info/dependency_links.txt
+[4.316s] writing entry points to ../../../build/pi_gpio/pi_gpio.egg-info/entry_points.txt
+[4.317s] writing requirements to ../../../build/pi_gpio/pi_gpio.egg-info/requires.txt
+[4.318s] writing top-level names to ../../../build/pi_gpio/pi_gpio.egg-info/top_level.txt
+[4.464s] reading manifest file '../../../build/pi_gpio/pi_gpio.egg-info/SOURCES.txt'
+[4.468s] writing manifest file '../../../build/pi_gpio/pi_gpio.egg-info/SOURCES.txt'
+[4.469s] running build
+[4.469s] running build_py
+[4.470s] running install
+[4.473s] running install_lib
+[4.479s] running install_data
+[4.482s] running install_egg_info
+[4.489s] removing '/home/ubuntu/cu-arc-21-22/CS/drone_ws/install/pi_gpio/lib/python3.8/site-packages/pi_gpio-0.8.2-py3.8.egg-info' (and everything under it)
+[4.491s] Copying ../../../build/pi_gpio/pi_gpio.egg-info to /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/pi_gpio/lib/python3.8/site-packages/pi_gpio-0.8.2-py3.8.egg-info
+[4.496s] running install_scripts
+[4.565s] Installing pi_gpio_server script to /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/pi_gpio/lib/pi_gpio
+[4.567s] writing list of installed files to '/home/ubuntu/cu-arc-21-22/CS/drone_ws/build/pi_gpio/install.log'
+[4.666s] Invoked command in '/home/ubuntu/cu-arc-21-22/CS/drone_ws/src/ros2_pi_gpio/pi_gpio' returned '0': AMENT_PREFIX_PATH=/home/ubuntu/cu-arc-21-22/CS/drone_ws/install/pi_gpio_interface:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/ubuntu/cu-arc-21-22/CS/drone_ws/install/pi_gpio_interface:${CMAKE_PREFIX_PATH} LD_LIBRARY_PATH=/home/ubuntu/cu-arc-21-22/CS/drone_ws/install/pi_gpio_interface/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/ubuntu/cu-arc-21-22/CS/drone_ws/install/pi_gpio/lib/python3.8/site-packages:/home/ubuntu/cu-arc-21-22/CS/drone_ws/install/pi_gpio_interface/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../../build/pi_gpio build --build-base /home/ubuntu/cu-arc-21-22/CS/drone_ws/build/pi_gpio/build install --prefix /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/pi_gpio --record /home/ubuntu/cu-arc-21-22/CS/drone_ws/build/pi_gpio/install.log --single-version-externally-managed

@@ -23,7 +23,7 @@ for i in range(8):
         print('not connected')
         time.sleep(2**i)
 
-slack_token = 'xoxb-427849421186-3155871478097-b7Q2mg0iploNCXJA1V5rIi5n'
+slack_token = 'xoxb-427849421186-3155871478097-5oZfX3a2dYv7yV8iocG1Nb7z'
 client = slack.WebClient(token=slack_token)
 client.chat_postMessage(channel='raspberry-pi-ips', text='{} has ip {}'.format(socket.gethostname(), get_ip()))
 print('posted')

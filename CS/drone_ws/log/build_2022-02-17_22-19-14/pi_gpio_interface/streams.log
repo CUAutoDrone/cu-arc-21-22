@@ -1,0 +1,26 @@
+[0.174s] Invoking command in '/home/ubuntu/cu-arc-21-22/CS/drone_ws/build/pi_gpio_interface': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ubuntu/cu-arc-21-22/CS/drone_ws/install/controls /usr/bin/cmake /home/ubuntu/cu-arc-21-22/CS/drone_ws/src/ros2_pi_gpio/pi_gpio_interface -DCMAKE_INSTALL_PREFIX=/home/ubuntu/cu-arc-21-22/CS/drone_ws/install/pi_gpio_interface
+[0.246s] -- Found ament_cmake: 0.9.9 (/home/ubuntu/ros2_foxy/ros2-linux/share/ament_cmake/cmake)
+[0.361s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[1.437s] -- Found rosidl_default_generators: 1.0.1 (/home/ubuntu/ros2_foxy/ros2-linux/share/rosidl_default_generators/cmake)
+[1.447s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.463s] -- Found rosidl_adapter: 1.2.1 (/home/ubuntu/ros2_foxy/ros2-linux/share/rosidl_adapter/cmake)
+[1.784s] CMake Error at /usr/share/cmake-3.16/Modules/FindPackageHandleStandardArgs.cmake:146 (message):
+[1.786s]   Could NOT find OpenSSL, try to set the path to OpenSSL root folder in the
+[1.786s]   system variable OPENSSL_ROOT_DIR (missing: OPENSSL_CRYPTO_LIBRARY
+[1.787s]   OPENSSL_INCLUDE_DIR)
+[1.787s] Call Stack (most recent call first):
+[1.787s]   /usr/share/cmake-3.16/Modules/FindPackageHandleStandardArgs.cmake:393 (_FPHSA_FAILURE_MESSAGE)
+[1.788s]   /usr/share/cmake-3.16/Modules/FindOpenSSL.cmake:447 (find_package_handle_standard_args)
+[1.788s]   /home/ubuntu/ros2_foxy/ros2-linux/share/fastrtps/cmake/fastrtps-config.cmake:52 (find_package)
+[1.789s]   /home/ubuntu/ros2_foxy/ros2-linux/share/rosidl_typesupport_fastrtps_c/cmake/rosidl_typesupport_fastrtps_c-extras.cmake:6 (find_package)
+[1.789s]   /home/ubuntu/ros2_foxy/ros2-linux/share/rosidl_typesupport_fastrtps_c/cmake/rosidl_typesupport_fastrtps_cConfig.cmake:41 (include)
+[1.790s]   /home/ubuntu/ros2_foxy/ros2-linux/share/rosidl_typesupport_c/cmake/rosidl_typesupport_c-extras.cmake:13 (find_package)
+[1.791s]   /home/ubuntu/ros2_foxy/ros2-linux/share/rosidl_typesupport_c/cmake/rosidl_typesupport_cConfig.cmake:41 (include)
+[1.791s]   /home/ubuntu/ros2_foxy/ros2-linux/share/rosidl_default_generators/cmake/rosidl_default_generators-extras.cmake:21 (find_package)
+[1.792s]   /home/ubuntu/ros2_foxy/ros2-linux/share/rosidl_default_generators/cmake/rosidl_default_generatorsConfig.cmake:41 (include)
+[1.792s]   CMakeLists.txt:14 (find_package)
+[1.793s] 
+[1.794s] 
+[1.795s] -- Configuring incomplete, errors occurred!
+[1.796s] See also "/home/ubuntu/cu-arc-21-22/CS/drone_ws/build/pi_gpio_interface/CMakeFiles/CMakeOutput.log".
+[1.803s] Invoked command in '/home/ubuntu/cu-arc-21-22/CS/drone_ws/build/pi_gpio_interface' returned '1': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ubuntu/cu-arc-21-22/CS/drone_ws/install/controls /usr/bin/cmake /home/ubuntu/cu-arc-21-22/CS/drone_ws/src/ros2_pi_gpio/pi_gpio_interface -DCMAKE_INSTALL_PREFIX=/home/ubuntu/cu-arc-21-22/CS/drone_ws/install/pi_gpio_interface

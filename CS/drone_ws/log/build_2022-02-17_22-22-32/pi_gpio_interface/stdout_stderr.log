@@ -1,0 +1,160 @@
+-- Found ament_cmake: 0.9.9 (/home/ubuntu/ros2_foxy/ros2-linux/share/ament_cmake/cmake)
+-- Using PYTHON_EXECUTABLE: /usr/bin/python3
+-- Override CMake install command with custom implementation using symlinks instead of copying resources
+-- Found rosidl_default_generators: 1.0.1 (/home/ubuntu/ros2_foxy/ros2-linux/share/rosidl_default_generators/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Found rosidl_adapter: 1.2.1 (/home/ubuntu/ros2_foxy/ros2-linux/share/rosidl_adapter/cmake)
+-- Found OpenSSL: /usr/lib/aarch64-linux-gnu/libcrypto.so (found version "1.1.1f")  
+-- Found FastRTPS: /home/ubuntu/ros2_foxy/ros2-linux/include  
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found PythonInterp: /usr/bin/python3 (found version "3.8.10") 
+-- Found ament_cmake_ros: 0.9.2 (/home/ubuntu/ros2_foxy/ros2-linux/share/ament_cmake_ros/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3.5") 
+-- Found python_cmake_module: 0.8.1 (/home/ubuntu/ros2_foxy/ros2-linux/share/python_cmake_module/cmake)
+-- Found PythonLibs: /usr/lib/aarch64-linux-gnu/libpython3.8.so (found suitable version "3.8.10", minimum required is "3.5") 
+-- Using PYTHON_EXECUTABLE: /usr/bin/python3
+-- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.8
+-- Using PYTHON_LIBRARIES: /usr/lib/aarch64-linux-gnu/libpython3.8.so
+-- Found PythonExtra: .so  
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/ubuntu/cu-arc-21-22/CS/drone_ws/build/pi_gpio_interface
+[  3%] [34m[1mGenerating C code for ROS interfaces[0m
+[35m[1mScanning dependencies of target pi_gpio_interface__cpp[0m
+[  6%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[35m[1mScanning dependencies of target pi_gpio_interface__rosidl_generator_c[0m
+[  9%] [32mBuilding C object CMakeFiles/pi_gpio_interface__rosidl_generator_c.dir/rosidl_generator_c/pi_gpio_interface/action/detail/gpio__functions.c.o[0m
+[  9%] Built target pi_gpio_interface__cpp
+[ 12%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
+[ 16%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[ 19%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[ 22%] [32m[1mLinking C shared library libpi_gpio_interface__rosidl_generator_c.so[0m
+[ 22%] Built target pi_gpio_interface__rosidl_generator_c
+[ 25%] [34m[1mGenerating C type support dispatch for ROS interfaces[0m
+[35m[1mScanning dependencies of target pi_gpio_interface__rosidl_typesupport_cpp[0m
+[ 29%] [32mBuilding CXX object CMakeFiles/pi_gpio_interface__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/pi_gpio_interface/action/gpio__type_support.cpp.o[0m
+[35m[1mScanning dependencies of target pi_gpio_interface__rosidl_typesupport_introspection_cpp[0m
+[ 32%] [32mBuilding CXX object CMakeFiles/pi_gpio_interface__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/pi_gpio_interface/action/detail/gpio__type_support.cpp.o[0m
+[35m[1mScanning dependencies of target pi_gpio_interface__rosidl_typesupport_fastrtps_cpp[0m
+[ 35%] [32mBuilding CXX object CMakeFiles/pi_gpio_interface__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/pi_gpio_interface/action/detail/dds_fastrtps/gpio__type_support.cpp.o[0m
+[35m[1mScanning dependencies of target pi_gpio_interface__rosidl_typesupport_c[0m
+[ 38%] [32mBuilding CXX object CMakeFiles/pi_gpio_interface__rosidl_typesupport_c.dir/rosidl_typesupport_c/pi_gpio_interface/action/gpio__type_support.cpp.o[0m
+[ 41%] [32m[1mLinking CXX shared library libpi_gpio_interface__rosidl_typesupport_c.so[0m
+[ 41%] Built target pi_gpio_interface__rosidl_typesupport_c
+[ 45%] [34m[1mGenerating C introspection for ROS interfaces[0m
+[ 48%] [32m[1mLinking CXX shared library libpi_gpio_interface__rosidl_typesupport_cpp.so[0m
+[ 48%] Built target pi_gpio_interface__rosidl_typesupport_cpp
+[ 51%] [32m[1mLinking CXX shared library libpi_gpio_interface__rosidl_typesupport_introspection_cpp.so[0m
+[ 51%] Built target pi_gpio_interface__rosidl_typesupport_introspection_cpp
+[ 54%] [32m[1mLinking CXX shared library libpi_gpio_interface__rosidl_typesupport_fastrtps_cpp.so[0m
+[35m[1mScanning dependencies of target pi_gpio_interface__rosidl_typesupport_introspection_c[0m
+[ 58%] [32mBuilding C object CMakeFiles/pi_gpio_interface__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/pi_gpio_interface/action/detail/gpio__type_support.c.o[0m
+[ 58%] Built target pi_gpio_interface__rosidl_typesupport_fastrtps_cpp
+[ 61%] [34m[1mGenerating C type support for eProsima Fast-RTPS[0m
+[ 64%] [32m[1mLinking C shared library libpi_gpio_interface__rosidl_typesupport_introspection_c.so[0m
+[ 64%] Built target pi_gpio_interface__rosidl_typesupport_introspection_c
+[35m[1mScanning dependencies of target pi_gpio_interface__rosidl_typesupport_fastrtps_c[0m
+[ 67%] [32mBuilding CXX object CMakeFiles/pi_gpio_interface__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/pi_gpio_interface/action/detail/gpio__type_support_c.cpp.o[0m
+[ 70%] [32m[1mLinking CXX shared library libpi_gpio_interface__rosidl_typesupport_fastrtps_c.so[0m
+[ 70%] Built target pi_gpio_interface__rosidl_typesupport_fastrtps_c
+[35m[1mScanning dependencies of target pi_gpio_interface[0m
+[ 70%] Built target pi_gpio_interface
+[35m[1mScanning dependencies of target pi_gpio_interface__py[0m
+[ 74%] [34m[1mGenerating Python code for ROS interfaces[0m
+[ 74%] Built target pi_gpio_interface__py
+[35m[1mScanning dependencies of target pi_gpio_interface__python[0m
+[ 77%] [32mBuilding C object CMakeFiles/pi_gpio_interface__python.dir/rosidl_generator_py/pi_gpio_interface/action/_gpio_s.c.o[0m
+[ 80%] [32m[1mLinking C shared library rosidl_generator_py/pi_gpio_interface/libpi_gpio_interface__python.so[0m
+[ 80%] Built target pi_gpio_interface__python
+[35m[1mScanning dependencies of target pi_gpio_interface__rosidl_typesupport_c__pyext[0m
+[35m[1mScanning dependencies of target pi_gpio_interface__rosidl_typesupport_introspection_c__pyext[0m
+[35m[1mScanning dependencies of target pi_gpio_interface__rosidl_typesupport_fastrtps_c__pyext[0m
+[ 83%] [32mBuilding C object CMakeFiles/pi_gpio_interface__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/pi_gpio_interface/_pi_gpio_interface_s.ep.rosidl_typesupport_c.c.o[0m
+[ 87%] [32mBuilding C object CMakeFiles/pi_gpio_interface__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/pi_gpio_interface/_pi_gpio_interface_s.ep.rosidl_typesupport_introspection_c.c.o[0m
+[ 90%] [32mBuilding C object CMakeFiles/pi_gpio_interface__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/pi_gpio_interface/_pi_gpio_interface_s.ep.rosidl_typesupport_fastrtps_c.c.o[0m
+[ 96%] [32m[1mLinking C shared library rosidl_generator_py/pi_gpio_interface/pi_gpio_interface_s__rosidl_typesupport_c.cpython-38-aarch64-linux-gnu.so[0m
+[ 96%] [32m[1mLinking C shared library rosidl_generator_py/pi_gpio_interface/pi_gpio_interface_s__rosidl_typesupport_introspection_c.cpython-38-aarch64-linux-gnu.so[0m
+[100%] [32m[1mLinking CXX shared library rosidl_generator_py/pi_gpio_interface/pi_gpio_interface_s__rosidl_typesupport_fastrtps_c.cpython-38-aarch64-linux-gnu.so[0m
+[100%] Built target pi_gpio_interface__rosidl_typesupport_introspection_c__pyext
+[100%] Built target pi_gpio_interface__rosidl_typesupport_c__pyext
+[100%] Built target pi_gpio_interface__rosidl_typesupport_fastrtps_c__pyext
+-- Install configuration: ""
+-- Execute custom install script
+-- Symlinking: /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/pi_gpio_interface/share/ament_index/resource_index/rosidl_interfaces/pi_gpio_interface
+-- Symlinking: /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/pi_gpio_interface/include/pi_gpio_interface/action/detail/gpio__functions.h
+-- Symlinking: /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/pi_gpio_interface/include/pi_gpio_interface/action/detail/gpio__struct.h
+-- Symlinking: /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/pi_gpio_interface/include/pi_gpio_interface/action/detail/gpio__type_support.h
+-- Symlinking: /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/pi_gpio_interface/include/pi_gpio_interface/action/gpio.h
+-- Symlinking: /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/pi_gpio_interface/include/pi_gpio_interface/msg/rosidl_generator_c__visibility_control.h
+-- Symlinking: /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/pi_gpio_interface/share/pi_gpio_interface/environment/library_path.sh
+-- Symlinking: /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/pi_gpio_interface/share/pi_gpio_interface/environment/library_path.dsv
+-- Symlinking: /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/pi_gpio_interface/include/pi_gpio_interface/action/detail/gpio__rosidl_typesupport_fastrtps_c.h
+-- Symlinking: /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/pi_gpio_interface/include/pi_gpio_interface/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+-- Symlinking: /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/pi_gpio_interface/lib/libpi_gpio_interface__rosidl_typesupport_fastrtps_c.so
+-- Symlinking: /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/pi_gpio_interface/include/pi_gpio_interface/action/detail/gpio__rosidl_typesupport_fastrtps_cpp.hpp
+-- Symlinking: /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/pi_gpio_interface/include/pi_gpio_interface/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+-- Symlinking: /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/pi_gpio_interface/lib/libpi_gpio_interface__rosidl_typesupport_fastrtps_cpp.so
+-- Symlinking: /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/pi_gpio_interface/include/pi_gpio_interface/action/detail/gpio__rosidl_typesupport_introspection_c.h
+-- Symlinking: /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/pi_gpio_interface/include/pi_gpio_interface/msg/rosidl_typesupport_introspection_c__visibility_control.h
+-- Symlinking: /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/pi_gpio_interface/include/pi_gpio_interface/action/detail/gpio__builder.hpp
+-- Symlinking: /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/pi_gpio_interface/include/pi_gpio_interface/action/detail/gpio__struct.hpp
+-- Symlinking: /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/pi_gpio_interface/include/pi_gpio_interface/action/detail/gpio__traits.hpp
+-- Symlinking: /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/pi_gpio_interface/include/pi_gpio_interface/action/gpio.hpp
+-- Symlinking: /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/pi_gpio_interface/include/pi_gpio_interface/action/detail/gpio__rosidl_typesupport_introspection_cpp.hpp
+-- Symlinking: /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/pi_gpio_interface/share/pi_gpio_interface/environment/pythonpath.sh
+-- Symlinking: /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/pi_gpio_interface/share/pi_gpio_interface/environment/pythonpath.dsv
+-- Symlinking: /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/pi_gpio_interface/lib/python3.8/site-packages/pi_gpio_interface/__init__.py
+-- Symlinking: /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/pi_gpio_interface/lib/python3.8/site-packages/pi_gpio_interface/action/__init__.py
+-- Symlinking: /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/pi_gpio_interface/lib/python3.8/site-packages/pi_gpio_interface/action/_gpio.py
+-- Symlinking: /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/pi_gpio_interface/lib/python3.8/site-packages/pi_gpio_interface/pi_gpio_interface_s__rosidl_typesupport_fastrtps_c.cpython-38-aarch64-linux-gnu.so
+-- Symlinking: /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/pi_gpio_interface/lib/python3.8/site-packages/pi_gpio_interface/pi_gpio_interface_s__rosidl_typesupport_introspection_c.cpython-38-aarch64-linux-gnu.so
+-- Symlinking: /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/pi_gpio_interface/lib/python3.8/site-packages/pi_gpio_interface/pi_gpio_interface_s__rosidl_typesupport_c.cpython-38-aarch64-linux-gnu.so
+-- Symlinking: /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/pi_gpio_interface/lib/libpi_gpio_interface__python.so
+-- Symlinking: /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/pi_gpio_interface/share/pi_gpio_interface/action/GPIO.idl
+-- Symlinking: /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/pi_gpio_interface/share/pi_gpio_interface/action/GPIO.action
+-- Symlinking: /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/pi_gpio_interface/share/ament_index/resource_index/package_run_dependencies/pi_gpio_interface
+-- Symlinking: /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/pi_gpio_interface/share/ament_index/resource_index/parent_prefix_path/pi_gpio_interface
+-- Symlinking: /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/pi_gpio_interface/share/pi_gpio_interface/environment/ament_prefix_path.sh
+-- Symlinking: /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/pi_gpio_interface/share/pi_gpio_interface/environment/ament_prefix_path.dsv
+-- Symlinking: /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/pi_gpio_interface/share/pi_gpio_interface/environment/path.sh
+-- Symlinking: /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/pi_gpio_interface/share/pi_gpio_interface/environment/path.dsv
+-- Symlinking: /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/pi_gpio_interface/share/pi_gpio_interface/local_setup.bash
+-- Symlinking: /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/pi_gpio_interface/share/pi_gpio_interface/local_setup.sh
+-- Symlinking: /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/pi_gpio_interface/share/pi_gpio_interface/local_setup.zsh
+-- Symlinking: /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/pi_gpio_interface/share/pi_gpio_interface/local_setup.dsv
+-- Symlinking: /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/pi_gpio_interface/share/pi_gpio_interface/package.dsv
+-- Symlinking: /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/pi_gpio_interface/share/ament_index/resource_index/packages/pi_gpio_interface
+-- Symlinking: /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/pi_gpio_interface/share/pi_gpio_interface/cmake/rosidl_cmake-extras.cmake
+-- Symlinking: /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/pi_gpio_interface/share/pi_gpio_interface/cmake/ament_cmake_export_dependencies-extras.cmake
+-- Symlinking: /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/pi_gpio_interface/share/pi_gpio_interface/cmake/ament_cmake_export_libraries-extras.cmake
+-- Symlinking: /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/pi_gpio_interface/share/pi_gpio_interface/cmake/ament_cmake_export_targets-extras.cmake
+-- Symlinking: /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/pi_gpio_interface/share/pi_gpio_interface/cmake/ament_cmake_export_include_directories-extras.cmake
+-- Symlinking: /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/pi_gpio_interface/share/pi_gpio_interface/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+-- Symlinking: /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/pi_gpio_interface/share/pi_gpio_interface/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+-- Symlinking: /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/pi_gpio_interface/share/pi_gpio_interface/cmake/pi_gpio_interfaceConfig.cmake
+-- Symlinking: /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/pi_gpio_interface/share/pi_gpio_interface/cmake/pi_gpio_interfaceConfig-version.cmake
+-- Symlinking: /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/pi_gpio_interface/share/pi_gpio_interface/package.xml
+-- Installing: /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/pi_gpio_interface/lib/libpi_gpio_interface__rosidl_generator_c.so
+-- Set runtime path of "/home/ubuntu/cu-arc-21-22/CS/drone_ws/install/pi_gpio_interface/lib/libpi_gpio_interface__rosidl_generator_c.so" to ""
+-- Installing: /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/pi_gpio_interface/lib/libpi_gpio_interface__rosidl_typesupport_introspection_c.so
+-- Set runtime path of "/home/ubuntu/cu-arc-21-22/CS/drone_ws/install/pi_gpio_interface/lib/libpi_gpio_interface__rosidl_typesupport_introspection_c.so" to ""
+-- Installing: /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/pi_gpio_interface/lib/libpi_gpio_interface__rosidl_typesupport_c.so
+-- Set runtime path of "/home/ubuntu/cu-arc-21-22/CS/drone_ws/install/pi_gpio_interface/lib/libpi_gpio_interface__rosidl_typesupport_c.so" to ""
+-- Installing: /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/pi_gpio_interface/lib/libpi_gpio_interface__rosidl_typesupport_introspection_cpp.so
+-- Set runtime path of "/home/ubuntu/cu-arc-21-22/CS/drone_ws/install/pi_gpio_interface/lib/libpi_gpio_interface__rosidl_typesupport_introspection_cpp.so" to ""
+-- Installing: /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/pi_gpio_interface/lib/libpi_gpio_interface__rosidl_typesupport_cpp.so
+-- Set runtime path of "/home/ubuntu/cu-arc-21-22/CS/drone_ws/install/pi_gpio_interface/lib/libpi_gpio_interface__rosidl_typesupport_cpp.so" to ""
+Compiling '/home/ubuntu/cu-arc-21-22/CS/drone_ws/install/pi_gpio_interface/lib/python3.8/site-packages/pi_gpio_interface/__init__.py'...
+-- Installing: /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/pi_gpio_interface/share/pi_gpio_interface/cmake/pi_gpio_interface__rosidl_generator_cExport.cmake
+-- Installing: /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/pi_gpio_interface/share/pi_gpio_interface/cmake/pi_gpio_interface__rosidl_generator_cExport-noconfig.cmake
+-- Installing: /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/pi_gpio_interface/share/pi_gpio_interface/cmake/pi_gpio_interface__rosidl_typesupport_introspection_cExport.cmake
+-- Installing: /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/pi_gpio_interface/share/pi_gpio_interface/cmake/pi_gpio_interface__rosidl_typesupport_introspection_cExport-noconfig.cmake
+-- Installing: /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/pi_gpio_interface/share/pi_gpio_interface/cmake/pi_gpio_interface__rosidl_typesupport_cExport.cmake
+-- Installing: /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/pi_gpio_interface/share/pi_gpio_interface/cmake/pi_gpio_interface__rosidl_typesupport_cExport-noconfig.cmake
+-- Installing: /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/pi_gpio_interface/share/pi_gpio_interface/cmake/pi_gpio_interface__rosidl_generator_cppExport.cmake
+-- Installing: /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/pi_gpio_interface/share/pi_gpio_interface/cmake/pi_gpio_interface__rosidl_typesupport_introspection_cppExport.cmake
+-- Installing: /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/pi_gpio_interface/share/pi_gpio_interface/cmake/pi_gpio_interface__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+-- Installing: /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/pi_gpio_interface/share/pi_gpio_interface/cmake/pi_gpio_interface__rosidl_typesupport_cppExport.cmake
+-- Installing: /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/pi_gpio_interface/share/pi_gpio_interface/cmake/pi_gpio_interface__rosidl_typesupport_cppExport-noconfig.cmake
