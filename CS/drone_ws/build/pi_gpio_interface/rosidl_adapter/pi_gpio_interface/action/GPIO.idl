@@ -1,0 +1,24 @@
+// generated from rosidl_adapter/resource/action.idl.em
+// with input from pi_gpio_interface/action/GPIO.action
+// generated code does not contain a copyright notice
+
+
+module pi_gpio_interface {
+  module action {
+    @verbatim (language="comment", text=
+      " Goal")
+    struct GPIO_Goal {
+      string gpio;
+    };
+    struct GPIO_Result {
+      @verbatim (language="comment", text=
+        " Result")
+      int32 value;
+    };
+    struct GPIO_Feedback {
+      @verbatim (language="comment", text=
+        " Feedback")
+      int32 feedback;
+    };
+  };
+};

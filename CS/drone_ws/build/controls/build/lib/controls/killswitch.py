@@ -5,7 +5,7 @@ from std_msgs.msg import Bool
 
 class KillSwitch(Node):
     def __init__(self):
-        super().__init__('pid_controller')
+        super().__init__('kill_switch')
         self.publisher = self.create_publisher(Bool, 'arm', 1)
 
 
@@ -22,7 +22,6 @@ def main(args=None):
     input("Press enter to kill")
     kill_switch.kill()
 
-    kill_switch.destroyNode()
     rclpy.shutdown()
 
 

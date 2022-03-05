@@ -1,0 +1,40 @@
+{
+  "package_name": "pi_gpio_interface",
+  "output_dir": "/home/ubuntu/cu-arc-21-22/CS/drone_ws/build/pi_gpio_interface/rosidl_generator_py/pi_gpio_interface",
+  "template_dir": "/home/ubuntu/ros2_foxy/ros2-linux/share/rosidl_generator_py/cmake/../resource",
+  "idl_tuples": [
+    "/home/ubuntu/cu-arc-21-22/CS/drone_ws/build/pi_gpio_interface/rosidl_adapter/pi_gpio_interface:action/GPIO.idl"
+  ],
+  "ros_interface_dependencies": [
+    "action_msgs:/home/ubuntu/ros2_foxy/ros2-linux/share/action_msgs/msg/GoalInfo.idl",
+    "action_msgs:/home/ubuntu/ros2_foxy/ros2-linux/share/action_msgs/msg/GoalStatus.idl",
+    "action_msgs:/home/ubuntu/ros2_foxy/ros2-linux/share/action_msgs/msg/GoalStatusArray.idl",
+    "action_msgs:/home/ubuntu/ros2_foxy/ros2-linux/share/action_msgs/srv/CancelGoal.idl",
+    "builtin_interfaces:/home/ubuntu/ros2_foxy/ros2-linux/share/builtin_interfaces/msg/Duration.idl",
+    "builtin_interfaces:/home/ubuntu/ros2_foxy/ros2-linux/share/builtin_interfaces/msg/Time.idl",
+    "unique_identifier_msgs:/home/ubuntu/ros2_foxy/ros2-linux/share/unique_identifier_msgs/msg/UUID.idl"
+  ],
+  "target_dependencies": [
+    "/home/ubuntu/ros2_foxy/ros2-linux/share/rosidl_generator_py/cmake/../../../lib/rosidl_generator_py/rosidl_generator_py",
+    "/home/ubuntu/ros2_foxy/ros2-linux/lib/python3.8/site-packages/rosidl_generator_py/__init__.py",
+    "/home/ubuntu/ros2_foxy/ros2-linux/lib/python3.8/site-packages/rosidl_generator_py/generate_py_impl.py",
+    "/home/ubuntu/ros2_foxy/ros2-linux/share/rosidl_generator_py/cmake/../resource/_action_pkg_typesupport_entry_point.c.em",
+    "/home/ubuntu/ros2_foxy/ros2-linux/share/rosidl_generator_py/cmake/../resource/_action.py.em",
+    "/home/ubuntu/ros2_foxy/ros2-linux/share/rosidl_generator_py/cmake/../resource/_idl_pkg_typesupport_entry_point.c.em",
+    "/home/ubuntu/ros2_foxy/ros2-linux/share/rosidl_generator_py/cmake/../resource/_idl_support.c.em",
+    "/home/ubuntu/ros2_foxy/ros2-linux/share/rosidl_generator_py/cmake/../resource/_idl.py.em",
+    "/home/ubuntu/ros2_foxy/ros2-linux/share/rosidl_generator_py/cmake/../resource/_msg_pkg_typesupport_entry_point.c.em",
+    "/home/ubuntu/ros2_foxy/ros2-linux/share/rosidl_generator_py/cmake/../resource/_msg_support.c.em",
+    "/home/ubuntu/ros2_foxy/ros2-linux/share/rosidl_generator_py/cmake/../resource/_msg.py.em",
+    "/home/ubuntu/ros2_foxy/ros2-linux/share/rosidl_generator_py/cmake/../resource/_srv_pkg_typesupport_entry_point.c.em",
+    "/home/ubuntu/ros2_foxy/ros2-linux/share/rosidl_generator_py/cmake/../resource/_srv.py.em",
+    "/home/ubuntu/cu-arc-21-22/CS/drone_ws/build/pi_gpio_interface/rosidl_adapter/pi_gpio_interface/action/GPIO.idl",
+    "/home/ubuntu/ros2_foxy/ros2-linux/share/action_msgs/msg/GoalInfo.idl",
+    "/home/ubuntu/ros2_foxy/ros2-linux/share/action_msgs/msg/GoalStatus.idl",
+    "/home/ubuntu/ros2_foxy/ros2-linux/share/action_msgs/msg/GoalStatusArray.idl",
+    "/home/ubuntu/ros2_foxy/ros2-linux/share/action_msgs/srv/CancelGoal.idl",
+    "/home/ubuntu/ros2_foxy/ros2-linux/share/builtin_interfaces/msg/Duration.idl",
+    "/home/ubuntu/ros2_foxy/ros2-linux/share/builtin_interfaces/msg/Time.idl",
+    "/home/ubuntu/ros2_foxy/ros2-linux/share/unique_identifier_msgs/msg/UUID.idl"
+  ]
+}

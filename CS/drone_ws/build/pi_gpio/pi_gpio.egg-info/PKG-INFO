@@ -1,0 +1,17 @@
+Metadata-Version: 1.2
+Name: pi-gpio
+Version: 0.8.2
+Summary: ROS2 Action Server to control Raspberry Pi GPIO
+Home-page: UNKNOWN
+Author: H. Melih Erdogan
+Author-email: h.meliherdogan@gmail.com
+Maintainer: H. Melih Erdogan
+Maintainer-email: h.meliherdogan@gmail.com
+License: Apache License, Version 2.0
+Description: UNKNOWN
+Keywords: ROS
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python
+Classifier: Topic :: Software Development

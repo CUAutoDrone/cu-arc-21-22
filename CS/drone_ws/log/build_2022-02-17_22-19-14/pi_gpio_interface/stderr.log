@@ -1,0 +1,17 @@
+CMake Error at /usr/share/cmake-3.16/Modules/FindPackageHandleStandardArgs.cmake:146 (message):
+  Could NOT find OpenSSL, try to set the path to OpenSSL root folder in the
+  system variable OPENSSL_ROOT_DIR (missing: OPENSSL_CRYPTO_LIBRARY
+  OPENSSL_INCLUDE_DIR)
+Call Stack (most recent call first):
+  /usr/share/cmake-3.16/Modules/FindPackageHandleStandardArgs.cmake:393 (_FPHSA_FAILURE_MESSAGE)
+  /usr/share/cmake-3.16/Modules/FindOpenSSL.cmake:447 (find_package_handle_standard_args)
+  /home/ubuntu/ros2_foxy/ros2-linux/share/fastrtps/cmake/fastrtps-config.cmake:52 (find_package)
+  /home/ubuntu/ros2_foxy/ros2-linux/share/rosidl_typesupport_fastrtps_c/cmake/rosidl_typesupport_fastrtps_c-extras.cmake:6 (find_package)
+  /home/ubuntu/ros2_foxy/ros2-linux/share/rosidl_typesupport_fastrtps_c/cmake/rosidl_typesupport_fastrtps_cConfig.cmake:41 (include)
+  /home/ubuntu/ros2_foxy/ros2-linux/share/rosidl_typesupport_c/cmake/rosidl_typesupport_c-extras.cmake:13 (find_package)
+  /home/ubuntu/ros2_foxy/ros2-linux/share/rosidl_typesupport_c/cmake/rosidl_typesupport_cConfig.cmake:41 (include)
+  /home/ubuntu/ros2_foxy/ros2-linux/share/rosidl_default_generators/cmake/rosidl_default_generators-extras.cmake:21 (find_package)
+  /home/ubuntu/ros2_foxy/ros2-linux/share/rosidl_default_generators/cmake/rosidl_default_generatorsConfig.cmake:41 (include)
+  CMakeLists.txt:14 (find_package)
+
+

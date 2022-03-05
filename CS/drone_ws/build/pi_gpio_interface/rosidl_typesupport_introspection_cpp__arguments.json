@@ -1,0 +1,35 @@
+{
+  "package_name": "pi_gpio_interface",
+  "output_dir": "/home/ubuntu/cu-arc-21-22/CS/drone_ws/build/pi_gpio_interface/rosidl_typesupport_introspection_cpp/pi_gpio_interface",
+  "template_dir": "/home/ubuntu/ros2_foxy/ros2-linux/share/rosidl_typesupport_introspection_cpp/resource",
+  "idl_tuples": [
+    "/home/ubuntu/cu-arc-21-22/CS/drone_ws/build/pi_gpio_interface/rosidl_adapter/pi_gpio_interface:action/GPIO.idl"
+  ],
+  "ros_interface_dependencies": [
+    "action_msgs:/home/ubuntu/ros2_foxy/ros2-linux/share/action_msgs/msg/GoalInfo.idl",
+    "action_msgs:/home/ubuntu/ros2_foxy/ros2-linux/share/action_msgs/msg/GoalStatus.idl",
+    "action_msgs:/home/ubuntu/ros2_foxy/ros2-linux/share/action_msgs/msg/GoalStatusArray.idl",
+    "action_msgs:/home/ubuntu/ros2_foxy/ros2-linux/share/action_msgs/srv/CancelGoal.idl",
+    "builtin_interfaces:/home/ubuntu/ros2_foxy/ros2-linux/share/builtin_interfaces/msg/Duration.idl",
+    "builtin_interfaces:/home/ubuntu/ros2_foxy/ros2-linux/share/builtin_interfaces/msg/Time.idl",
+    "unique_identifier_msgs:/home/ubuntu/ros2_foxy/ros2-linux/share/unique_identifier_msgs/msg/UUID.idl"
+  ],
+  "target_dependencies": [
+    "/home/ubuntu/ros2_foxy/ros2-linux/lib/rosidl_typesupport_introspection_cpp/rosidl_typesupport_introspection_cpp",
+    "/home/ubuntu/ros2_foxy/ros2-linux/lib/python3.8/site-packages/rosidl_typesupport_introspection_cpp/__init__.py",
+    "/home/ubuntu/ros2_foxy/ros2-linux/share/rosidl_typesupport_introspection_cpp/resource/idl__rosidl_typesupport_introspection_cpp.hpp.em",
+    "/home/ubuntu/ros2_foxy/ros2-linux/share/rosidl_typesupport_introspection_cpp/resource/idl__type_support.cpp.em",
+    "/home/ubuntu/ros2_foxy/ros2-linux/share/rosidl_typesupport_introspection_cpp/resource/msg__rosidl_typesupport_introspection_cpp.hpp.em",
+    "/home/ubuntu/ros2_foxy/ros2-linux/share/rosidl_typesupport_introspection_cpp/resource/msg__type_support.cpp.em",
+    "/home/ubuntu/ros2_foxy/ros2-linux/share/rosidl_typesupport_introspection_cpp/resource/srv__rosidl_typesupport_introspection_cpp.hpp.em",
+    "/home/ubuntu/ros2_foxy/ros2-linux/share/rosidl_typesupport_introspection_cpp/resource/srv__type_support.cpp.em",
+    "/home/ubuntu/cu-arc-21-22/CS/drone_ws/build/pi_gpio_interface/rosidl_adapter/pi_gpio_interface/action/GPIO.idl",
+    "/home/ubuntu/ros2_foxy/ros2-linux/share/action_msgs/msg/GoalInfo.idl",
+    "/home/ubuntu/ros2_foxy/ros2-linux/share/action_msgs/msg/GoalStatus.idl",
+    "/home/ubuntu/ros2_foxy/ros2-linux/share/action_msgs/msg/GoalStatusArray.idl",
+    "/home/ubuntu/ros2_foxy/ros2-linux/share/action_msgs/srv/CancelGoal.idl",
+    "/home/ubuntu/ros2_foxy/ros2-linux/share/builtin_interfaces/msg/Duration.idl",
+    "/home/ubuntu/ros2_foxy/ros2-linux/share/builtin_interfaces/msg/Time.idl",
+    "/home/ubuntu/ros2_foxy/ros2-linux/share/unique_identifier_msgs/msg/UUID.idl"
+  ]
+}

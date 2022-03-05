@@ -14,8 +14,8 @@ class UltrasonicSensor(Node):
         self.GPIO_TRIGGER = 2
         self.GPIO_ECHO = 3
 
-        GPIO.setup(GPIO_TRIGGER, GPIO.OUT)
-        GPIO.setup(GPIO_ECHO, GPIO.IN)
+        GPIO.setup(self.GPIO_TRIGGER, GPIO.OUT)
+        GPIO.setup(self.GPIO_ECHO, GPIO.IN)
 
         self.publisher = self.create_publisher(Int64, 'height', 1)
         self.timer = self.create_timer(0.1, self.timer_callback)

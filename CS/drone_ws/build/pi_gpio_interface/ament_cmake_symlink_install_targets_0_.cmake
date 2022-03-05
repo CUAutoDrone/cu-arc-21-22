@@ -1,0 +1,1 @@
+ament_cmake_symlink_install_targets("TARGET_FILES" "/home/ubuntu/cu-arc-21-22/CS/drone_ws/build/pi_gpio_interface/libpi_gpio_interface__rosidl_typesupport_fastrtps_c.so" "TARGETS" "pi_gpio_interface__rosidl_typesupport_fastrtps_c" "ARCHIVE_DESTINATION" "lib" "LIBRARY_DESTINATION" "lib" "RUNTIME_DESTINATION" "bin")

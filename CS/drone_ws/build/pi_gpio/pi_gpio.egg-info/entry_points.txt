@@ -1,0 +1,3 @@
+[console_scripts]
+pi_gpio_server = pi_gpio.pi_gpio_server:main
+

@@ -1,0 +1,90 @@
+[0.255s] Invoking command in '/home/ubuntu/cu-arc-21-22/CS/drone_ws/build/pi_gpio_interface': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ubuntu/cu-arc-21-22/CS/drone_ws/install/pi_gpio:/home/ubuntu/cu-arc-21-22/CS/drone_ws/install/controls /usr/bin/cmake --build /home/ubuntu/cu-arc-21-22/CS/drone_ws/build/pi_gpio_interface -- -j4 -l4
+[0.819s] [  3%] Built target pi_gpio_interface__cpp
+[0.842s] [ 12%] Built target pi_gpio_interface__rosidl_generator_c
+[1.015s] [ 22%] Built target pi_gpio_interface__rosidl_typesupport_introspection_cpp
+[1.023s] [ 32%] Built target pi_gpio_interface__rosidl_typesupport_cpp
+[1.037s] [ 41%] Built target pi_gpio_interface__rosidl_typesupport_c
+[1.069s] [ 51%] Built target pi_gpio_interface__rosidl_typesupport_fastrtps_cpp
+[1.154s] [ 61%] Built target pi_gpio_interface__rosidl_typesupport_introspection_c
+[1.231s] [ 70%] Built target pi_gpio_interface__rosidl_typesupport_fastrtps_c
+[1.337s] [ 70%] Built target pi_gpio_interface
+[1.450s] [ 74%] Built target pi_gpio_interface__py
+[1.631s] [ 80%] Built target pi_gpio_interface__python
+[1.822s] [ 93%] Built target pi_gpio_interface__rosidl_typesupport_c__pyext
+[1.823s] [ 93%] Built target pi_gpio_interface__rosidl_typesupport_introspection_c__pyext
+[1.838s] [100%] Built target pi_gpio_interface__rosidl_typesupport_fastrtps_c__pyext
+[1.888s] Invoked command in '/home/ubuntu/cu-arc-21-22/CS/drone_ws/build/pi_gpio_interface' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ubuntu/cu-arc-21-22/CS/drone_ws/install/pi_gpio:/home/ubuntu/cu-arc-21-22/CS/drone_ws/install/controls /usr/bin/cmake --build /home/ubuntu/cu-arc-21-22/CS/drone_ws/build/pi_gpio_interface -- -j4 -l4
+[2.252s] Invoking command in '/home/ubuntu/cu-arc-21-22/CS/drone_ws/build/pi_gpio_interface': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ubuntu/cu-arc-21-22/CS/drone_ws/install/pi_gpio:/home/ubuntu/cu-arc-21-22/CS/drone_ws/install/controls /usr/bin/cmake --install /home/ubuntu/cu-arc-21-22/CS/drone_ws/build/pi_gpio_interface
+[2.295s] -- Install configuration: ""
+[2.298s] -- Execute custom install script
+[2.302s] -- Up-to-date symlink: /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/pi_gpio_interface/share/ament_index/resource_index/rosidl_interfaces/pi_gpio_interface
+[2.309s] -- Up-to-date symlink: /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/pi_gpio_interface/include/pi_gpio_interface/action/detail/gpio__functions.h
+[2.311s] -- Up-to-date symlink: /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/pi_gpio_interface/include/pi_gpio_interface/action/detail/gpio__struct.h
+[2.316s] -- Up-to-date symlink: /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/pi_gpio_interface/include/pi_gpio_interface/action/detail/gpio__type_support.h
+[2.317s] -- Up-to-date symlink: /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/pi_gpio_interface/include/pi_gpio_interface/action/gpio.h
+[2.319s] -- Up-to-date symlink: /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/pi_gpio_interface/include/pi_gpio_interface/msg/rosidl_generator_c__visibility_control.h
+[2.322s] -- Up-to-date symlink: /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/pi_gpio_interface/share/pi_gpio_interface/environment/library_path.sh
+[2.323s] -- Up-to-date symlink: /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/pi_gpio_interface/share/pi_gpio_interface/environment/library_path.dsv
+[2.328s] -- Up-to-date symlink: /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/pi_gpio_interface/include/pi_gpio_interface/action/detail/gpio__rosidl_typesupport_fastrtps_c.h
+[2.330s] -- Up-to-date symlink: /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/pi_gpio_interface/include/pi_gpio_interface/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[2.334s] -- Up-to-date symlink: /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/pi_gpio_interface/lib/libpi_gpio_interface__rosidl_typesupport_fastrtps_c.so
+[2.340s] -- Up-to-date symlink: /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/pi_gpio_interface/include/pi_gpio_interface/action/detail/gpio__rosidl_typesupport_fastrtps_cpp.hpp
+[2.342s] -- Up-to-date symlink: /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/pi_gpio_interface/include/pi_gpio_interface/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[2.347s] -- Up-to-date symlink: /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/pi_gpio_interface/lib/libpi_gpio_interface__rosidl_typesupport_fastrtps_cpp.so
+[2.351s] -- Up-to-date symlink: /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/pi_gpio_interface/include/pi_gpio_interface/action/detail/gpio__rosidl_typesupport_introspection_c.h
+[2.353s] -- Up-to-date symlink: /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/pi_gpio_interface/include/pi_gpio_interface/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[2.357s] -- Up-to-date symlink: /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/pi_gpio_interface/include/pi_gpio_interface/action/detail/gpio__builder.hpp
+[2.360s] -- Up-to-date symlink: /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/pi_gpio_interface/include/pi_gpio_interface/action/detail/gpio__struct.hpp
+[2.362s] -- Up-to-date symlink: /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/pi_gpio_interface/include/pi_gpio_interface/action/detail/gpio__traits.hpp
+[2.364s] -- Up-to-date symlink: /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/pi_gpio_interface/include/pi_gpio_interface/action/gpio.hpp
+[2.369s] -- Up-to-date symlink: /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/pi_gpio_interface/include/pi_gpio_interface/action/detail/gpio__rosidl_typesupport_introspection_cpp.hpp
+[2.371s] -- Up-to-date symlink: /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/pi_gpio_interface/share/pi_gpio_interface/environment/pythonpath.sh
+[2.373s] -- Up-to-date symlink: /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/pi_gpio_interface/share/pi_gpio_interface/environment/pythonpath.dsv
+[2.375s] -- Up-to-date symlink: /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/pi_gpio_interface/lib/python3.8/site-packages/pi_gpio_interface/__init__.py
+[2.379s] -- Up-to-date symlink: /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/pi_gpio_interface/lib/python3.8/site-packages/pi_gpio_interface/action/__init__.py
+[2.381s] -- Up-to-date symlink: /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/pi_gpio_interface/lib/python3.8/site-packages/pi_gpio_interface/action/_gpio.py
+[2.386s] -- Up-to-date symlink: /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/pi_gpio_interface/lib/python3.8/site-packages/pi_gpio_interface/pi_gpio_interface_s__rosidl_typesupport_fastrtps_c.cpython-38-aarch64-linux-gnu.so
+[2.390s] -- Up-to-date symlink: /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/pi_gpio_interface/lib/python3.8/site-packages/pi_gpio_interface/pi_gpio_interface_s__rosidl_typesupport_introspection_c.cpython-38-aarch64-linux-gnu.so
+[2.394s] -- Up-to-date symlink: /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/pi_gpio_interface/lib/python3.8/site-packages/pi_gpio_interface/pi_gpio_interface_s__rosidl_typesupport_c.cpython-38-aarch64-linux-gnu.so
+[2.398s] -- Up-to-date symlink: /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/pi_gpio_interface/lib/libpi_gpio_interface__python.so
+[2.401s] -- Up-to-date symlink: /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/pi_gpio_interface/share/pi_gpio_interface/action/GPIO.idl
+[2.403s] -- Up-to-date symlink: /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/pi_gpio_interface/share/pi_gpio_interface/action/GPIO.action
+[2.406s] -- Up-to-date symlink: /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/pi_gpio_interface/share/ament_index/resource_index/package_run_dependencies/pi_gpio_interface
+[2.409s] -- Up-to-date symlink: /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/pi_gpio_interface/share/ament_index/resource_index/parent_prefix_path/pi_gpio_interface
+[2.411s] -- Up-to-date symlink: /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/pi_gpio_interface/share/pi_gpio_interface/environment/ament_prefix_path.sh
+[2.415s] -- Up-to-date symlink: /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/pi_gpio_interface/share/pi_gpio_interface/environment/ament_prefix_path.dsv
+[2.416s] -- Up-to-date symlink: /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/pi_gpio_interface/share/pi_gpio_interface/environment/path.sh
+[2.418s] -- Up-to-date symlink: /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/pi_gpio_interface/share/pi_gpio_interface/environment/path.dsv
+[2.421s] -- Up-to-date symlink: /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/pi_gpio_interface/share/pi_gpio_interface/local_setup.bash
+[2.423s] -- Up-to-date symlink: /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/pi_gpio_interface/share/pi_gpio_interface/local_setup.sh
+[2.426s] -- Up-to-date symlink: /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/pi_gpio_interface/share/pi_gpio_interface/local_setup.zsh
+[2.428s] -- Up-to-date symlink: /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/pi_gpio_interface/share/pi_gpio_interface/local_setup.dsv
+[2.429s] -- Symlinking: /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/pi_gpio_interface/share/pi_gpio_interface/package.dsv
+[2.791s] -- Up-to-date symlink: /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/pi_gpio_interface/share/ament_index/resource_index/packages/pi_gpio_interface
+[2.794s] -- Up-to-date symlink: /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/pi_gpio_interface/share/pi_gpio_interface/cmake/rosidl_cmake-extras.cmake
+[2.797s] -- Up-to-date symlink: /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/pi_gpio_interface/share/pi_gpio_interface/cmake/ament_cmake_export_dependencies-extras.cmake
+[2.799s] -- Up-to-date symlink: /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/pi_gpio_interface/share/pi_gpio_interface/cmake/ament_cmake_export_libraries-extras.cmake
+[2.802s] -- Up-to-date symlink: /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/pi_gpio_interface/share/pi_gpio_interface/cmake/ament_cmake_export_targets-extras.cmake
+[2.804s] -- Up-to-date symlink: /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/pi_gpio_interface/share/pi_gpio_interface/cmake/ament_cmake_export_include_directories-extras.cmake
+[2.807s] -- Up-to-date symlink: /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/pi_gpio_interface/share/pi_gpio_interface/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[2.810s] -- Up-to-date symlink: /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/pi_gpio_interface/share/pi_gpio_interface/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[2.812s] -- Up-to-date symlink: /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/pi_gpio_interface/share/pi_gpio_interface/cmake/pi_gpio_interfaceConfig.cmake
+[2.815s] -- Up-to-date symlink: /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/pi_gpio_interface/share/pi_gpio_interface/cmake/pi_gpio_interfaceConfig-version.cmake
+[2.817s] -- Up-to-date symlink: /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/pi_gpio_interface/share/pi_gpio_interface/package.xml
+[2.821s] -- Up-to-date: /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/pi_gpio_interface/lib/libpi_gpio_interface__rosidl_generator_c.so
+[2.826s] -- Up-to-date: /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/pi_gpio_interface/lib/libpi_gpio_interface__rosidl_typesupport_introspection_c.so
+[2.831s] -- Up-to-date: /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/pi_gpio_interface/lib/libpi_gpio_interface__rosidl_typesupport_c.so
+[2.836s] -- Up-to-date: /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/pi_gpio_interface/lib/libpi_gpio_interface__rosidl_typesupport_introspection_cpp.so
+[2.840s] -- Up-to-date: /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/pi_gpio_interface/lib/libpi_gpio_interface__rosidl_typesupport_cpp.so
+[3.031s] -- Up-to-date: /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/pi_gpio_interface/share/pi_gpio_interface/cmake/pi_gpio_interface__rosidl_generator_cExport.cmake
+[3.031s] -- Up-to-date: /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/pi_gpio_interface/share/pi_gpio_interface/cmake/pi_gpio_interface__rosidl_generator_cExport-noconfig.cmake
+[3.035s] -- Up-to-date: /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/pi_gpio_interface/share/pi_gpio_interface/cmake/pi_gpio_interface__rosidl_typesupport_introspection_cExport.cmake
+[3.036s] -- Up-to-date: /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/pi_gpio_interface/share/pi_gpio_interface/cmake/pi_gpio_interface__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[3.039s] -- Up-to-date: /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/pi_gpio_interface/share/pi_gpio_interface/cmake/pi_gpio_interface__rosidl_typesupport_cExport.cmake
+[3.040s] -- Up-to-date: /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/pi_gpio_interface/share/pi_gpio_interface/cmake/pi_gpio_interface__rosidl_typesupport_cExport-noconfig.cmake
+[3.044s] -- Up-to-date: /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/pi_gpio_interface/share/pi_gpio_interface/cmake/pi_gpio_interface__rosidl_generator_cppExport.cmake
+[3.047s] -- Up-to-date: /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/pi_gpio_interface/share/pi_gpio_interface/cmake/pi_gpio_interface__rosidl_typesupport_introspection_cppExport.cmake
+[3.048s] -- Up-to-date: /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/pi_gpio_interface/share/pi_gpio_interface/cmake/pi_gpio_interface__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[3.052s] -- Up-to-date: /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/pi_gpio_interface/share/pi_gpio_interface/cmake/pi_gpio_interface__rosidl_typesupport_cppExport.cmake
+[3.053s] -- Up-to-date: /home/ubuntu/cu-arc-21-22/CS/drone_ws/install/pi_gpio_interface/share/pi_gpio_interface/cmake/pi_gpio_interface__rosidl_typesupport_cppExport-noconfig.cmake
+[3.062s] Invoked command in '/home/ubuntu/cu-arc-21-22/CS/drone_ws/build/pi_gpio_interface' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ubuntu/cu-arc-21-22/CS/drone_ws/install/pi_gpio:/home/ubuntu/cu-arc-21-22/CS/drone_ws/install/controls /usr/bin/cmake --install /home/ubuntu/cu-arc-21-22/CS/drone_ws/build/pi_gpio_interface

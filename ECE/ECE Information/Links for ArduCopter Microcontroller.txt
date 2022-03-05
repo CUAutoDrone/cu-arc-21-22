@@ -1,5 +1,9 @@
 https://www.youtube.com/watch?v=HL8ZYeLOYLA&t=49s -- Binding Transmiter to Receiver 
-https://www.instructables.com/Building-Your-First-ArduCopter/ -- Setting up microcontroller
+https://www.instructables.com/Building-Your-First-ArduCopter/ -- Setting up microcontroller and setup with mission planner (calibrations)
 https://ardupilot.org/planner/docs/common-mission-planning.html -- Main Page for ArduPilot info
+https://ardupilot.org/copter/docs/common-connect-mission-planner-autopilot.html -- Connecting ArduCopter to Mission Planner
+https://ardupilot.org/planner/docs/common-radio-control-calibration.html -- info on radio control calibration (transmitter setup)
+https://docs.px4.io/master/en/config/flight_mode.html -- Flight mode config
+https://robu.in/calibrating-apm-2-8-using-mission-planner/ -- more on arducopter setup and mission planner
+https://ardupilot.org/copter/docs/common-rc-systems.html -- radio control systems for arducopter
 
- 
