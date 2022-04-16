@@ -1,4 +1,4 @@
-//Reads Pitch, Yaw, and Roll from MPU 92/65 Gyroscope
+//Successfully reads Pitch, Yaw, and Roll from MPU 92/65 Gyroscope
 
 #include "MPU9250.h"
 
@@ -13,6 +13,7 @@ void setup() {
 }
 
 void loop() {
+    // Prints roll, pitch, and yaw
     if (mpu.update()) {
         Serial.print("Yaw: "); Serial.print(mpu.getYaw()); Serial.print(", Pitch: ");
         Serial.print(mpu.getPitch()); Serial.print(", Roll: ");

@@ -26,7 +26,7 @@ def readDistance():
 	and go to page 4 in the I2C Interface section for the exact specifications and steps.
 	"""
 	bit_mask= 0b00000001
-	#step 1
+	#step 1 (register change speicified by documentation for LIDAR)
 	write(0x62,0x00,0x04)
 	#step 2. We check the last bit by doing a logical and with the mask and the data to isolate the last bit
 	value = read(0x62,0x01)
@@ -35,7 +35,7 @@ def readDistance():
 	while(check==1):
 		value=read(0x62,0x01)
 		check=bit_mask & value
-	#step 3
+	#step 3 Modifying register value to get distance value
 	low = read(0x62,0x10)
 	high =  read(0x62, 0x0f)
 	value = high*256 + low
