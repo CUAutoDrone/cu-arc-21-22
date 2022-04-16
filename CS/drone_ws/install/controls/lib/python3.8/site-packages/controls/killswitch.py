@@ -19,10 +19,9 @@ def main(args=None):
     rclpy.init(args=args)
 
     kill_switch = KillSwitch()
+    
     input("Press enter to kill")
     kill_switch.kill()
-
-    rclpy.shutdown()
 
 
 if __name__ == '__main__':

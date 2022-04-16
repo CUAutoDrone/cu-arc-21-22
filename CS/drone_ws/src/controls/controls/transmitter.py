@@ -127,20 +127,7 @@ def test_main(args=None):
     executor.add_node(roll)
     executor.add_node(yaw)
 
-    try:
-        executor.spin()
-
-    except KeyboardInterrupt:
-        executor.shutdown()
-
-        arm.destroy_node()
-        throttle.destroy_node()
-        pitch.destroy_node()
-        roll.destroy_node()
-        yaw.destroy_node()
-        
-        rclpy.shutdown()
-        control.shutdown()
+    executor.spin()
 
 if __name__ == '__main__':
     main()

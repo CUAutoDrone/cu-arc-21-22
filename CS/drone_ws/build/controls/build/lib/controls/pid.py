@@ -24,7 +24,7 @@ class PID(Node):
         self.sum = 0
         self.last_error = 0
 
-        self._neutral_throttle = 1550
+        self._neutral_throttle = 1030
 
 
     def update_callback(self, msg):
@@ -57,9 +57,6 @@ def main(args=None):
 
     pid = PID()
     rclpy.spin(pid)
-
-    pid.destroyNode()
-    rclpy.shutdown()
 
 
 if __name__ == '__main__':

@@ -157,9 +157,6 @@ def main(args=None):
     executor.add_node(controller)
     executor.spin()
 
-    executor.destroy_node()
-    rclpy.shutdown()
-
 
 def test_main(args=None):
     rclpy.init(args=args)
@@ -168,9 +165,6 @@ def test_main(args=None):
     controller = FlightController(test=True)
     executor.add_node(controller)
     executor.spin()
-
-    executor.destroy_node()
-    rclpy.shutdown()
 
 
 if __name__ == '__main__':

@@ -26,9 +26,6 @@ def main(args=None):
     publisher = HeightPublisher(sensor)
     rclpy.spin(publisher)
 
-    publisher.destroyNode()
-    rclpy.shutdown()
-
 
 if __name__ == '__main__':
     main()

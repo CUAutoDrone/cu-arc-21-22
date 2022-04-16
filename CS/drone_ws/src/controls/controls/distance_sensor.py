@@ -67,9 +67,6 @@ def main(args=None):
     distance_sensor = DistanceSensor()
     rclpy.spin(distance_sensor)
 
-    distance_sensor.destroyNode()
-    rclpy.shutdown()
-
 
 if __name__ == '__main__':
     main()
