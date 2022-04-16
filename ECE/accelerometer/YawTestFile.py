@@ -23,6 +23,8 @@ magnetic_declination = -11.767
 #Holliston
 #magnetic_declination = -14.1
 
+# This is an attempt to convert methods in arduino library to python
+
 def update_q (ax, ay, az, gx, gy, gz, mx, my, mz, q, deltaT):
     deltaT = abs(deltaT * 0.001 * 0.001)
     q0 = q[0]
