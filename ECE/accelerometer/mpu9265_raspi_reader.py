@@ -42,6 +42,7 @@ try:
         #print(" my = " , ( mag['y'] ))
         #print(" mz = " , ( mag['z'] ))
 
+        # assign
         accelX = accel['x']
         accelY = accel['y']
         accelZ = accel['z']
