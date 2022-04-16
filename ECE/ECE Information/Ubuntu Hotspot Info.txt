@@ -1,0 +1,1 @@
+https://raspberrypi.stackexchange.com/questions/109425/ubuntu-server-18-wifi-hotspot-setup --> Stack Exchange version of hotspot setup on ubuntu
