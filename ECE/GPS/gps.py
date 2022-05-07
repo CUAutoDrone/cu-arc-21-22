@@ -13,6 +13,9 @@ class GPS:
         self.t.start()
         self.stop_thread = False
 
+    @property
+    def ms_since_last_update(self):
+        return (time.time()-self.last_updated)*1000
 
     def process_line(self, line, print_output=False):
         # Processes a line. Returns None when no information is found. Otherwise it returns a dictionary
@@ -62,6 +65,7 @@ class GPS:
 if __name__ == '__main__':
     gps = GPS()
     time.sleep(10)
+    print(gps.ms_since_last_update)
     del gps
 
 
