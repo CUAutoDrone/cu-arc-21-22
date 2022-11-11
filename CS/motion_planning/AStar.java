@@ -1,6 +1,7 @@
 package astar;
 
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -69,10 +70,7 @@ public class AStar {
 	public ArrayList<Node> search() {
 		start.setDistFromStart(0);
 		start.setHeuristic(Math.sqrt(Math.pow(start.getX() - target.getX(), 2) + Math.pow(start.getY() - target.getY(), 2)));
-		
-		for(Node node: graph) {
-			opened.add(node);
-		}
+		opened.add(start);
 		
 		while (true) {
 			numSteps++;
@@ -92,6 +90,7 @@ public class AStar {
 					currNode = currNode.getParent();
 					path.add(currNode);
 				}
+				Collections.reverse(path);
 				return path;
 			}
 			
@@ -99,7 +98,7 @@ public class AStar {
 			
 			if(newNodes.size() > 0) {
 				for(Node newNode: newNodes) {
-					newNode.setHeuristic(findHeuristic(removed, newNode));
+					newNode.setHeuristic(findHeuristic(newNode, target));
 					if(!closed.contains(newNode) && !opened.contains(newNode)) {
 						newNode.setParent(removed);
 						opened.add(newNode);
