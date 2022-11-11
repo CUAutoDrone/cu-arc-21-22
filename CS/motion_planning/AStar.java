@@ -18,7 +18,6 @@ public class AStar {
 		this.graph = graph;
 		this.start = start;
 		this.target = target;
-		this.numSteps = numSteps;
 		opened = new ArrayList<Node>();
 		closed = new ArrayList<Node>();
 	}
@@ -71,10 +70,14 @@ public class AStar {
 		start.setDistFromStart(0);
 		start.setHeuristic(Math.sqrt(Math.pow(start.getX() - target.getX(), 2) + Math.pow(start.getY() - target.getY(), 2)));
 		
+		for(Node node: graph) {
+			opened.add(node);
+		}
+		
 		while (true) {
 			numSteps++;
 			
-			if(opened != null && opened.size() == 0) {
+			if(opened.size() == 0) {
 				System.out.println("No solution found");
 				break;
 			}
