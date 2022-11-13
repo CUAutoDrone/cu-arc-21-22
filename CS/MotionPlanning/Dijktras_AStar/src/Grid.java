@@ -187,14 +187,19 @@ public class Grid {
             if (current.getX() == endX && current.getY() == endY) return buildPath(current);
 
             for (int[] direction : adjacent) {
-                int newX = current.getX() + direction[0];
-                int newY = current.getY() + direction[1];
+                int[] jump = jump(current.getX(),current.getY(),
+                        endX,endY,new int[] {direction[0],direction[1]});
+                if (jump == null) {
+                    continue;
+                }
+                int newX = jump[0];
+                int newY = jump[1];
                 try {
                     if (gridPoints[newX][newY]) {
                         AStarPoint p = new AStarPoint(newX, newY);
                         store.putIfAbsent(p, p);
                         p = store.get(p);
-                        int newDist = current.gCost + direction[2];
+                        int newDist = current.gCost + getDist(current.getX(), current.getY(), newX,newY);
                         if (closed.contains(p) && newDist >= p.gCost)
                             continue;
                         if (!open.contains(p) || newDist < p.gCost) {
@@ -211,9 +216,49 @@ public class Grid {
                 }
             }
         }
-
-
         return null;
+    }
+
+    private int[] jump(int x, int y, int endX, int endY, int[] d){
+        x += d[0];
+        y += d[1];
+
+        try {
+            if (!gridPoints[x][y]) return null;
+        }catch (IndexOutOfBoundsException e){
+            return null;
+        }
+
+        if (x == endX && y == endY) return new int[] {x,y};
+
+        if (Math.abs(d[0]) == Math.abs(d[1])) { //diagonal
+            try {
+                if (!gridPoints[x - d[0]][y])
+                    return new int[]{x, y};
+            }catch (IndexOutOfBoundsException ignored){}
+            try {
+                if (!gridPoints[x][y - d[1]])
+                    return new int[]{x, y};
+            }catch (IndexOutOfBoundsException ignored){}
+
+            if (jump(x, y, endX, endY, new int[]{0, d[1]}) != null)
+                return new int[]{x, y};
+            if (jump(x, y, endX, endY, new int[]{d[0], 0}) != null)
+                return new int[]{x, y};
+
+
+        } else { //orthogonal
+            try {
+                if (!gridPoints[x + d[1]][y + d[0]])
+                    return new int[]{x, y};
+            }catch (IndexOutOfBoundsException ignored){}
+            try {
+                if (!gridPoints[x - d[1]][y - d[0]])
+                    return new int[]{x, y};
+            }catch (IndexOutOfBoundsException ignored){}
+        }
+
+        return jump(x,y,endX,endY,d);
     }
 
     /** Prints a representation of the grid and the path through that grid.
