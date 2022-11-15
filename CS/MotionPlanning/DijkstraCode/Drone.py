@@ -31,8 +31,8 @@ class Drone:
         SandF[self.__startpos] = (0, None)
         while(F.getHeapSize()>0):
             f = F.pop()
-            if f == endpoint:
-                return self.__showpath(SandF, endpoint)
+            #if f == endpoint:
+            #    return self.__showpath(SandF, endpoint)
             fdist = (SandF[f])[0]
             for neighbor in self.__grid[f].getNeighbors():
                 other = neighbor.getSink()
@@ -45,7 +45,13 @@ class Drone:
                         SandF[other] = (wdist, f)
                         if other in F.getHeap():
                             F.changePriority(other, wdist)
-        return []
+                        else:
+                            F.insert(other,wdist)
+        try:
+            return self.__showpath(SandF, endpoint)
+        except:
+            print("No path to endpoint!")
+            return []
 
     def __showpath(self, dict, endpoint):
         """Returns the path from starting position to endpoint
