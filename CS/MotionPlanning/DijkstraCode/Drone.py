@@ -14,12 +14,16 @@ class Drone:
         startpos = starting position of the drone (a tuple)
     """
 
-    def __init__(self, grid):
+    def __init__(self, grid, startpoint):
         """Constructs a Grid object
            Precondition: grid is a Grid object"""
         self.__grid = grid.getGridPoints()
         self.__size = grid.getSize()
-        self.__startpos = (0,0)
+        self.__startpos = startpoint
+
+    def getStartPoint(self):
+        """Returns the starting position of the drone"""
+        return self.__startpos
 
     # Dijkstra's Algorithm
     def shortestPath1(self, endpoint):
