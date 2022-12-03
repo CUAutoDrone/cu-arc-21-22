@@ -1,0 +1,72 @@
+public class Pathfind {
+    public static void main(String[] args){
+        /*
+        Grid g = new Grid(10,10);
+
+
+        int s = 10;
+        for (int i = 2; i <= s;i ++){
+            g.makeObstacle(2,i);
+            g.makeObstacle(i,2);
+            g.makeObstacle(s,i);
+            g.makeObstacle(i,s);
+        }
+        g.removeObstacle(2,2);
+        g.removeObstacle(2,3);
+        g.removeObstacle(3,2);
+
+
+        g.makeObstacle(1, 1);
+        g.makeObstacle(2, 1);
+        g.makeObstacle(1, 2);
+        g.makeObstacle(1, 3);
+        g.makeObstacle(8, 8);
+        g.makeObstacle(8, 7);
+        g.makeObstacle(7, 8);
+
+        */
+        int size = 10;
+
+        Grid g = new Grid(size,size);
+
+        /*
+        int s0 = 2;
+        int s = 1666;
+
+        for (int i = s0; i <= s;i ++){
+            g.makeObstacle(s0,i);
+            g.makeObstacle(i,s0);
+            g.makeObstacle(s,i);
+            g.makeObstacle(i,s);138
+        }
+        g.removeObstacle(2,2);
+        g.removeObstacle(3,2);
+        g.removeObstacle(2,3);
+        */
+        for (int i = 1; i <= 9;i ++){
+            g.makeObstacle(7,i);
+        }
+
+        long startTime = System.currentTimeMillis();
+
+        int[][] path = g.findPathFast(0,0,size-1,size-1);
+        startTime = System.currentTimeMillis()-startTime;
+        g.printPath(path);
+        System.out.println(startTime);
+        /*for (int[] p : path){
+            System.out.println(p[0]+","+p[1]);
+        }
+         */
+
+        //15s
+        //g.printPath(g.findPathFast(3,3,14,8));
+        //g.printPath(g.findPathFast(7,7,12,10));
+        /*
+        g.makeObstacle(5,5);
+        g.makeObstacle(4,5);
+        g.makeObstacle(5,4);
+
+        g.printPath(g.findPathFast(0,0,14,14));
+        */
+    }
+}
