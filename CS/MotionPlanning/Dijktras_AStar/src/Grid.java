@@ -1,7 +1,9 @@
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.LinkedList;
 import java.util.PriorityQueue;
 
 public class Grid {
@@ -9,8 +11,9 @@ public class Grid {
     private final int dDist = 14; //diagonal distance edge weight
     private final int oDist = 10; //orthogonal distance edge weight
 
-    private final int[][] adjacent = {{-1, -1, dDist}, {1, 1, dDist}, {1, -1, dDist},{-1, 1, dDist}, //diagonal
-            {0, -1, oDist}, {0, 1, oDist}, {-1, 0, oDist},{1, 0, oDist}}; //orthogonal
+    private final int[][] adjacent = {{1,1,dDist}, {-1,1,dDist},{0,1,oDist},{1,0,oDist},
+            {-1,0,oDist},{0,-1,oDist},{1,-1,dDist},{-1,-1,dDist}};
+
 
     /** Represents the grid, true if the point is traversable and
      * false if the point is not traversable.
@@ -31,7 +34,7 @@ public class Grid {
         xSize = xDim;
         ySize = yDim;
         gridPoints = new boolean[xDim][yDim];
-        for(boolean row[]: gridPoints)
+        for(boolean[] row : gridPoints)
             Arrays.fill(row, true);
     }
 
@@ -66,10 +69,13 @@ public class Grid {
      * Requires: startX,startY endX,endY are both points on the grid.
      */
 
+
+
     public int[][] findPathDijkstras(int startX, int startY, int endX, int endY){
 
         HashMap<Point, Point> points = new HashMap<>();
-        PriorityQueue<Point> q = new PriorityQueue<>(1, new PointCompare());
+        PriorityQueue<Point> q = new PriorityQueue<>(1,
+                Comparator.comparingInt(o -> o.dist));
 
 
         Point current = new Point(startX, startY, 0);
@@ -123,8 +129,26 @@ public class Grid {
      * Requires: startX,startY endX,endY are both points on the grid.
      */
     public int[][] findPathAStar(int startX, int startY, int endX, int endY){
-        PriorityQueue<AStarPoint> open = new PriorityQueue<>(1,new AStarPointCompare());
+
+        /*PriorityQueue<AStarPoint> open = new PriorityQueue<>(1, (o1,o2) -> {
+            int c = Integer.compare(o1.fCost(),o2.fCost());
+            if (c == 0)
+                return Integer.compare(o1.hCost, o2.hCost);
+            return c;
+        });
+        */
+
+
+        PriorityQ<AStarPoint> open = new PriorityQ<>((o1,o2) -> {
+            int c = Integer.compare(o1.fCost(),o2.fCost());
+            if (c == 0)
+                return Integer.compare(o1.hCost, o2.hCost);
+            return c;
+        });
+        //double[] time = new double[40];
+
         HashSet<AStarPoint> closed = new HashSet<>();
+
         HashMap<AStarPoint,AStarPoint> store = new HashMap<>();
 
 
@@ -132,32 +156,69 @@ public class Grid {
         current.gCost = 0;
         open.add(current);
 
+        //long i = 0;
         while (open.size() > 0){
+            //i++;
+
+            //time[0] -= (double)System.nanoTime()/1000000000;
 
             current = open.poll();
-            closed.add(current);
+            //time[0] += (double)System.nanoTime()/1000000000;
 
-            if (current.getX() == endX && current.getY() == endY) return buildPath(current);
+            //time[1] -= (double)System.nanoTime()/1000000000;
+            closed.add(current);
+            //time[1] += (double)System.nanoTime()/1000000000;
+
+
+
+            if (current.getX() == endX && current.getY() == endY) {
+                //System.out.println(i);
+                /*System.out.println("time stuff");
+                for (int j = 0; j < time.length; j++){
+                    if (time[j] != 0)
+                        System.out.println(j+" "+time[j]);
+                }*/
+                return buildPath(current); //1.7ms for 10,000 with square
+            }
 
             for (int[] direction : adjacent) {
                 int newX = current.getX() + direction[0];
                 int newY = current.getY() + direction[1];
                 try {
                     if (gridPoints[newX][newY]) {
+                        //time[10] -= (double)System.nanoTime()/1000000000;
                         AStarPoint p = new AStarPoint(newX, newY);
+                        //time[10] += (double)System.nanoTime()/1000000000;
+
+
+                        //time[11] -= (double)System.nanoTime()/1000000000;
                         store.putIfAbsent(p, p);
+                        //time[11] += (double)System.nanoTime()/1000000000;
+
+
+                        //time[12] -= (double)System.nanoTime()/1000000000;
                         p = store.get(p);
+                        //time[12] += (double)System.nanoTime()/1000000000;
+
                         int newDist = current.gCost + direction[2];
-                        if (closed.contains(p) && newDist >= p.gCost)
-                            continue;
-                        if (!open.contains(p) || newDist < p.gCost) {
+
+
+                        //time[20] -= (double)System.nanoTime()/1000000000;
+                        //if () {
+                            //time[20] += (double)System.nanoTime()/1000000000;
+                            //continue;
+                        //}
+                        //time[20] += (double)System.nanoTime()/1000000000;
+
+                        //time[30] -= (double)System.nanoTime()/1000000000;'
+                        if (closed.contains(p) && newDist >= p.gCost) continue;
+                        if (newDist < p.gCost) {//!open.contains(p) ||
                             p.gCost = newDist;
                             p.hCost = getDist(p.getX(), p.getY(), endX, endY);
                             p.previous = current;
-                            if (!open.contains(p)) {
-                                open.add(p);
-                            }
+                            open.add(p);
                         }
+                        //time[30] += (double)System.nanoTime()/1000000000;
                     }
 
                 } catch (IndexOutOfBoundsException ignored) {
@@ -165,12 +226,44 @@ public class Grid {
             }
         }
 
-
         return null;
     }
 
+
+    public int[][] findPathFast(int startX, int startY, int endX, int endY){
+        ASPController controller = new ASPController(startX,startY,endX,endY,oDist,dDist);
+
+        while (true){
+            int[] current = controller.getNext();
+            if (current == null) return null;
+            if (current[0] == endX && current[1] == endY)
+                return controller.buildPath(current);
+
+            for (int i = 0; i < 8; i ++) {
+                int[] direction = adjacent[i];
+                int newX = current[0] + direction[0];
+                int newY = current[1] + direction[1];
+                try {
+                    if (gridPoints[newX][newY]) {
+                        int gCost = controller.gCost(newX,newY);
+                        int newDist = current[2] + direction[2];
+                        if (newDist >= gCost && controller.inClosed(newX,newY))
+                            continue;
+                        if (newDist < gCost) {
+                            controller.updatePoint(newX,newY,newDist,i);
+                        }
+                    }
+
+                } catch (IndexOutOfBoundsException ignored) {
+                }
+            }
+        }
+    }
+
+
     public int[][] findPathJPS(int startX, int startY, int endX, int endY){
-        PriorityQueue<AStarPoint> open = new PriorityQueue<>(1,new AStarPointCompare());
+        PriorityQueue<AStarPoint> open = new PriorityQueue<>(1,
+                Comparator.comparingInt(AStarPoint::fCost).thenComparingInt(o -> o.hCost));
         HashSet<AStarPoint> closed = new HashSet<>();
         HashMap<AStarPoint,AStarPoint> store = new HashMap<>();
 
@@ -182,6 +275,9 @@ public class Grid {
         while (open.size() > 0){
 
             current = open.poll();
+            while (closed.contains(current)){
+                current = open.poll();
+            }
             closed.add(current);
 
             if (current.getX() == endX && current.getY() == endY) return buildPath(current);
@@ -202,13 +298,13 @@ public class Grid {
                         int newDist = current.gCost + getDist(current.getX(), current.getY(), newX,newY);
                         if (closed.contains(p) && newDist >= p.gCost)
                             continue;
-                        if (!open.contains(p) || newDist < p.gCost) {
+                        if (newDist < p.gCost) {
                             p.gCost = newDist;
                             p.hCost = getDist(p.getX(), p.getY(), endX, endY);
                             p.previous = current;
-                            if (!open.contains(p)) {
-                                open.add(p);
-                            }
+                            //if (!open.contains(p)) {
+                            open.add(p);
+                            //}
                         }
                     }
 
@@ -281,7 +377,7 @@ public class Grid {
      || represents untraversable points
      __ represents traversable points
 
-     * If the path is not valid (ie. uses untraversable points or points not in grid) then
+     * If the path is not valid (i.e. uses untraversable points or points not in grid) then
      Invalid path
      is printed
      */
@@ -319,26 +415,20 @@ public class Grid {
             if(x != xSize) System.out.println("|");
 
         }
-        System.out.println("");
+        System.out.println();
 
     }
 
 
     private int[][] buildPath(Point end){
-        ArrayList<Point> path = new ArrayList<>();
+        LinkedList<int[]> path = new LinkedList<>();
         while (end != null){
-            path.add(end);
+            path.add(0,new int[] {end.getX(),end.getY()});
             end = end.previous;
         }
 
         int[][] r = new int[path.size()][2];
-        int i = 0;
-        for (Point p: path){
-            r[path.size()-1-i][0] = p.getX();
-            r[path.size()-1-i][1] = p.getY();
-            i++;
-        }
-        return r;
+        return path.toArray(r);
     }
 
     private int getDist(int x1, int y1, int x2, int y2){
