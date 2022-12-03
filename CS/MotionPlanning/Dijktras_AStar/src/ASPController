@@ -1,0 +1,142 @@
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.LinkedList;
+import java.util.PriorityQueue;
+
+public class ASPController {
+
+    /**
+     * HashMap that maps Integer representation of x,y point to Integer representation of
+     * a point's information: its gCost and the direction of its parent node
+     * Integer -> Direction:
+     * |1|2|0|
+     * |4|x|3|
+     * |7|5|6|
+     *
+     * Integer (Key) representation:
+     * 16 bits that correspond to x value followed by 16 bits representing y value
+     * Ex. For a point (x,y) = (231,318)
+     * 00000000 11100111 00000001 00111110
+     * |-------x-------| |-------y-------|
+     *
+     * Integer (Value) representation:
+     * 29 bits that represent the gCost flowed by 3 bits representing one of 8
+     * directions that its parent node is in, see above
+     * Ex. For a point that has a gCost of 534 and whose parent node is directly down
+     * 00000000 00000000 00010000 10110 101
+     * |------------gCost-------------| |-| direction
+     */
+    private final HashMap<Integer,Integer> points = new HashMap<>();
+    private final HashSet<Integer> closed = new HashSet<>();
+    private final PriorityQueue<Long> open = new PriorityQueue<>(1, (o1,o2)->{
+        int c = getCost(o1) - getCost(o2);
+        if (c == 0) return hCost(o1) - hCost(o2);
+        return c;
+    });
+    private final int startX, startY, endX, endY, oDist, dDist;
+    private final int[][] adj;
+    public ASPController(int startX,int startY,int endX, int endY, int oDist, int dDist){
+        this.startX = startX;
+        this.startY = startY;
+        this.endX = endX;
+        this.endY = endY;
+        this.oDist = oDist;
+        this.dDist = dDist;
+        adj = new int[][] {{1,1,dDist}, {-1,1,dDist},{0,1,oDist},{1,0,oDist},
+            {-1,0,oDist},{0,-1,oDist},{1,-1,dDist},{-1,-1,dDist}};
+        open.add( (long) getxy(startX,startY) << 32 | buildPoint(hCostxy(startX,startY),0));
+        points.put(getxy(startX,startY), 0);
+    }
+
+
+    public int[] getNext(){
+        int[] r = new int[3];
+        if (open.isEmpty()) return null;
+        long next = open.poll();
+        int xy = getxy(getX(next),getY(next));
+        while (closed.contains(xy)){
+            if (open.isEmpty()) return null;
+            next = open.poll();
+            xy = getxy(getX(next),getY(next));
+        }
+        closed.add(xy);
+        r[0] = getX(next);
+        r[1] = getY(next);
+        r[2] = getCost(next) - hCostxy(r[0],r[1]);
+
+        return r;
+    }
+
+    public void updatePoint(int x, int y, int gCost, int direction){
+        int xy = getxy(x,y);
+        points.put(xy,buildPoint(gCost,direction));
+        open.add((long)xy << 32 | buildPoint(gCost+hCostxy(x,y),direction));
+    }
+
+    public int gCost(int x, int y){
+        Integer p = points.get( getxy(x,y) );
+        if (p != null) {
+            return getCost(p);
+        }
+        points.put(getxy(x,y), buildPoint(536870911,0));
+        return 536870911;
+    }
+
+
+    public boolean inClosed(int x, int y){
+        return closed.contains(getxy(x,y));
+    }
+
+    public int[][] buildPath(int[] end){
+        LinkedList<int[]> path = new LinkedList<>();
+        int x = end[0];
+        int y = end[1];
+        int p = points.get(getxy(x,y));
+        while (x != startX || y != startY){
+            int[] point = new int[]{x,y};
+            path.add(0,point);
+            x += adj[getDir(p)][0];
+            y += adj[getDir(p)][1];
+            p = points.get(getxy(x ,y));
+        }
+        path.add(0,new int[]{x,y});
+
+        int[][] r = new int[path.size()][2];
+        return path.toArray(r);
+    }
+
+    private int getX(long p){
+        return (int) (p >>> 48);
+    }
+    private int getY(long p){
+        return (int) ((p >>> 32) & 65535);
+    }
+    private int getCost(long p){
+        return (int) ((p >>> 3) & 536870911);
+    }
+
+    private int getDir(int p){
+        return (int) (p & 7);
+    }
+
+    private int buildPoint(int gCost, int direction){
+        return (gCost << 3) | (7-direction);
+    }
+
+    private int getxy(int x, int y){
+        return x<<16 | y;
+    }
+
+    private int hCost(long n){
+        int xDist = Math.abs(getX(n)-endX);
+        int yDist = Math.abs(getY(n)-endY);
+        return xDist > yDist ? dDist*yDist+oDist*(xDist-yDist) : dDist*xDist+oDist*(yDist-xDist);
+    }
+    private int hCostxy(int x, int y){
+        int xDist = Math.abs(x-endX);
+        int yDist = Math.abs(y-endY);
+        return xDist > yDist ? dDist*yDist+oDist*(xDist-yDist) : dDist*xDist+oDist*(yDist-xDist);
+    }
+
+
+}
