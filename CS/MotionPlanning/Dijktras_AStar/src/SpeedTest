@@ -1,0 +1,108 @@
+import java.util.Random;
+
+public class SpeedTest {
+    public static void main (String[] args){
+        int size = 100;
+
+        Grid g = new Grid(size,size);
+        Random rand = new Random();
+
+
+        int s = 2*size/3;
+
+        for (int i = 0; i < 10_000_000; i++){
+            int r = rand.nextInt(size-1);
+            g.makeObstacle(r,r);
+            g.removeObstacle(r,r);
+        }
+
+        for (int i = 5; i <= s;i ++){
+            g.makeObstacle(5,i);
+            g.makeObstacle(i,5);
+            g.makeObstacle(s,i);
+            g.makeObstacle(i,s);
+        }
+
+        g.removeObstacle(5,5);
+        g.removeObstacle(5,6);
+        g.removeObstacle(6,5);
+
+        double avg1 = 0;
+        double avg2 = 0;
+        int[][] path;
+        int total = 1;
+        for (int i = 0; i < total; i++) {
+            int rx1 = rand.nextInt(size);
+            int ry1 = rand.nextInt(size);
+            int rx2 = rand.nextInt(size);
+            int ry2 = rand.nextInt(size);
+            //System.out.println(rx1+","+ry1+" "+rx2+","+ry2);
+
+            long startTime = System.currentTimeMillis();
+            //path = g.findPathFast(rx1, ry1, rx2, ry2);
+            avg1 += ((double) (System.currentTimeMillis() - startTime));
+
+            /*
+            if (g.isTraversable(rx1,ry1) && g.isTraversable(rx2,ry2)){
+                assert  path != null;
+            }else {
+                assert path == null;
+            }
+
+             */
+
+
+
+            System.out.println(rx1+","+ry1+" "+rx2+","+ry2);
+
+            startTime = System.currentTimeMillis();
+            path = g.findPathAStar(rx1, ry1, rx2, ry2);
+            avg2 += ((double) (System.currentTimeMillis() - startTime));
+
+            System.out.println("done");
+
+            if (g.isTraversable(rx1,ry1) && g.isTraversable(rx2,ry2)){
+                assert  path != null;
+            }else {
+                assert path == null;
+            }
+
+            rx1 = rand.nextInt(size);
+            ry1 = rand.nextInt(size);
+            rx2 = rand.nextInt(size);
+            ry2 = rand.nextInt(size);
+
+            System.out.println(rx1+","+ry1+" "+rx2+","+ry2);
+
+            startTime = System.currentTimeMillis();
+            path = g.findPathAStar(rx1, ry1, rx2, ry2);
+            avg2 += ((double) (System.currentTimeMillis() - startTime));
+
+
+            System.out.println("done");
+            if (g.isTraversable(rx1,ry1) && g.isTraversable(rx2,ry2)){
+                assert  path != null;
+            }else {
+                assert path == null;
+            }
+
+            //System.out.println(rx1+","+ry1+" "+rx2+","+ry2);
+
+            startTime = System.currentTimeMillis();
+            //path = g.findPathFast(rx1, ry1, rx2, ry2);
+            avg1 += ((double) (System.currentTimeMillis() - startTime));
+
+            /*
+            if (g.isTraversable(rx1,ry1) && g.isTraversable(rx2,ry2)){
+                assert  path != null;
+            }else {
+                assert path == null;
+            }
+
+             */
+        }
+        System.out.println("bt "+(avg1/(total*2))+"ms");
+        System.out.println("A* "+(avg2/(total*2))+"ms");
+    }
+}
+
