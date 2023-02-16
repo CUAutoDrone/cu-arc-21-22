@@ -13,14 +13,18 @@ class Grid:
         obstacles: a dictionary of all the gridpoints that are obstacles
     """
 
-    def __init__(self, size):
+    def __init__(self, size, testmode):
         """Constructs a Grid object
-           Precondition: size is an integer greater than 0"""
+           Precondition: size is an integer greater than 0
+                         testmode must be a boolean"""
 
         self.__gridPoints = {}
         self.__size = size
         self.__setupGrid()
-        self.__obstacles = self.__assignObstacles()
+        if testmode: #You assign your own obstacles
+            self.__obstacles = {}
+        else: #Obstacles are randomly chosen
+            self.__obstacles = self.__assignObstacles()
 
 
     def getGridPoints(self):
@@ -53,7 +57,7 @@ class Grid:
         for row in range(self.__size):
             for column in range(self.__size):
                 gridpoint = GridPoint((row,column))
-                neighbors = self.__returnNeighbors(row,column,size)
+                neighbors = self.__returnNeighbors(row,column)
                 gridpoint.setNeighbors(neighbors)
                 self.__gridPoints[(row,column)] = gridpoint
 
@@ -79,14 +83,25 @@ class Grid:
             if answer == "Y":
                 ready = 1
             else:
-                self.__reset()
+                self.reset()
 
         return obstacles
+
+    def assignObstaclesManually(self, obstacles):
+        """Sets the obstacles manually
+           Precondition: obstacles is a non empty array of tuples that represent valid gridpoints"""
+        for obstacle in obstacles:
+            gridpoint = self.__gridPoints[obstacle]
+            gridpoint.switchPassibility()
+            self.__obstacles[obstacle] = gridpoint
+        self.printGrid()
+
 
     def __returnNeighbors(self, row, column):
         """Returns the neighbors of the gridpoing defined at (row,column)
            Precondition: 0<=row,column<=self.__size-1"""
         source = (row,column)
+
         if (row == 0):
             if (column == 0):
                 neighbors = [Edge(source, (0,1), 1), Edge(source, (1,0), 1), Edge(source, (1,1), math.sqrt(2))]
@@ -109,7 +124,8 @@ class Grid:
             neighbors = [Edge(source, (row+1, column), 1), Edge(source, (row-1, column), 1), Edge(source, (row, column-1), 1), Edge(source, (row, column+1), 1), Edge(source, (row-1, column-1), math.sqrt(2)), Edge(source, (row+1, column+1), math.sqrt(2)), Edge(source, (row-1, column+1), math.sqrt(2)), Edge(source, (row+1, column-1), math.sqrt(2))]
         return neighbors
 
-    def __reset(self):
+
+    def reset(self):
         """Resets the grid by turning any obstacles into passible gridpoints"""
         for row in range(self.__size):
             for column in range(self.__size):

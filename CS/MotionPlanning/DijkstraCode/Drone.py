@@ -14,12 +14,16 @@ class Drone:
         startpos = starting position of the drone (a tuple)
     """
 
-    def __init__(self, grid):
+    def __init__(self, grid, startpoint):
         """Constructs a Grid object
            Precondition: grid is a Grid object"""
         self.__grid = grid.getGridPoints()
         self.__size = grid.getSize()
-        self.__startpos = (0,0)
+        self.__startpos = startpoint
+
+    def getStartPoint(self):
+        """Returns the starting position of the drone"""
+        return self.__startpos
 
     # Dijkstra's Algorithm
     def shortestPath1(self, endpoint):
@@ -31,8 +35,8 @@ class Drone:
         SandF[self.__startpos] = (0, None)
         while(F.getHeapSize()>0):
             f = F.pop()
-            if f == endpoint:
-                return self.__showpath(SandF, endpoint)
+            #if f == endpoint:
+            #    return self.__showpath(SandF, endpoint)
             fdist = (SandF[f])[0]
             for neighbor in self.__grid[f].getNeighbors():
                 other = neighbor.getSink()
@@ -45,7 +49,13 @@ class Drone:
                         SandF[other] = (wdist, f)
                         if other in F.getHeap():
                             F.changePriority(other, wdist)
-        return []
+                        else:
+                            F.insert(other,wdist)
+        try:
+            return self.__showpath(SandF, endpoint)
+        except:
+            print("No path to endpoint!")
+            return []
 
     def __showpath(self, dict, endpoint):
         """Returns the path from starting position to endpoint

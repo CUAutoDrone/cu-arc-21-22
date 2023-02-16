@@ -1,0 +1,151 @@
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.HashMap;
+
+public class PriorityQ<T> {
+    private ArrayList<T> q = new ArrayList<>();
+    private HashMap<T,Integer> ind = new HashMap<>();
+    Comparator<T> c;
+
+    public PriorityQ (Comparator<T> comparator){
+        c = comparator;
+    }
+    private boolean classInv(){
+/*
+        for (int i = 0; i < q.size(); i++) {
+            if (c.compare(q.get((i - 1) / 2), q.get(i)) > 0) { //parent cant have less prio
+                System.out.println("a");
+                return false;
+            }
+
+            if (2 * i + 1 < q.size()) { //left child cant have higher prio
+                if (c.compare(q.get(2 * i + 1), q.get(i)) < 0) {
+                    System.out.println("b");
+                    System.out.println(q.get(i));
+                    System.out.println(q.get(2 * i + 1));
+                    return false;
+                }
+
+            }
+            if (2 * i + 2 < q.size()) { //right child cant have higher prio
+                if (c.compare(q.get(2 * i + 2), q.get(i)) < 0) {
+                    System.out.println("c");
+                    return false;
+                }
+            }
+        }
+        for (T value : q){
+            //System.out.println(value);
+            if (!value.equals( q.get(ind.get(value)) )) {
+                System.out.println("d");
+                return false;
+            }
+        }
+
+
+ */
+        return true;
+
+
+    }
+    public T poll(){
+
+        T v = q.get(0);
+        ind.remove(v);
+        if (q.size() == 1) {
+            q.remove(0);
+            return v;
+        }
+        q.set(0,q.remove(q.size()-1));
+        ind.put(q.get(0), 0);
+        bubbleDown(0);
+        assert classInv();
+        return v;
+        /*
+        T min = q.get(0);
+        int minI = 0;
+        for (int i = 1; i<q.size(); i++){
+            if (c.compare(min, q.get(i)) > 0){
+                min = q.get(i);
+                minI = i;
+            }
+        }
+        q.remove(minI);
+        return min;
+
+         */
+
+    }
+    public void add(T value){
+
+        assert classInv();
+        if (contains(value)){
+            increasePriority(value);
+            return;
+        }
+        q.add(value);
+
+        ind.put(value, q.size()-1);
+        bubbleUp(q.size()-1);
+        assert classInv();
+
+    }
+    public void increasePriority(T value){
+        int i = ind.get(value);
+        q.set(i,value);
+        bubbleUp(i);
+    }
+    public int size(){
+        return q.size();
+    }
+    public boolean contains(T value){
+
+        for (T v: q){
+            if (v.equals(value)) return true;
+        }
+        return false;
+        //return ind.get(value) != null;
+    }
+    private void bubbleUp(int i){
+        int p = (i-1)/2;
+        while (c.compare(q.get(i), q.get(p)) < 0){
+            swap(i,p);
+            i = p;
+            p = (i-1)/2;
+        }
+        assert classInv();
+    }
+    private void bubbleDown(int i){
+        int l = 2*i+1;
+        int r = 2*i+2;
+        while (l < q.size()) {
+            if (r >= q.size() || c.compare(q.get(l), q.get(r)) <= 0) { // l is higher prio
+                if (c.compare(q.get(i),q.get(l)) <= 0 ) {
+                    assert classInv();
+                    return;
+                }
+                swap(i,l);
+                i = l;
+
+            } else { // r is higher prio
+                if (c.compare(q.get(i),q.get(r)) <= 0 ) {
+                    assert classInv();
+                    return;
+                }
+                swap(i,r);
+                i = r;
+            }
+            l = 2*i+1;
+            r = 2*i+2;
+        }
+
+        assert classInv();
+    }
+    private void swap(int a, int b){
+        T temp = q.get(a); //set temp to a
+        q.set(a,q.get(b)); //set a to b
+        ind.put(q.get(b),a); //put b as a
+        q.set(b,temp); //set b to temp (a)
+        ind.put(temp,b); //put temp (a) as b
+    }
+}
