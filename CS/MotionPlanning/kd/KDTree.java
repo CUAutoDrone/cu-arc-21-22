@@ -67,6 +67,78 @@ public class KDTree {
 		
 	}
 	
+	public int depth(Point p) {
+		if(root == null) return -1;
+		if(root.location == p) return 0;
+		if(root.left.depth(p) > -1) return 1 + root.left.depth(p);
+		return 1 + root.right.depth(p);
+	}
+	
+	public Node minNode(Node x, Node y, Node z, int dim) {
+		if(dim == 0) {
+			if(x.location.x >= y.location.x && x.location.x >= z.location.x) {
+				return x;
+			}
+			if(y.location.x >= z.location.x) {
+				return y;
+			}
+			return z;
+		}
+		if(x.location.y >= y.location.y && x.location.y >= z.location.y) {
+			return x;
+		}
+		if(y.location.y >= z.location.y) {
+			return y;
+		}
+		return z;
+	}
+	
+	public Node findMin(Node n, int dim) {
+		if(n == null) return null;
+		if(dim == depth(n.location) % k) {
+			if(root.left == null) return root;
+			return findMin(root.left.root, dim);
+		}
+		 
+		return minNode(n, findMin(n.left.root, dim), findMin(n.right.root, dim), 
+				dim);
+		
+	}
+	
+	private Node deleteRec(Node rt, Point pt, int depth) {
+		if(pt == null) return null;
+		int currDim = depth % k;
+		if(root.location.x == rt.location.x && rt.location.y == rt.location.y) {
+			if(rt.right != null) {
+				Node min = findMin(rt, currDim);
+				rt.location.x = min.location.x;
+				rt.location.y = min.location.y;
+				rt.right = new KDTree(deleteRec(rt.right.root, min.location, depth + 1).location);
+			}
+			else if(rt.left != null) {
+				Node min = findMin(rt, currDim);
+				rt.location.x = min.location.x;
+				rt.location.y = min.location.y;
+				rt.right = new KDTree(deleteRec(rt.left.root, min.location, depth + 1).location);
+			}
+			else {
+				rt = null;
+				return null;
+			}
+		}
+		if(pt.compareTo(root.location, currDim == 0) < 0) {
+			rt.left = new KDTree(deleteRec(rt.left.root, pt, depth + 1).location);
+		}
+		else {
+			rt.right = new KDTree(deleteRec(rt.right.root, pt, depth + 1).location);
+		}
+		return rt;
+	}
+	
+	public Node delete(Point pt) {
+		return deleteRec(root, pt, 0);
+	}
+	
 	public int pointCount() {
 		return numPoints;
 	}
@@ -105,5 +177,15 @@ public class KDTree {
 		}
 		
 		return currBestNode.location;
+	}
+	
+	public Point[] radiusNearestNeighbors(Point p, double r) {
+		Point nearest = nearestNeighbor(p);
+		ArrayList<Point> pts = new ArrayList<Point>();
+		while(nearest.euclideanDist(p) <= r) {
+			pts.add(nearest);
+			this.delete(p);
+		}
+		return (Point[]) pts.toArray();
 	}
 }

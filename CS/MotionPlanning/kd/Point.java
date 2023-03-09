@@ -22,6 +22,10 @@ public class Point {
 		if(xAligned) return x - p2.x;
 		return y - p2.y;
 	}
+	
+	public double euclideanDist(Point p2) {
+		return Math.sqrt((x - p2.x) * (x - p2.x) + (y - p2.y) * (y - p2.y));
+	}
 }
 
 
