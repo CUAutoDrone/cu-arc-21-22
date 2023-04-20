@@ -2,19 +2,19 @@ package kd;
 
 import java.util.*;
 
-public class KDTree {
+public class KdTree {
 	private Node root;
 	private int numPoints = 0;
 	private int depth = 0;
 	int k = 2;
 	
-	public KDTree(int depth, List<Point> pointList) {
+	public KdTree(int depth, List<Point> pointList) {
 		numPoints += pointList.size();
 		this.depth = depth;
 		root = makeTree(depth, pointList);
 	}
 	
-	public KDTree(Point point) {
+	public KdTree(Point point) {
 		root = new Node(point);
 		numPoints = 1;
 	}
@@ -35,8 +35,8 @@ public class KDTree {
 		Point median = pointsToSort.get(pointsToSort.size() / k);
 		Node node = new Node(median);
 		int medianIndex = pointToIndex.get(median);
-		node.left = new KDTree(depth + 1, pointList.subList(0, medianIndex));
-		node.right = new KDTree(depth + 1, pointList.subList(medianIndex + 1, pointList.size()));
+		node.left = new KdTree(depth + 1, pointList.subList(0, medianIndex));
+		node.right = new KdTree(depth + 1, pointList.subList(medianIndex + 1, pointList.size()));
 		return node;
 	}
 	
@@ -49,22 +49,23 @@ public class KDTree {
 		while(curr != null) {
 			if(curr.location.compareTo(p, currDepth % k == 0) < 0) {
 				if(curr.left == null) {
-					curr.left = new KDTree(p);
+					curr.left = new KdTree(p);
+					break;
 				}
 				else {
 					curr = curr.left.root;
 				}
 			}
+			
 			else {
 				if(curr.right == null) {
-					curr.right = new KDTree(p);
+					curr.right = new KdTree(p);
 				}
 				else {
 					curr = curr.right.root;
 				}
 			}
 		}
-		
 	}
 	
 	public int depth(Point p) {
@@ -75,22 +76,19 @@ public class KDTree {
 	}
 	
 	public Node minNode(Node x, Node y, Node z, int dim) {
-		if(dim == 0) {
-			if(x.location.x >= y.location.x && x.location.x >= z.location.x) {
-				return x;
-			}
-			if(y.location.x >= z.location.x) {
-				return y;
-			}
-			return z;
+		Node res = x;
+		Point resLoc = null;
+		if(res != null) {
+			resLoc = x.location;
 		}
-		if(x.location.y >= y.location.y && x.location.y >= z.location.y) {
-			return x;
+		if(y != null && y.location.compareTo(resLoc, dim == 0) < 0) {
+			res = y;
+			resLoc = y.location;
 		}
-		if(y.location.y >= z.location.y) {
-			return y;
+		if(z != null && z.location.compareTo(resLoc, dim == 0) < 0) {
+			res = z;
 		}
-		return z;
+		return res;
 	}
 	
 	public Node findMin(Node n, int dim) {
@@ -99,27 +97,40 @@ public class KDTree {
 			if(root.left == null) return root;
 			return findMin(root.left.root, dim);
 		}
+		
+		Node l = null;
+		if(n.left != null) {
+			l = n.left.root;
+		}
+		Node r = null;
+		if(n.right != null) {
+			r = n.right.root;
+		}
 		 
-		return minNode(n, findMin(n.left.root, dim), findMin(n.right.root, dim), 
-				dim);
+		return minNode(n, findMin(l, dim), findMin(r, dim), dim);
 		
 	}
 	
 	private Node deleteRec(Node rt, Point pt, int depth) {
 		if(pt == null) return null;
 		int currDim = depth % k;
-		if(root.location.x == rt.location.x && rt.location.y == rt.location.y) {
+		if(rt.location.x == pt.x && rt.location.y == pt.y) {
 			if(rt.right != null) {
 				Node min = findMin(rt, currDim);
 				rt.location.x = min.location.x;
 				rt.location.y = min.location.y;
-				rt.right = new KDTree(deleteRec(rt.right.root, min.location, depth + 1).location);
+				rt.right = new KdTree(deleteRec(rt.right.root, min.location, depth + 1).location);
 			}
 			else if(rt.left != null) {
 				Node min = findMin(rt, currDim);
 				rt.location.x = min.location.x;
 				rt.location.y = min.location.y;
-				rt.right = new KDTree(deleteRec(rt.left.root, min.location, depth + 1).location);
+				if(deleteRec(rt.left.root, min.location, depth + 1) == null) {
+					rt.right = null;
+				}
+				else {
+					rt.right = new KdTree(deleteRec(rt.left.root, min.location, depth + 1).location);
+				}
 			}
 			else {
 				rt = null;
@@ -127,10 +138,19 @@ public class KDTree {
 			}
 		}
 		if(pt.compareTo(root.location, currDim == 0) < 0) {
-			rt.left = new KDTree(deleteRec(rt.left.root, pt, depth + 1).location);
+			rt.left = new KdTree(deleteRec(rt.left.root, pt, depth + 1).location);
 		}
 		else {
-			rt.right = new KDTree(deleteRec(rt.right.root, pt, depth + 1).location);
+			Node r = null;
+			if(rt.right != null) {
+				r = deleteRec(rt.right.root, pt, depth + 1);
+			}
+			if(r == null) {
+				rt.right = null;
+			}
+			else {
+				rt.right = new KdTree(deleteRec(rt.right.root, pt, depth + 1).location);
+			}
 		}
 		return rt;
 	}
@@ -167,8 +187,8 @@ public class KDTree {
 					curr = curr.right.root;
 				}
 			}
-			
-			if(curr.location.dist(p, currDepth % k == 0) < currBestDist) {
+
+			if(curr != null && curr.location.dist(p, currDepth % k == 0) < currBestDist) {
 				currBestDist = curr.location.dist(p, currDepth % k == 0);
 				currBestNode = curr;
 			}
@@ -183,9 +203,15 @@ public class KDTree {
 		Point nearest = nearestNeighbor(p);
 		ArrayList<Point> pts = new ArrayList<Point>();
 		while(nearest.euclideanDist(p) <= r) {
+			System.out.println(nearest);
 			pts.add(nearest);
-			this.delete(p);
+			this.delete(nearest);
+			nearest = nearestNeighbor(p);
 		}
-		return (Point[]) pts.toArray();
+		Point[] ptsArray = new Point[pts.size()];
+		for(int i = 0; i < pts.size(); i++) {
+			ptsArray[i] = pts.get(i);
+		}
+		return ptsArray;
 	}
 }

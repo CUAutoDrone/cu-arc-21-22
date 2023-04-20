@@ -5,6 +5,8 @@ import java.util.*;
 public class Point {
 	public double x;
 	public double y;
+    public double distanceToParent;
+    public Point parent;
 	
 	public Point(double x, double y) {
 		this.x = x;
@@ -26,6 +28,11 @@ public class Point {
 	public double euclideanDist(Point p2) {
 		return Math.sqrt((x - p2.x) * (x - p2.x) + (y - p2.y) * (y - p2.y));
 	}
+	
+    public double cost(){
+        if (parent == null) return 0;
+        return distanceToParent + parent.cost();
+    }
 }
 
 
