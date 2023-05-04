@@ -4,21 +4,24 @@ import java.util.*;
 
 public class KdTree {
 	private Node root;
-	private int numPoints = 0;
-	private int depth = 0;
-	int k = 2;
+	private int numPoints = 0; // number of points in the tree
+	private int depth = 0; // maximum tree depth
+	int k = 2; // number of dimensions: 2 for 2-D space
 	
+	// Constructor 1
 	public KdTree(int depth, List<Point> pointList) {
 		numPoints += pointList.size();
 		this.depth = depth;
 		root = makeTree(depth, pointList);
 	}
 	
+	// Constructor 2
 	public KdTree(Point point) {
 		root = new Node(point);
 		numPoints = 1;
 	}
 	
+	// Create a tree with the given depth from the given points
 	public Node makeTree(int depth, List<Point> pointList) {
 		int numToSort = 100;
 		UniqueRng rng = new UniqueRng(numToSort);
@@ -40,6 +43,7 @@ public class KdTree {
 		return node;
 	}
 	
+	// Add point p to the tree
 	public void add(Point p) {
 		int currDepth = 0;
 		Node curr = root;
@@ -68,6 +72,7 @@ public class KdTree {
 		}
 	}
 	
+	// Calculate depth of tree
 	public int depth(Point p) {
 		if(root == null) return -1;
 		if(root.location == p) return 0;
@@ -75,6 +80,8 @@ public class KdTree {
 		return 1 + root.right.depth(p);
 	}
 	
+	// Utility function to determine "minimum" of three nodes
+	// using point compareTo method
 	public Node minNode(Node x, Node y, Node z, int dim) {
 		Node res = x;
 		Point resLoc = null;
@@ -91,6 +98,7 @@ public class KdTree {
 		return res;
 	}
 	
+	// Finds minimum node in tree along dimension dim
 	public Node findMin(Node n, int dim) {
 		if(n == null) return null;
 		if(dim == depth(n.location) % k) {
@@ -111,6 +119,9 @@ public class KdTree {
 		
 	}
 	
+	// Delete point pt from tree with root rt. Currently does not work
+	// (points are not deleted from tree)
+	// See https://www.geeksforgeeks.org/deletion-in-k-dimensional-tree/
 	private Node deleteRec(Node rt, Point pt, int depth) {
 		if(pt == null) return null;
 		int currDim = depth % k;
@@ -163,6 +174,7 @@ public class KdTree {
 		return numPoints;
 	}
 	
+	// Find closest point to in tree to point p
 	public Point nearestNeighbor(Point p) {
 		Node curr = root;
 		Stack<Node> path = new Stack<Node>();
@@ -199,6 +211,8 @@ public class KdTree {
 		return currBestNode.location;
 	}
 	
+	// Find all points within a radius of r from point p, in order from
+	// closest to farthest
 	public Point[] radiusNearestNeighbors(Point p, double r) {
 		Point nearest = nearestNeighbor(p);
 		ArrayList<Point> pts = new ArrayList<Point>();
