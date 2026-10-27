@@ -20,7 +20,7 @@ import os
 import glob
 import pandas as pd
 import io
-import xml.etree.ElementTree as ET
+import defusedxml.ElementTree as ET
 import argparse
 
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'    # Suppress TensorFlow logging (1)
